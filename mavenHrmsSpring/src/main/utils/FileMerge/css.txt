@@ -1,6 +1,0 @@
-style/portal.css
-style/view.css
-style/dashboardstyles.css
-style/ImportWizard.css
-style/chart.css
-style/orgChart.css
