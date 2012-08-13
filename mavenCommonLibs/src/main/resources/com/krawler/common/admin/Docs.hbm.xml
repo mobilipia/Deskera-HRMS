@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false" default-lazy="false">
+  <class name="com.krawler.common.admin.Docs" table="crm_docs">
+    <id name="docid" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one cascade="delete" class="com.krawler.common.admin.User" column="userid" name="userid"/>
+    <property name="docname" type="java.lang.String"/>
+    <property name="docsize" type="java.lang.String"/>
+    <property name="doctype" type="java.lang.String"/>
+    <property name="docdesc" type="java.lang.String"/>
+    <property name="uploadedon" type="java.util.Date"/>
+    <property name="storename" type="java.lang.String"/>
+    <property name="storageindex" type="java.lang.Integer"/>
+    <many-to-one class="com.krawler.common.admin.Company" fetch="select" name="company">
+      <column name="companyid"/>
+    </many-to-one>
+    <property name="deleteflag" type="integer">
+      <column default="0" name="deleteflag"/>
+    </property>
+    <property name="tags" type="java.lang.String"/>
+    <property name="comments" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

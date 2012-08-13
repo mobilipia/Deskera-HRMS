@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.Payhistory" table="payhistory">
+    <id name="historyid" type="string">
+      <column name="historyid"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" fetch="select" name="userID">
+      <column name="userID" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="masterDB.Template" fetch="select" name="template">
+      <column length="36" name="templateid" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.krawler.common.admin.userSalaryTemplateMap" fetch="select" name="mappingid">
+      <column length="36" name="mappingid" not-null="false"/>
+    </many-to-one>
+    <property name="name" type="string">
+      <column name="name"/>
+    </property>
+    <property name="design" type="string">
+      <column name="design"/>
+    </property>
+    <property name="department" type="string">
+      <column name="department"/>
+    </property>
+    <property name="gross" type="string">
+      <column name="gross"/>
+    </property>
+    <property name="net" type="string">
+      <column name="net"/>
+    </property>
+    <property name="wagetot" type="string">
+      <column name="wagetot"/>
+    </property>
+    <property name="taxtot" type="string">
+      <column name="taxtot"/>
+    </property>
+    <property name="deductot" type="string">
+      <column name="deductot"/>
+    </property>
+    <property name="ectot" type="string">
+      <column name="empcontribtot"/>
+    </property>
+    <property name="paydate" type="date">
+      <column length="10" name="paydate"/>
+    </property>
+    <property name="salary" type="string">
+      <column name="salary"/>
+    </property>
+    <property name="wage" type="string">
+      <column name="wage"/>
+    </property>
+    <property name="tax" type="string">
+      <column name="tax"/>
+    </property>
+    <property name="status" type="string">
+      <column name="status"/>
+    </property>
+    <property name="paymonth" type="string">
+      <column name="paymonth"/>
+    </property>
+    <property name="paycyclestart" type="date">
+      <column length="10" name="paycyclestart"/>
+    </property>
+    <property name="paycycleend" type="date">
+      <column length="10" name="paycycleend"/>
+    </property>
+    <property name="createdon" type="timestamp">
+      <column length="19" name="createdon"/>
+    </property>
+    <property name="createdfor" type="timestamp">
+      <column length="19" name="createdfor"/>
+    </property>
+    <property name="generatedon" type="timestamp">
+      <column length="19" name="generatedon"/>
+    </property>
+    <property name="unpaidleaves" type="double">
+      <column default="0" name="unpaidleaves"/>
+    </property>
+    <property name="salarystatus" type="integer">
+      <column name="salarystatus" default='3' not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

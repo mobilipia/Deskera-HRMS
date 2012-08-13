@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false" default-lazy="false">
+  <class name="com.krawler.hrms.common.docs.HrmsDocs" table="hrms_docs">
+    <id name="docid" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one cascade="delete" class="com.krawler.common.admin.User" column="userid" name="userid"/>
+    <many-to-one cascade="delete" class="com.krawler.hrms.recruitment.Jobapplicant" column="applicantid" name="applicantid"/>
+    <property name="docname" type="java.lang.String"/>
+    <property name="docsize" type="java.lang.String"/>
+    <property name="doctype" type="java.lang.String"/>
+    <property name="uploadedon" type="java.util.Date"/>
+    <property name="uploadedby" type="java.lang.String"/>
+    <property name="storename" type="java.lang.String"/>
+    <property name="storageindex" type="java.lang.Integer"/>
+    <property name="dispdocname" type="java.lang.String"/>
+    <property name="docdesc" type="java.lang.String"/>
+    <property name="deleted" type="true_false">
+      <column name="deleteflag"/>
+    </property>
+    <property name="referenceid" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

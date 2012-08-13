@@ -1,0 +1,145 @@
+/* 
+    Document    : orgChart
+    Created on  : Apr 23, 2009, 1:47:13 PM
+    Author      : bala
+    Description : For organisation chart
+*/
+
+root { 
+    display: block;
+}
+
+.chartDragClass {
+    background-color: #FFFFCC;
+}
+
+.adminWinImg{
+    margin:12px 10px 10px 20px;
+}
+
+div.block {
+    font-family: "Trebuchet MS",sans-serif;
+    min-height: 90px;
+    overflow: hidden;
+    /*padding: 0;*/
+    text-align: center;
+    width: 120px;
+}
+
+div.block {
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+    /*padding: 0;*/
+}
+
+div.blockUnMapped {
+    font-family: "Trebuchet MS",sans-serif;
+    min-height: 75px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 120px;
+}
+
+div.blocknode {
+    min-width: 140px;
+}
+
+div.blocknodeUnmapped {
+    width: 140px;
+}
+
+div.blockUnMapped {
+    /*clear:both;*/
+    float: left;
+    margin: 5px;
+    padding: 0;
+    position: relative;
+}
+
+div.blocktop {
+    background: transparent url(../images/orgchart/nodetop.png) no-repeat scroll left top;
+    display: block;
+    font-size: 14px;
+    height: 25px;
+    margin: 0;
+    padding: 10px 12px 4px 10px;
+    /*width: 98px;*/
+}
+
+.handle {
+    cursor:move;
+}
+
+/*a {
+    background-repeat:no-repeat;
+    color:#DB7714;
+}*/
+
+div.blockbottom {
+    background: transparent url(../images/orgchart/nodebottom.png) no-repeat scroll left bottom;
+    font-size: 12px;
+    height: 25px;
+    margin: 0;
+    padding: 4px 12px 25px 10px;
+    /*width: 98px;*/
+}
+
+div.block a.details_icon, div#head_block a.details_icon {
+    background: url(../images/tbar1.gif) no-repeat !important;
+    background-position: 0 -1589px !important;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 15px;
+    margin-left: 40px;
+    margin-top: 10px;
+    position: absolute;
+    text-decoration: none;
+    width: 20px;
+    /*visibility: hidden;*/
+}
+
+div.block a.edit_icon, div#head_block a.edit_icon {
+    background: transparent url(../images/orgchart/Tool2.png) no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 10px;
+    position: absolute;
+    text-decoration: none;
+    width: 20px;
+    /*visibility: hidden;*/
+}
+
+div.block a.unmap_icon, div#head_block a.unmap_icon {
+    background: transparent url(../images/orgchart/Delete.gif) no-repeat scroll 0 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 16px;
+    margin-left: 75px;
+    margin-top: 10px;
+    position: absolute;
+    text-decoration: none;
+    width: 30px;
+    /*visibility:hidden;*/
+}
+
+div.blockUnMapped a.map_icon, div#head_block a.map_icon {
+    background: url(../images/crm-tbar.gif) no-repeat !important;
+    background-position: 0 -963px !important;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 16px;
+    margin-left: 35px;
+    margin-top: 10px;
+    position: absolute;
+    text-decoration: none;
+    width: 30px;
+    /*visibility: hidden;*/
+}

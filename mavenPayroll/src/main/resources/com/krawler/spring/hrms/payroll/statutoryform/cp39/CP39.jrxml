@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CP39" pageWidth="842" pageHeight="612" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="0.75"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<parameter name="ProductsSubReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SubReportData" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="officialUseKelompok" class="java.lang.String"/>
+	<field name="officialUseResit" class="java.lang.String"/>
+	<field name="contributionMonth" class="java.lang.String"/>
+	<field name="contributionYear" class="java.lang.String"/>
+	<field name="deductionForPCB" class="java.lang.String"/>
+	<field name="deductionForCP38" class="java.lang.String"/>
+	<field name="numberOfEmployeeForPCB" class="java.lang.String"/>
+	<field name="numberOfEmployeeForCP38" class="java.lang.String"/>
+	<field name="number" class="java.lang.String"/>
+	<field name="branch" class="java.lang.String"/>
+	<field name="date" class="java.lang.String"/>
+	<field name="signature" class="java.lang.String"/>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="identificationNumber" class="java.lang.String"/>
+	<field name="designation" class="java.lang.String"/>
+	<field name="telephoneNumber" class="java.lang.String"/>
+	<field name="employerReferenceNumber" class="java.lang.String"/>
+	<field name="companyReferenceNumber" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	<field name="companyAddress" class="java.lang.String"/>
+	<field name="amount" class="java.lang.String"/>
+	<variable name="officialUseResit_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{officialUseResit}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="200" height="15"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Borang ini boleh difotokopi
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="40" width="200" height="45"/>
+				<box topPadding="3" leftPadding="2" bottomPadding="3" rightPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Cawangan Pungutan Kuala Lumpur
+Kaunter Bayaran Dan Tingkat 1, Blok 8A
+Kompleks Bangunan Kerajaan, Jalan Duta
+50600 KUALA LUMPUR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="15" width="200" height="25"/>
+				<box topPadding="3" leftPadding="2" bottomPadding="3" rightPadding="2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KETUA PENGARAH HASIL DALAM NEGERI
+LEMBAGA HASIL DALAM NEGERI
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="582" y="0" width="220" height="15"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CP39 Pin. 2011
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="15" width="200" height="70"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement stretchType="RelativeToBandHeight" x="582" y="15" width="220" height="70"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="87" y="25" width="125" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{officialUseKelompok}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="87" y="46" width="125" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{officialUseResit}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="14" y="25" width="63" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. Kelompok]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="14" y="46" width="63" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. Resit]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="582" y="15" width="220" height="21"/>
+				<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNTUK KEGUNAAN PEJABAT]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="217" y="15" width="354" height="77"/>
+			</frame>
+			<frame>
+				<reportElement x="285" y="15" width="286" height="76"/>
+				<staticText>
+					<reportElement x="0" y="14" width="286" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[PENYATA POTONGAN CUKAI OLEH MAJIKAN
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="28" width="286" height="15" forecolor="#F00707"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[[SEKSYEN 107 AKTA CUKAI PENDAPATAN, 1967
+
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="42" width="286" height="15" forecolor="#F00707"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="false"/>
+					</textElement>
+					<text><![CDATA[KAEDAH CUKAI PENDAPATAN (POTONGAN DARIPADA SARAAN), 1994]
+]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="109" y="60" width="30" height="15"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{contributionMonth}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="175" y="60" width="42" height="15"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{contributionYear}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="60" width="105" height="15"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[POTONGAN BAGI BULAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="143" y="60" width="28" height="15"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TAHUN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="286" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CUKAI PENDAPATAN MALAYSIA
+]]></text>
+				</staticText>
+			</frame>
+			<image onErrorType="Blank">
+				<reportElement x="217" y="15" width="60" height="65"/>
+				<imageExpression><![CDATA["../../images/logo_malaysia.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="393" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="12" width="265" height="140"/>
+				<box leftPadding="0">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="265" height="15" forecolor="#000000" backcolor="#C0C0C0"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[BUTIR-BUTIR MAJIKAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="18" width="85" height="20"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No. Rujukan
+Majikan E]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="96" y="18" width="154" height="20"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{employerReferenceNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="43" width="85" height="20"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. Pendaftaran
+Perniagaan
+]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="96" y="46" width="154" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{companyReferenceNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="62" width="85" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Nama Syarikat
+Perniagaan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="96" y="62" width="154" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.0" lineStyle="Dashed"/>
+						<topPen lineWidth="0.0" lineStyle="Dashed"/>
+						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="77" width="85" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Alamat Syarikat/]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="96" y="77" width="154" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.0" lineStyle="Dashed"/>
+						<topPen lineWidth="0.0" lineStyle="Dashed"/>
+						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{companyAddress}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="91" width="85" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Perniagaan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="96" y="93" width="154" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.0" lineStyle="Dashed"/>
+						<topPen lineWidth="0.0" lineStyle="Dashed"/>
+						<leftPen lineWidth="0.0" lineStyle="Dashed"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="265" y="12" width="270" height="140"/>
+				<box leftPadding="0">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement x="90" y="15" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PCB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="15" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CP38]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="15" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="45" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Bilangan Pekerja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="30" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Jumlah Pekerja]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="90" y="30" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{deductionForPCB}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="180" y="30" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{deductionForCP38}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="90" y="45" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numberOfEmployeeForPCB}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="180" y="45" width="90" height="15"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{numberOfEmployeeForCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="60" width="90" height="80"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Butir-butir / Cek /
+Bank / Deraf /
+Kiriman Wang /
+Wang Pos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="90" y="60" width="60" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Amaun]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="90" y="80" width="60" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Nombor]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="150" y="80" width="120" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="90" y="100" width="60" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Cawangan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="150" y="100" width="120" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{branch}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="90" y="120" width="60" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Tarikh]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="150" y="120" width="120" height="20"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="270" height="15" backcolor="#C0C0C0"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[BUTIR-BUTIR PEMBAYARAN]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="150" y="60" width="120" height="20"/>
+					<box leftPadding="2" rightPadding="2">
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="535" y="12" width="267" height="140"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="267" height="15" forecolor="#000000" backcolor="#C0C0C0"/>
+					<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PEGAWAI YANG MENYEDIAKAN MAKLUMAT]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="7" y="26" width="64" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Tandatangan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="93" y="26" width="165" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.5" lineStyle="Dotted"/>
+						<topPen lineWidth="0.0" lineStyle="Dotted"/>
+						<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{signature}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="46" width="64" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Nama Penuh]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="93" y="45" width="165" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.5" lineStyle="Dotted"/>
+						<topPen lineWidth="0.0" lineStyle="Dotted"/>
+						<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="66" width="64" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. K/P]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="93" y="66" width="165" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.5" lineStyle="Dotted"/>
+						<topPen lineWidth="0.0" lineStyle="Dotted"/>
+						<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{identificationNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="85" width="64" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Jawatan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="93" y="86" width="165" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.5" lineStyle="Dotted"/>
+						<topPen lineWidth="0.0" lineStyle="Dotted"/>
+						<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="7" y="106" width="64" height="15"/>
+					<box leftPadding="2" rightPadding="2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. Telefon]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement stretchType="RelativeToBandHeight" x="93" y="106" width="165" height="15"/>
+					<box leftPadding="2" rightPadding="2">
+						<pen lineWidth="0.5" lineStyle="Dotted"/>
+						<topPen lineWidth="0.0" lineStyle="Dotted"/>
+						<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dotted"/>
+						<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{telephoneNumber}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="165" width="802" height="218"/>
+				<frame>
+					<reportElement x="0" y="0" width="390" height="218"/>
+					<staticText>
+						<reportElement mode="Opaque" x="0" y="0" width="15" height="13" backcolor="#C0C0C0"/>
+						<box leftPadding="2" rightPadding="2">
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[A]]></text>
+					</staticText>
+					<staticText>
+						<reportElement mode="Opaque" x="15" y="0" width="81" height="13" backcolor="#C0C0C0"/>
+						<box leftPadding="2" rightPadding="2">
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[BORANG CP 39]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="25" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[2. Majikan digalakkan menghantar maklumat potongan dalam bentuk disket/cakera padat/pemacu flash]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="35" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    mengikut format dan spesifikasi yang ditentukan oleh LHDN bagi menggantikan Borang CP39.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="45" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[3. No. Rujukan Cukai Pendapatan:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="55" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    3.1 Isikan nombor rujukan cukai pendapatan dalam ruangan yang telah disediakan.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="85" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[          pendaftaran boleh dibuat melalui :]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="65" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[          Contoh: SG 2506203-00(0) boleh diisi sebagai SG 02506203000]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="75" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    3.2 Bagi pekerja yang layak dikenakan PCB tetapi tiada nombor rujukan fail cukai pendapatan,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="15" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[1. Borang ini mesti diisi dengan lengkap dan betul.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="185" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[                                                         CP38 (jika ada).]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="105" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[          ii. Borang CP22 atau borang in lieu of CP39 dikemukakan ke cawangan LHDNM yang berdekatan.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="125" width="223" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    Isikan nama penuh pekerja seperti di kad pengenalan/pasport ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="115" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[4. Nama pekerja :]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="155" width="39" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    Contoh:
+
+]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="135" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[    tidak layak dikenakan potongan bagi bulan berkenaan).]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="145" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[5. Nombor Kad Pengenalan : Isikan kedua-dua nombor kad pengenalan baru dan lama (sekiranya ada).]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="95" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[          i. majikan atau pekerja boleh mendaftar secara atas talian melalui e-Daftar di www.hasil.gov.my, atau]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="165" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[6.  Jumlah Potongan Cukai: PCB - Isikan amaun cukai mengikut Potongan Cukai Bulanan.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="175" width="390" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[                                             CP38 - Isikan amaun potongan cukai mengikut arahan Borang]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="39" y="155" width="351" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[720403065235 atau A2172122]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="223" y="125" width="167" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[(Jangan senaraikan pekerja yang]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="406" y="0" width="396" height="218"/>
+					<staticText>
+						<reportElement mode="Opaque" x="1" y="0" width="19" height="13" backcolor="#C0C0C0"/>
+						<box leftPadding="2" rightPadding="2">
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[B]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="25" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    lewatnya pada hari kesepuluh bulan berikutnya.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="35" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    Contoh: PCB/CP38 bagi bulan April 2010, tarikh akhirnya ialah pada 10 Mei 2010.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="45" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[2. Sediakan borang CP39 beserta cek/bank draf/kiriman wang/wang pos (instrumen bayaran) yang berasingan]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="55" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    untuk bulan atau tahun berlainan.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="85" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[   E, Nama Syarikat/Perniagaan dan alamat majikan di belakang instrumen bayaran.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="65" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[3. Pastikan jumlah potongan PCB/CP38 adalah betul dan sama dengan nilai instrumen bayaran.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="75" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[4 Instrumen bayaran hendaklah dibayar kepada Ketua Pengarah Hasil Dalam Negeri. Catatkan no rujukan majikan ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="15" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[1. Bayaran dan Borang CP39 yang telah lengkap diisi mestilah sampai ke Cawangan Pungutan LHDN selewat-]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="205" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[2. Sekiranya maklumat tidak lengkap dan tidak betul, majikan akan dikenakan kompaun.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="105" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[    Keuntungan Harta Tanah tidak boleh dibayar bersama dengan bayaran yang menggunakan borang ini.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="125" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[    Cawangan Pungutan Kota Kinabalu                          Cawangan Pungutan Kuching,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="115" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[6.Untuk bayaran bagi Negeri Sabah, sila alamatkan ke: 7. Untuk bayaran bagi Negeri Sarawak, sila alamatkan ke:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="155" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[    88600 Kota Kinabalu, Sabah                                     93100 Kuching, Sarawak]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="135" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[    Wisma Hasil                                                              Aras 1, Wisma Hasil,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="145" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[    Jalan Tunku Abdul Rahman                                      No. 1, Jalan Padungan,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="95" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[5. Bayaran untuk Cukai Syarikat, Skim Ansurans (CP500), Penyelesaian Cukai (Pemberhentian Kerja) dan Cukai]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="165" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[8. Sila hubungi talian 1-300-88-3010 untuk sebarang pertanyaan lanjut.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="195" width="396" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7"/>
+						</textElement>
+						<text><![CDATA[1. Jika jumlah instrumen bayaran tidak sama dengan jumlah potongan, bayaran akan ditolak.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement mode="Opaque" x="0" y="180" width="19" height="13" backcolor="#C0C0C0"/>
+						<box leftPadding="2" rightPadding="2">
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[C]]></text>
+					</staticText>
+					<staticText>
+						<reportElement mode="Opaque" x="19" y="180" width="81" height="13" backcolor="#C0C0C0"/>
+						<box leftPadding="2" rightPadding="2">
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[PERINGATAN
+]]></text>
+					</staticText>
+					<staticText>
+						<reportElement mode="Opaque" x="20" y="0" width="81" height="13" backcolor="#C0C0C0"/>
+						<box leftPadding="2" rightPadding="2">
+							<topPen lineWidth="0.5"/>
+							<leftPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[PEMBAYARAN
+]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="198" y="135" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Aras 1, Wisma Hasil,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="198" y="145" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[No. 1, Jalan Padungan,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="197" y="125" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Cawangan Pungutan Kuching,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="198" y="155" width="198" height="10"/>
+						<box leftPadding="2" rightPadding="2"/>
+						<textElement verticalAlignment="Middle">
+							<font size="7" isBold="true"/>
+						</textElement>
+						<text><![CDATA[93100 Kuching, Sarawak]]></text>
+					</staticText>
+				</frame>
+			</frame>
+		</band>
+		<band height="213">
+			<subreport>
+				<reportElement x="-19" y="0" width="843" height="212"/>
+				<dataSourceExpression><![CDATA[$P{SubReportData}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{ProductsSubReport}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

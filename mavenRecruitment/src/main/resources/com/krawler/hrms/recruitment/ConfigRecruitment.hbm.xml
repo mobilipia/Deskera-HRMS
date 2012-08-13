@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.ConfigRecruitment" table="configrecruitment">
+    <id name="configid" type="string">
+      <column name="configid"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="configtype" type="integer">
+      <column name="configtype"/>
+    </property>
+    <property name="formtype" type="string">
+      <column length="100" name="formtype"/>
+    </property>
+    <property name="position" type="integer">
+      <column name="position"/>
+    </property>
+    <property name="name" type="string">
+      <column length="100" name="name"/>
+    </property>
+    <property name="colnum" type="integer">
+      <column name="colnum"/>
+    </property>
+    <property name="deleted" type="true_false">
+      <column name="deleteflag"/>
+    </property>
+    <property name="isSystemProperty" type="true_false">
+      <column name="issystemproperty" />
+    </property>
+
+    <property name="allownull" type="true_false">
+      <column name="allownull" />
+    </property>
+
+    <property name="visible" type="true_false">
+      <column name="visible" />
+    </property>
+
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+  </class>
+</hibernate-mapping>

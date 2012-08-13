@@ -1,0 +1,440 @@
+.inputcheckboxinvisible{
+    display: none;
+}
+.legend {
+    font-weight: bold;
+}
+
+.inputcheckbox{
+    margin-left: 30px;
+}
+
+.signupfieldset{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+body {
+    background: no-repeat #dfe8f6 url(../images/login/bg-body.jpg) 50% 50%;
+    font-family: "Lucida Grande", "Trebuchet MS", Tahoma, Verdana, Arial, Geneva, Helvetica, sans-serif;
+}
+
+body, form, fieldset, ul, li, h1, h2, h3, h4, h5, h6, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    outline: none;
+}
+
+#master {
+    position: absolute;
+    width: 456px;
+    height: 355px;
+    background: no-repeat url(../images/login/bg-login.jpg) 0 0;
+    overflow: hidden;
+    color: #fff;
+    font-size: .7em;
+}
+
+#top-links {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    background: red;
+}
+
+#top-links li {
+    display: inline;
+    float: left;
+    margin: 0 10px;
+    text-indent: -2000px;
+}
+
+#top-links li a:link, #top-links li a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+#top-links li a:hover {
+    color: #8c8eac;
+}
+
+#link-blog a {
+    position: absolute;
+    right: 70px;
+    width: 30px;
+    height: 20px;
+    display: block;
+}
+
+#link-support a {
+    position: absolute;
+    right: 5px;
+    width: 50px;
+    height: 20px;
+    display: block;
+}
+
+#master-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 355px;
+}
+
+.prompt, .infoprompt {
+    padding: 5px 0 15px 0;
+    font-size: .9em;
+}
+
+a.eml {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.eml:link, a.eml:visited, .prompt {
+    color: #ffa500;
+}
+
+a.eml:hover {
+    color: #767575;
+}
+
+#master div.container {
+    display: none;
+}
+
+#master div.container.active {
+    display: block;
+}
+
+#master dl.form-controls, #new-user-form dl.form-controls {
+    padding: 5px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+#master dl.form-controls dt {
+    float: left;
+    width: 100px;
+}
+
+#new-user-form h1 {
+  color:#FFFFFF;
+  font-size:1.4em;
+  padding:20px 30px 10px;
+}
+
+#master dl.form-controls dt label, #new-user-form dl.form-controls dt label {
+    height: 24px;
+    line-height: 24px;
+}
+
+#master dl.form-controls dd input.inputbox, #new-user-form dl.form-controls dd input.inputbox {
+    width: 160px;
+    border: 0;
+    background: transparent;
+}
+
+#master dl.form-controls dd, #new-user-form dl.form-controls dd {
+    float: left;
+    background: no-repeat url(../images/login/input.gif) 0 0;
+    height: 25px;
+    line-height: 24px;
+}
+
+#container-login {
+    padding: 10px 20px;
+}
+
+#input-submit {
+    clear: both;
+    padding: 10px 0 0 98px;
+}
+
+#tabs-bottom {
+    list-style: none;
+    position: absolute;
+    bottom: 20px;
+}
+
+#tabs-bottom li {
+    float: left;
+    display: inline;
+    height: 52px;
+}
+
+#tabs-bottom li a {
+    text-indent: -2000px;
+    float: left;
+    display: block;
+    background: url(../images/login/tabs.jpg) no-repeat 0 0;
+    height: 52px;
+}
+
+#tabs-bottom li#tab-login a:link, #tabs-bottom li#tab-login a:visited {
+    width: 116px;
+    height: 52px;
+}
+
+#tabs-bottom li#tab-login a:hover, #tabs-bottom li.active#tab-login a:link, #tabs-bottom li.active#tab-login a:visited {
+    background-position: 0 -52px;
+}
+
+#tabs-bottom li#tab-about a:link, #tabs-bottom li#tab-about a:visited {
+    background-position: -116px 0;
+    width: 116px;
+    height: 52px;
+}
+
+#tabs-bottom li#tab-about a:hover, #tabs-bottom li.active#tab-about a:link, #tabs-bottom li.active#tab-about a:visited {
+    background-position: -116px -52px;
+}
+
+#container-about {
+    width: 400px;
+}
+
+#container-about h1 {
+    font-size: 1.5em;
+}
+
+#container-about ul {
+    margin-left: 30px;
+}
+
+#btn-new-user {
+    position: absolute;
+    right: 13px;
+    bottom: 18px;
+    width: 113px;
+    height: 31px;
+    text-indent: -2000px;
+    background: no-repeat url(../images/login/new-user.gif) 0 0;
+    cursor: pointer;
+}
+
+#btn-new-user span {
+    display: block;
+    height: 31px;
+    background: no-repeat url(../images/login/new-user.gif) 0 -31px;
+    cursor: pointer;
+}
+
+#new-user-form {
+    display: none;
+    width: 470px;
+    height: 320px;
+    position: absolute;
+    background: url(../images/login/bg-new-login.png) no-repeat 0 0;
+    z-index: 2000;
+    color: #fff;
+}
+
+#new-user-form {
+    font-size: .7em;
+}
+
+#new-user-form dl.form-controls dt {
+    float: left;
+    width: 144px;
+    text-align: right;
+    margin-right: 14px;
+}
+
+#new-user-submit {
+    clear: both;
+    margin-top: -7px;
+    text-align: center;
+}
+
+#new-user-links {
+    text-align: right;
+    margin-right: 12px;
+}
+
+#payment-form h1 {
+    padding: 20px 30px 10px 30px;
+    color: #fff;
+    font-size: 1.4em;
+}
+ 
+.errorprompt {
+    color: red;
+    visibility: hidden;
+    padding-left: 2px;
+}
+
+#usrFeedback {
+    margin-left: 12px;
+    vertical-align: top;
+    line-height: 28px;
+}
+
+.loadingFB {
+    background: url('../images/loading.gif') no-repeat 0 -1px;
+    padding-left: 16px;
+}
+
+.errorFB, .infoFB {
+    background: none;
+    padding-left: 0;
+}
+
+.errorFB {
+    color: red;
+}
+
+.infoFB {
+    color: green;
+}
+
+.centered {
+    text-align: center;
+}
+
+.clr {
+    clear: both;
+}
+
+#chkusravail{
+	margin-left: 157px;
+	clear: both;
+}
+.procSave{
+    background-image:url(../images/Save.gif)!important;
+}
+.procNew{
+    background-image:url(../images/New.gif)!important;
+}
+.procEdit{
+    background-image:url(../images/edit.gif)!important;
+}
+.procArrowDown{
+    background-image:url(../images/arrowdown.png)!important;
+}
+.procArrowUp{
+    background-image:url(../images/arrowup.png)!important;
+}
+.procDelete{
+    background-image:url(../images/Delete.gif)!important;
+}
+.procOpen{
+    background-image:url(../images/open.png)!important;
+}
+.procView{
+    background-image:url(../images/View.png )!important;
+}
+.procApprove{
+    background-image:url(../images/moderator.png)!important;
+}
+.procThumbsUp{
+    background-image:url(../images/thumbs_up.gif)!important;
+}
+.procThumbsDown{
+    background-image:url(../images/thumbs_down.gif)!important;
+}
+.procErase{
+    background-image:url(../images/erase_16.png)!important;
+}
+.procHome{
+    background-image:url(../images/home.png)!important;
+}
+.procStock{
+    background-image:url(../images/box.png)!important;
+}
+.procUpdate{
+    background-image:url(../images/Update.png)!important;
+}
+.procUpdateSmall{
+    background-image:url(../images/update_small.png)!important;
+}
+.procCancelSmall{
+    background-image:url(../images/cancel_small.png)!important;
+}
+.procGoodsReceipt{
+    background-image:url(../images/document16.png)!important;
+}
+.procReport{    
+    background-image:url(../images/report.gif)!important;
+}
+.procAdmin{
+    background-image:url(../images/admin.png)!important;
+}
+.procPermission{
+    background-image:url(../images/permission.gif)!important;
+}
+.procEmpManagemet{
+    background-image:url(../images/community.png)!important;
+}
+.procVendor{
+    background-image:url(../images/vendor.gif)!important;
+}
+.procWarehouse{
+    background-image:url(../images/building.png)!important;
+}
+.procAddWarehouse{
+    background-image:url(../images/building_add.png)!important;
+}
+.procEditWarehouse{
+    background-image:url(../images/building_edit.png)!important;
+}
+.procDeleteWarehouse{
+    background-image:url(../images/building_delete.png)!important;
+}
+.procAddUser{
+    background-image:url(../images/user_add.gif)!important;
+}
+.procDeleteUser{
+    background-image:url(../images/user_delete.gif)!important;
+}
+.procEditUser{
+    background-image:url(../images/user_edit.png)!important;
+}
+.procAddProd{
+    background-image:url(../images/prod_add.png)!important;
+}
+.procDeleteProd{
+    background-image:url(../images/prod_delete.png)!important;
+}
+.procEditProd{
+    background-image:url(../images/prod_edit.png)!important;
+}
+.procAddVendor{
+    background-image:url(../images/vendor_add.png)!important;
+}
+.procDeleteVendor{
+    background-image:url(../images/vendor_delete.png)!important;
+}
+.procEditVendor{
+    background-image:url(../images/vendor_edit.png)!important;
+}
+.procAddPrice{
+    background-image:url(../images/money_add.png)!important;
+}
+.procDeletePrice{
+    background-image:url(../images/money_delete.png)!important;
+}
+.procEditPrice{
+    background-image:url(../images/money_edit.png)!important;
+}
+.procPrice{
+    background-image:url(../images/money.png)!important;
+}
+.procAutomaticGR{
+    background-image:url(../images/automatic_24.png)!important;
+}
+.procAutomaticGRSmall{
+    background-image:url(../images/automatic_16.png)!important;
+}
+.procManualGR{
+    background-image:url(../images/gr_24.png)!important;
+}
+.procManualGRSmall{
+    background-image:url(../images/gr_16.png)!important;
+}

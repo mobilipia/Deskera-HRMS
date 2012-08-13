@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.DefaultHeader" table="default_header">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="defaultHeader" type="string">
+      <column name="defaultHeader"/>
+    </property>
+    <property name="moduleName" type="string">
+      <column name="moduleName"/>
+    </property>
+    <property name="flag" type="int">
+      <column default="0" name="flag"/>
+    </property>
+    <property name="configid" type="string">
+      <column name=""/>
+    </property>
+    <property name="pojoheadername" type="string">
+      <column name="pojoheadername"/>
+    </property>
+    <property name="recordname" type="string">
+      <column name="recordname"/>
+    </property>
+    <property name="xtype" type="string">
+      <column name="xtype"/>
+    </property>
+    <property name="pojoMethodName" type="string">
+      <column name="pojomethodname"/>
+    </property>
+    <property name="validateType" type="string">
+        <column name="validatetype" />
+    </property>
+    <property name="maxLength" type="int">
+      <column default="0" name="maxlength"/>
+    </property>
+    <property name="mandatory" type="true_false">
+      <column default="false" name="ismandatory"/>
+    </property>
+    <property name="required" type="true_false">
+        <column name="required" default="false"/>
+    </property>
+    <property name="hbmNotNull" type="true_false">
+      <column default="false" name="hbmnotnull"/>
+    </property>
+    <property name="defaultValue" type="string">
+      <column name="defaultvalue"/>
+    </property>
+    <property name="refModule_PojoClassName" type="string">
+      <column name="refmodule_pojoclassname"/>
+    </property>
+    <property name="refDataColumn_HbmName" type="string">
+      <column name="refdatacolumn_hbmname"/>
+    </property>
+    <property name="refFetchColumn_HbmName" type="string">
+      <column name="reffetchcolumn_hbmname"/>
+    </property>
+    <property name="allowImport" type="true_false">
+      <column default="true" name="allowimport"/>
+    </property>
+    <property name="customflag" type="true_false">
+        <column name="customflag" default="false"/>
+    </property>
+    <property name="allowMapping" type="true_false">
+        <column name="allowmapping" default="'T'"/>
+    </property>
+    <property name="dbcolumnname" type="string">
+      <column name="dbcolumnname"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.Modules" column="module" name="Module" not-null="true"/>
+
+    <!--set name="headerinfo" inverse="true" cascade="all,delete-orphan" >
+        <key column="defaultheader" />
+        <one-to-many class="com.krawler.common.admin.ColumnHeader" />
+    </set-->
+
+  </class>
+</hibernate-mapping>

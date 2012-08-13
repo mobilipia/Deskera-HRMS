@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="masterDB.MalaysianUserIncomeTaxInfo" table="malaysian_user_incometax_info">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <many-to-one class="com.krawler.common.admin.User" name="user">
+            <column name="user" not-null="true"/>
+        </many-to-one>
+        <property name="categoryid" type="integer">
+          <column name="categoryid"/>
+        </property>
+        <property name="previousEmployerEarning" type="double">
+          <column name="previousemployerearning" default="0"/>
+        </property>
+        <property name="previousEmployerIncomeTax" type="double">
+          <column name="previousemployerincomeTax" default="0"/>
+        </property>
+        <property name="previousEmployerEPF" type="double">
+          <column name="previousemployerepf" default="0"/>
+        </property>
+        <property name="previousEmployerLIC" type="double">
+          <column name="previousemployerlic" default="0"/>
+        </property>
+        <property name="previousEmployerZakat" type="double">
+          <column name="previousemployerzakat" default="0"/>
+        </property>
+        <property name="previousEmployerOtherDeduction" type="double">
+          <column name="previousemployerotherdeduction" default="0"/>
+        </property>
+        <property name="currentEPF" type="true_false">
+      		<column name="currentepf" default="false"/>
+   		</property>
+        <property name="currentLICAndOther" type="double">
+          <column name="currentlicandother" default="0"/>
+        </property>
+        <property name="currentZakat" type="double">
+          <column name="currentzakat" default="0"/>
+        </property>
+         <property name="currentBenefitInKind" type="double">
+          <column name="currentbenefitinkind" default="0"/>
+        </property>
+        <property name="submittedon" type="timestamp">
+          <column name="submittedon"/>
+        </property>
+        <property name="empStatus" type="integer">
+          <column name="empstatus"/>
+        </property>
+    </class>
+
+</hibernate-mapping>

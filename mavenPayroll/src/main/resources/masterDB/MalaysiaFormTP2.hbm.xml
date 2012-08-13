@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaFormTP2" table="malaysia_form_tp2">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="oldIdentificationNumber" type="string">
+          <column name="oldidentificationnumber"/>
+        </property>
+        <property name="newIdentificationNumber" type="string">
+          <column name="newidentificationnumber"/>
+        </property>
+        <property name="armyOrPoliceNumber" type="string">
+          <column name="armyorpolicenumber"/>
+        </property>
+        <property name="passportNumber" type="string">
+          <column name="passportnumber"/>
+        </property>
+        <property name="incomeTaxLHDNNumber" type="string">
+          <column name="incometaxlhdnnumber"/>
+        </property>
+        <property name="car" type="double">
+          <column name="car" default="0"/>
+        </property>
+        <property name="driver" type="double">
+          <column name="driver" default="0"/>
+        </property>
+        <property name="householdItems" type="double">
+          <column name="householditems" default="0"/>
+        </property>
+        <property name="entertainment" type="double">
+          <column name="entertainment" default="0"/>
+        </property>
+        <property name="gardener" type="double">
+          <column name="gardener" default="0"/>
+        </property>
+        <property name="maid" type="double">
+          <column name="maid" default="0"/>
+        </property>
+        <property name="holidayAllowance" type="double">
+          <column name="holidayallowance" default="0"/>
+        </property>
+        <property name="membership" type="double">
+          <column name="membership" default="0"/>
+        </property>
+        <property name="bik" type="double">
+          <column name="bik" default="0"/>
+        </property>
+        <property name="signature" type="string">
+          <column name="signature"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.Useraccount" fetch="select" name="useraccount">
+          <column name="useraccount" not-null="true"/>
+        </many-to-one>
+        <property name="authorizeStatus" type="integer">
+            <column name="authorizestatus" default="0"/>
+        </property>
+  </class>
+</hibernate-mapping>

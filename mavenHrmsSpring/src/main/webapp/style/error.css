@@ -1,0 +1,109 @@
+@charset "utf-8";
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:#fff;
+}
+a:focus {
+	outline:none;
+}
+p {
+	margin: 0px;
+	padding: 0px;
+}
+#top {
+	margin: auto 0px;
+	padding:0px;
+	height:55px;
+	width:100%;
+	background-image:url(../images/top-bg-error.jpg);
+	background-repeat:repeat-x;
+}
+#logo {
+	background-image: url(../images/deskera-logo.jpg);
+	background-repeat: no-repeat;
+	width:174px;
+	height: 55px;
+	float: left;
+	margin-left:30px;
+}
+.top-wapper {
+	width:970px;
+	margin:auto;
+}
+#menu {	
+	width:364px;
+	float:right;
+}
+#menu ul {
+	margin:0;
+	padding:0;
+	margin-top:18px;
+}
+#menu li {
+	padding:0;
+	display:inline;
+	list-style-type:none;
+	height: 55px;
+	margin:15px;
+}
+#menu a:link, #menu a:visited {
+	color:#0c3569;
+	text-decoration:none;
+}
+#menu a:hover, a:active {
+	color:#A70808;
+	text-decoration:none;
+}
+.pagenotfound {
+	margin: auto;
+	width: 500px;
+	background-color: #fff;
+	padding: 5px;
+}
+.error {
+	font-size: 22px;
+	color: #333333;
+	padding-right: 10px;
+	padding-left: 14px;
+	margin: 0px;
+}
+.content-list {
+	width:94%;
+	padding:5px 10px;
+	margin:10px;
+	float:left;
+	background:#FAFAFA;
+	border:solid 1px #e6e6e6;
+}
+.content-list p {
+	padding:10px 0 10px;
+	font-size:12px;
+	line-height:20px;
+	text-align:left;
+}
+.content-list ul {
+	padding:3px 6px;
+	margin:0px 10px 5px!important;
+	list-style:none;
+	list-style-type:none;
+	float:left;
+}
+.content-list li {
+	padding:0 0 0 15px!important;
+	margin:0;
+	color:#606060;
+	line-height:24px!important;
+}
+.highlight2 {
+	background:#fff;
+	border-bottom:solid 1px #d1d1d1;
+	font-weight:bold;
+	color:#000000;
+	padding:3px;
+}
+.error-hd {
+	color:#0c3569;
+}

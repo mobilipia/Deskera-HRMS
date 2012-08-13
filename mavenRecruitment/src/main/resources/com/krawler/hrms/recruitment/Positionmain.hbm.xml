@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.Positionmain" table="positionmain">
+    <id name="positionid" type="string">
+      <column name="positionid"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="positionname" name="position"/>
+    <property name="details" not-null="true" type="string">
+      <column length="255" name="details"/>
+    </property>
+    <property name="department" not-null="true" type="string">
+      <column length="40" name="department"/>
+    </property>
+    <property name="apprvmangr" not-null="true" type="string">
+      <column length="40" name="apprvmangr"/>
+    </property>
+    <property name="startdate" not-null="true" type="date">
+      <column length="10" name="startdate"/>
+    </property>
+    <property name="enddate" not-null="true" type="date">
+      <column length="10" name="enddate"/>
+    </property>
+    <property name="jobtype" not-null="true" type="string">
+      <column length="20" name="jobtype"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.Company" name="company" lazy="false"/>
+    <property name="delflag" type="int">
+      <column name="delflag"/>
+    </property>
+    <set cascade="all" inverse="true" name="applicantes">
+      <key column="jobid"/>
+      <one-to-many class="com.krawler.hrms.recruitment.Applicants"/>
+    </set>
+    <set cascade="all" inverse="true" name="allapplicationses">
+      <key column="jobposid"/>
+      <one-to-many class="com.krawler.hrms.recruitment.Allapplications"/>
+    </set>
+    <property name="travel" type="string">
+      <column length="20" name="travel"/>
+    </property>
+    <property name="relocation" type="string">
+      <column length="20" name="relocation"/>
+    </property>
+    <property name="location" type="string">
+      <column length="255" name="location"/>
+    </property>
+    <property name="experiencemonth" type="integer">
+      <column name="experiencemonth"/>
+    </property>
+    <property name="experienceyear" type="integer">
+      <column name="experienceyear"/>
+    </property>
+    <property name="jobshift" type="string">
+      <column length="20" name="jobshift"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" name="manager"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="departmentid"/>
+    <property name="jobidwthformat" type="integer">
+      <column name="jobidwthformat"/>
+    </property>
+    <property name="noofpos" type="integer">
+      <column name="noofpositions"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" column="CreatedBy" name="createdBy"/>
+    <property name="positionsfilled" type="integer">
+      <column name="positionsfilled"/>
+    </property>
+    <property name="jobid" not-null="true" type="string">
+      <column length="40" name="jobid"/>
+    </property>
+  </class>
+</hibernate-mapping>

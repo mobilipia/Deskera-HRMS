@@ -1,0 +1,180 @@
+/* 
+    Document   : form
+    Created on : Mar 12, 2009, 4:48:26 PM
+    Author     : krawler
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.desk li {
+width:62%;
+}
+form ul {
+font-size:100%;
+list-style-type:none;
+margin:0;
+padding:0;
+width:100%;
+}
+form li {
+clear:both;
+margin:0;
+padding:4px 5px 2px 9px;
+position:relative;
+}
+form li:after, .buttons:after {
+clear:both;
+content:".";
+display:block;
+height:0;
+visibility:hidden;
+}
+form li, .buttons {
+display:inline-block;
+}
+* html form li, * html .buttons {
+height:1%;
+}
+form li, .buttons {
+display:block;
+}
+* html form li div {
+display:inline-block;
+}
+form li div {
+color:#444444;
+margin:0;
+padding:0;
+}
+form li div span {
+margin:0;
+padding:5px 0 0;
+}
+form li div.left {
+float:left;
+width:100%;
+}
+form li.section {
+border-top:1px dotted #CCCCCC;
+margin-top:9px;
+padding-bottom:0;
+padding-left:9px;
+padding-top:13px;
+width:97% !important;
+}
+form ul li.first {
+border-top:medium none !important;
+margin-top:0 !important;
+padding-top:0 !important;
+}
+form .section h3 {
+font-size:110%;
+font-weight:normal;
+line-height:135%;
+margin:0 0 2px;
+}
+form .section p {
+font-size:85%;
+margin:0 0 10px;
+}
+form li div label, form li span label {
+clear:both;
+color:#333333;
+float:left;
+font-size:11px;
+line-height:9px;
+margin:0;
+padding:10px 5px 3px 0;
+text-align:right;
+width:35%;
+}
+.firefox select.select {
+background-image:url(../images/smalldrop-menu.png);
+background-position:left top;
+background-repeat:no-repeat;
+border-width:0;
+float:left;
+height:27px;
+margin:0;
+padding:8px 0 0 8px;
+width:228px;
+}
+:first-child + html select.select[class] {
+margin:1px 0 0 4px !important;
+}
+.safari select.select {
+font-size:120% !important;
+margin-bottom:1px;
+}
+form li.focused {
+background-color:#FFF7C0;
+}
+form li.focused .instruct, form li:hover .instruct {
+visibility:visible;
+}
+select.select[class] {
+background-color:transparent;
+border-width:0;
+color:#999999;
+float:left;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+height:27px;
+margin:0;
+padding:7px 2px 3px 6px;
+width:auto;
+}
+.validation {
+float:left;
+height:16px;
+padding-top:10px;
+width:16px;
+}
+.valid {
+background:transparent url(../images/check16.gif) no-repeat scroll 0 50%;
+}
+.errorimg {
+background:transparent url(../images/stop12.gif) no-repeat scroll 0 50%;
+}
+.loadingFB {
+background:#FFF6BF url(../images/loading.gif) no-repeat scroll 66px 3px;
+border:1px solid #FFD324;
+color:#514721;
+padding:2px 4px 3px;
+}
+.loadingMB {
+background:#FFF6BF no-repeat scroll 66px 3px;
+border:1px solid #FFD324;
+color:#514721;
+padding:2px 4px 3px;
+}
+.errorFB {
+background-color:#FFDFDF;
+border:1px solid #FFCCDF;
+color:#8A1F11;
+padding:2px 4px 3px;
+}
+#ajaxResult {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:13px;
+}
+.text-field {
+background-image:url(../images/sign-up-field.png);
+border-width:0;
+height:27px;
+padding:5px 8px 0 5px;
+width:214px !important;
+}
+.field {
+height:18px;
+padding:2px 1px 0 3px;
+width:213px !important;
+}
+.cancel-sign-up {
+background-image:url(../images/cancel-sign-up.png);
+}

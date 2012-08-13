@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.Goalrating" table="goalrating">
+    <id column="id" name="id">
+      <generator class="uuid"/>
+    </id>
+    <property name="minvalue" type="string">
+      <column length="50" name="minvalue"/>
+    </property>
+    <property name="maxvalue" type="string">
+      <column length="50" name="maxvalue"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+  </class>
+</hibernate-mapping>

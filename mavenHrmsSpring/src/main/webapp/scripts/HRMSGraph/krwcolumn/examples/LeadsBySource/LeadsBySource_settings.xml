@@ -1,0 +1,30 @@
+<settings>
+  <thousands_separator>,</thousands_separator>
+  <decimals_separator>.</decimals_separator>
+  <redraw>1</redraw>
+  <background>
+    <alpha>100</alpha>
+    <border_alpha>20</border_alpha>
+  </background>
+  <balloon>
+    <show><![CDATA[{title} ({value})  {percents}%  <br>{description}]]></show>
+  </balloon>
+  <legend>
+    <enabled>0</enabled>
+    <align>center</align>
+  </legend>
+  <pie>
+    <y>50%</y>
+    <inner_radius>0</inner_radius>
+     <height>45</height>
+    <angle>9</angle>
+  </pie>
+  <animation>
+    
+    <pull_out_time>0.5</pull_out_time>
+  </animation>
+  <data_labels>
+    <show>{title} ({value})</show>
+    <max_width>140</max_width>
+  </data_labels>
+</settings>

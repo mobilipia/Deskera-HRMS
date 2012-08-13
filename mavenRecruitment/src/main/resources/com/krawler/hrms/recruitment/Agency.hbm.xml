@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.Agency" table="agency">
+    <id column="agencyid" name="agencyid" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property name="agencyname" not-null="true" type="string">
+      <column length="255" name="agencyname"/>
+    </property>
+    <property name="agencyweb" not-null="true" type="string">
+      <column length="255" name="agencyweb"/>
+    </property>
+    <property name="reccost" not-null="true" type="string">
+      <column length="10" name="reccost"/>
+    </property>
+    <property name="conperson" not-null="true" type="string">
+      <column length="100" name="conperson"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" column="apprman" name="apprman" not-null="true"/>
+    <property name="agencyno" not-null="true" type="string">
+      <column length="25" name="agencyno"/>
+    </property>
+    <property name="agencyadd" not-null="true" type="string">
+      <column length="255" name="agencyadd"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+    <property name="delflag" type="int">
+      <column name="delflag"/>
+    </property>
+  </class>
+</hibernate-mapping>

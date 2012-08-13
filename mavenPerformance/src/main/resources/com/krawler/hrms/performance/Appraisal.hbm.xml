@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.Appraisal" table="appraisal">
+    <id name="appid" type="string">
+      <column name="appid"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.hrms.performance.Appraisalmanagement" name="appraisal"/>
+    <many-to-one class="com.krawler.hrms.performance.Managecmpt" name="competency"/>
+    <many-to-one class="com.krawler.hrms.performance.Finalgoalmanagement" name="goal"/>
+    <property name="compemprating" type="double">
+      <column name="compemprating"/>
+    </property>
+    <property name="compmanrating" type="double">
+      <column name="compmanrating"/>
+    </property>
+    <property name="compempgap" type="double">
+      <column name="compempgap"/>
+    </property>
+    <property name="compmangap" type="double">
+      <column name="compmangap"/>
+    </property>
+    <property name="goalemprating" type="double">
+      <column name="goalemprating"/>
+    </property>
+    <property name="goalmanrating" type="double">
+      <column name="goalmanrating"/>
+    </property>
+    <property name="compempcomment" type="text">
+      <column name="compempcomment"/>
+    </property>
+    <property name="compmancomment" type="text">
+      <column name="compmancomment"/>
+    </property>
+    <property name="goalempcomment" type="text">
+      <column name="goalempcomment"/>
+    </property>
+    <property name="goalmancomment" type="text">
+      <column name="goalmancomment"/>
+    </property>
+  </class>
+</hibernate-mapping>

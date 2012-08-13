@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--<class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.hrms.performance.QuestionGroup" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>-->
+  <class name="com.krawler.hrms.performance.QuestionGroup" table="questiongroup">
+    <id name="mid" type="string">
+      <column name="mid"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.hrms.performance.CompetencyQuestion" fetch="select" name="cmptquestion">
+      <column name="quesid" not-null="true"/>
+    </many-to-one>
+    <property name="groupid" type="string">
+      <column name="groupid" not-null="true"/>
+    </property>
+    <property name="groupname" type="string">
+      <column name="groupname"/>
+    </property>
+  </class>
+</hibernate-mapping>

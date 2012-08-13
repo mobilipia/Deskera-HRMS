@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.Componentmaster" table="componentmaster">
+    <id name="compid" type="string">
+      <column length="36" name="compid"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.Company" fetch="select" name="company">
+      <column length="36" name="companyid" not-null="true"/>
+    </many-to-one>
+    <property name="code" type="string">
+      <column length="100" name="code" not-null="true"/>
+    </property>
+    <property name="sdate" type="date">
+      <column length="12" name="sdate"/>
+    </property>
+    <property name="edate" type="date">
+      <column length="12" name="edate"/>
+    </property>
+    <property name="description" type="string">
+      <column length="1024" name="description"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" fetch="select" name="subtype">
+      <column length="36" name="subtype" not-null="true"/>
+    </many-to-one>    
+    <property  name="frequency">
+      <column name="frequency" default="0"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.CostCenter" fetch="select" name="costcenter">
+      <column length="36" name="costcenter" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.krawler.hrms.master.MasterData" fetch="select" name="paymentterm">
+      <column length="36" name="paymentterm"/>
+    </many-to-one>
+    <property name="amount" type="double">
+      <column name="amount"/>
+    </property>
+    <property name="isadjust" type="true_false">
+      <column name="isadjust"/>
+    </property>
+    <property name="isdefault" type="true_false">
+      <column name="isdefault"/>
+    </property>
+    <property name="isblock" type="true_false">
+      <column name="isblock"/>
+    </property>
+    <property name="istaxablecomponent" type="true_false">
+      <column name="istaxablecomponent"  default="false"/>
+    </property>
+    <property name="method" type="integer">
+      <column name="method" not-null="true"/>
+    </property>
+    <many-to-one class="masterDB.Componentmaster" fetch="select" name="computeon">
+      <column length="36" name="computeon"/>
+    </many-to-one>
+    <!--property name="computeon" type="integer">
+      <column length="11" name="computeon"/>
+    </property>
+    <property name="cash" type="double">
+      <column name="cash"/>
+    </property-->
+  </class>
+</hibernate-mapping>

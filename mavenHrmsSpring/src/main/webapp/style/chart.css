@@ -1,0 +1,720 @@
+/* CSS Document */
+.handle {cursor: move;}
+
+#chart_container {padding: 60px 40px 40px 40px;}
+
+div#chart_container div.hover div.blocknode {background: #ffffe7 url("/images/nodebottom_hover.gif")  bottom no-repeat;}
+div#chart_container div.hover div.blocknode div.bottomlink {border: 0;}
+div#chart_container div.hover div.tree div.blocknode {background: transparent;}
+div#chart_container div.hover div.tree div.blocknode div.bottomlink {border-right: 1px solid #cccccc;}
+
+div.zoom_lvl_3 div#chart_container div.sib_hover div.blocknode {background: #ffffe7 url("/images/nodebottom_sib_hover.gif") top no-repeat;}
+div.zoom_lvl_2 div#chart_container div.sib_hover div.blocknode {background: #ffffe7 url("/images/nodebottom_sibz2_hover.gif") top no-repeat;}
+div.zoom_lvl_1  div#chart_container div.sib_hover div.blocknode {background: #ffffe7 url("/images/nodebottom_sibz1_hover.gif") top no-repeat;}
+
+div#chart div#chart_container div.sib_hover div.tree div.blocknode {background: transparent !important;}
+
+/* Creates Lines */
+div.leftlink {width: 50%; float: left; }
+div.rightlink {width: 49.9999%; float: left; margin-left: -1px; }
+div.bottomlink {width: 50%; border-right: 1px solid #cccccc; clear: both; }
+div.no_bottomlink div.bottomlink {border: 0 !important;}
+
+div.blocknode {}
+div.tree {float: left;}
+div.tree div.block1 {}
+
+div.zoom_lvl_3 div.block1{width: 140px;}
+div.zoom_lvl_3 div.block2{width: 280px;}
+div.zoom_lvl_3 div.block3{width: 420px;}
+div.zoom_lvl_3 div.block4{width: 560px;}
+div.zoom_lvl_3 div.block5{width: 700px;}
+div.zoom_lvl_3 div.block6{width: 840px;}
+div.zoom_lvl_3 div.block7{width: 980px;}
+div.zoom_lvl_3 div.block8{width: 1120px;}
+div.zoom_lvl_3 div.block9{width: 1260px;}
+div.zoom_lvl_3 div.block10{width: 1400px;}
+div.zoom_lvl_3 div.block11{width: 1540px;}
+div.zoom_lvl_3 div.block12{width: 1680px;}
+div.zoom_lvl_3 div.block13{width: 1820px;}
+div.zoom_lvl_3 div.block14{width: 1960px;}
+div.zoom_lvl_3 div.block15{width: 2100px;}
+div.zoom_lvl_3 div.block16{width: 2240px;}
+div.zoom_lvl_3 div.block17{width: 2380px;}
+div.zoom_lvl_3 div.block18{width: 2520px;}
+div.zoom_lvl_3 div.block19{width: 2660px;}
+div.zoom_lvl_3 div.block20{width: 2800px;}
+div.zoom_lvl_3 div.block21{width: 2940px;}
+div.zoom_lvl_3 div.block22{width: 3080px;}
+div.zoom_lvl_3 div.block23{width: 3220px;}
+div.zoom_lvl_3 div.block24{width: 3360px;}
+div.zoom_lvl_3 div.block25{width: 3500px;}
+div.zoom_lvl_3 div.block26{width: 3640px;}
+div.zoom_lvl_3 div.block27{width: 3780px;}
+div.zoom_lvl_3 div.block28{width: 3920px;}
+div.zoom_lvl_3 div.block29{width: 4060px;}
+div.zoom_lvl_3 div.block30{width: 4200px;}
+div.zoom_lvl_3 div.block31{width: 4340px;}
+div.zoom_lvl_3 div.block32{width: 4480px;}
+div.zoom_lvl_3 div.block33{width: 4620px;}
+div.zoom_lvl_3 div.block34{width: 4760px;}
+div.zoom_lvl_3 div.block35{width: 4900px;}
+div.zoom_lvl_3 div.block36{width: 5040px;}
+div.zoom_lvl_3 div.block37{width: 5180px;}
+div.zoom_lvl_3 div.block38{width: 5320px;}
+div.zoom_lvl_3 div.block39{width: 5460px;}
+div.zoom_lvl_3 div.block40{width: 5600px;}
+div.zoom_lvl_3 div.block41{width: 5740px;}
+div.zoom_lvl_3 div.block42{width: 5880px;}
+div.zoom_lvl_3 div.block43{width: 6020px;}
+div.zoom_lvl_3 div.block44{width: 6160px;}
+div.zoom_lvl_3 div.block45{width: 6300px;}
+div.zoom_lvl_3 div.block46{width: 6440px;}
+div.zoom_lvl_3 div.block47{width: 6580px;}
+div.zoom_lvl_3 div.block48{width: 6720px;}
+div.zoom_lvl_3 div.block49{width: 6860px;}
+div.zoom_lvl_3 div.block50{width: 7000px;}
+div.zoom_lvl_3 div.block51{width: 7140px;}
+div.zoom_lvl_3 div.block52{width: 7280px;}
+div.zoom_lvl_3 div.block53{width: 7420px;}
+div.zoom_lvl_3 div.block54{width: 7560px;}
+div.zoom_lvl_3 div.block55{width: 7700px;}
+div.zoom_lvl_3 div.block56{width: 7840px;}
+div.zoom_lvl_3 div.block57{width: 7980px;}
+div.zoom_lvl_3 div.block58{width: 8120px;}
+div.zoom_lvl_3 div.block59{width: 8260px;}
+div.zoom_lvl_3 div.block60{width: 8400px;}
+div.zoom_lvl_3 div.block61{width: 8540px;}
+div.zoom_lvl_3 div.block62{width: 8680px;}
+div.zoom_lvl_3 div.block63{width: 8820px;}
+div.zoom_lvl_3 div.block64{width: 8960px;}
+div.zoom_lvl_3 div.block65{width: 9100px;}
+div.zoom_lvl_3 div.block66{width: 9240px;}
+div.zoom_lvl_3 div.block67{width: 9380px;}
+div.zoom_lvl_3 div.block68{width: 9520px;}
+div.zoom_lvl_3 div.block69{width: 9660px;}
+div.zoom_lvl_3 div.block70{width: 9800px;}
+div.zoom_lvl_3 div.block71{width: 9940px;}
+div.zoom_lvl_3 div.block72{width: 10080px;}
+div.zoom_lvl_3 div.block73{width: 10220px;}
+div.zoom_lvl_3 div.block74{width: 10360px;}
+div.zoom_lvl_3 div.block75{width: 10500px;}
+div.zoom_lvl_3 div.block76{width: 10640px;}
+div.zoom_lvl_3 div.block77{width: 10780px;}
+div.zoom_lvl_3 div.block78{width: 10920px;}
+div.zoom_lvl_3 div.block79{width: 11060px;}
+div.zoom_lvl_3 div.block80{width: 11200px;}
+div.zoom_lvl_3 div.block81{width: 11340px;}
+div.zoom_lvl_3 div.block82{width: 11480px;}
+div.zoom_lvl_3 div.block83{width: 11620px;}
+div.zoom_lvl_3 div.block84{width: 11760px;}
+div.zoom_lvl_3 div.block85{width: 11900px;}
+div.zoom_lvl_3 div.block86{width: 12040px;}
+div.zoom_lvl_3 div.block87{width: 12180px;}
+div.zoom_lvl_3 div.block88{width: 12320px;}
+div.zoom_lvl_3 div.block89{width: 12460px;}
+div.zoom_lvl_3 div.block90{width: 12600px;}
+div.zoom_lvl_3 div.block91{width: 12740px;}
+div.zoom_lvl_3 div.block92{width: 12880px;}
+div.zoom_lvl_3 div.block93{width: 13020px;}
+div.zoom_lvl_3 div.block94{width: 13160px;}
+div.zoom_lvl_3 div.block95{width: 13300px;}
+div.zoom_lvl_3 div.block96{width: 13440px;}
+div.zoom_lvl_3 div.block97{width: 13580px;}
+div.zoom_lvl_3 div.block98{width: 13720px;}
+div.zoom_lvl_3 div.block99{width: 13860px;}
+div.zoom_lvl_3 div.block100{width: 14000px;}
+div.zoom_lvl_3 div.block101{width: 14140px;}
+div.zoom_lvl_3 div.block102{width: 14280px;}
+div.zoom_lvl_3 div.block103{width: 14420px;}
+div.zoom_lvl_3 div.block104{width: 14560px;}
+div.zoom_lvl_3 div.block105{width: 14700px;}
+div.zoom_lvl_3 div.block106{width: 14840px;}
+div.zoom_lvl_3 div.block107{width: 14980px;}
+div.zoom_lvl_3 div.block108{width: 15120px;}
+div.zoom_lvl_3 div.block109{width: 15260px;}
+div.zoom_lvl_3 div.block110{width: 15400px;}
+div.zoom_lvl_3 div.block111{width: 15540px;}
+div.zoom_lvl_3 div.block112{width: 15680px;}
+div.zoom_lvl_3 div.block113{width: 15820px;}
+div.zoom_lvl_3 div.block114{width: 15960px;}
+div.zoom_lvl_3 div.block115{width: 16100px;}
+div.zoom_lvl_3 div.block116{width: 16240px;}
+div.zoom_lvl_3 div.block117{width: 16380px;}
+div.zoom_lvl_3 div.block118{width: 16520px;}
+div.zoom_lvl_3 div.block119{width: 16660px;}
+div.zoom_lvl_3 div.block120{width: 16800px;}
+div.zoom_lvl_3 div.block121{width: 16940px;}
+div.zoom_lvl_3 div.block122{width: 17080px;}
+div.zoom_lvl_3 div.block123{width: 17220px;}
+div.zoom_lvl_3 div.block124{width: 17360px;}
+div.zoom_lvl_3 div.block125{width: 17500px;}
+div.zoom_lvl_3 div.block126{width: 17640px;}
+div.zoom_lvl_3 div.block127{width: 17780px;}
+div.zoom_lvl_3 div.block128{width: 17920px;}
+div.zoom_lvl_3 div.block129{width: 18060px;}
+div.zoom_lvl_3 div.block130{width: 18200px;}
+div.zoom_lvl_3 div.block131{width: 18340px;}
+div.zoom_lvl_3 div.block132{width: 18480px;}
+div.zoom_lvl_3 div.block133{width: 18620px;}
+div.zoom_lvl_3 div.block134{width: 18760px;}
+div.zoom_lvl_3 div.block135{width: 18900px;}
+div.zoom_lvl_3 div.block136{width: 19040px;}
+div.zoom_lvl_3 div.block137{width: 19180px;}
+div.zoom_lvl_3 div.block138{width: 19320px;}
+div.zoom_lvl_3 div.block139{width: 19460px;}
+div.zoom_lvl_3 div.block140{width: 19600px;}
+div.zoom_lvl_3 div.block141{width: 19740px;}
+div.zoom_lvl_3 div.block142{width: 19880px;}
+div.zoom_lvl_3 div.block143{width: 20020px;}
+div.zoom_lvl_3 div.block144{width: 20160px;}
+div.zoom_lvl_3 div.block145{width: 20300px;}
+div.zoom_lvl_3 div.block146{width: 20440px;}
+div.zoom_lvl_3 div.block147{width: 20580px;}
+div.zoom_lvl_3 div.block148{width: 20720px;}
+div.zoom_lvl_3 div.block149{width: 20860px;}
+div.zoom_lvl_3 div.block150{width: 21000px;}
+
+div.zoom_lvl_2 div.block1{width: 100px;}
+div.zoom_lvl_2 div.block2{width: 200px;}
+div.zoom_lvl_2 div.block3{width: 300px;}
+div.zoom_lvl_2 div.block4{width: 400px;}
+div.zoom_lvl_2 div.block5{width: 500px;}
+div.zoom_lvl_2 div.block6{width: 600px;}
+div.zoom_lvl_2 div.block7{width: 700px;}
+div.zoom_lvl_2 div.block8{width: 800px;}
+div.zoom_lvl_2 div.block9{width: 900px;}
+div.zoom_lvl_2 div.block10{width: 1000px;}
+div.zoom_lvl_2 div.block11{width: 1100px;}
+div.zoom_lvl_2 div.block12{width: 1200px;}
+div.zoom_lvl_2 div.block13{width: 1300px;}
+div.zoom_lvl_2 div.block14{width: 1400px;}
+div.zoom_lvl_2 div.block15{width: 1500px;}
+div.zoom_lvl_2 div.block16{width: 1600px;}
+div.zoom_lvl_2 div.block17{width: 1700px;}
+div.zoom_lvl_2 div.block18{width: 1800px;}
+div.zoom_lvl_2 div.block19{width: 1900px;}
+div.zoom_lvl_2 div.block20{width: 2000px;}
+div.zoom_lvl_2 div.block21{width: 2100px;}
+div.zoom_lvl_2 div.block22{width: 2200px;}
+div.zoom_lvl_2 div.block23{width: 2300px;}
+div.zoom_lvl_2 div.block24{width: 2400px;}
+div.zoom_lvl_2 div.block25{width: 2500px;}
+div.zoom_lvl_2 div.block26{width: 2600px;}
+div.zoom_lvl_2 div.block27{width: 2700px;}
+div.zoom_lvl_2 div.block28{width: 2800px;}
+div.zoom_lvl_2 div.block29{width: 2900px;}
+div.zoom_lvl_2 div.block30{width: 3000px;}
+div.zoom_lvl_2 div.block31{width: 3100px;}
+div.zoom_lvl_2 div.block32{width: 3200px;}
+div.zoom_lvl_2 div.block33{width: 3300px;}
+div.zoom_lvl_2 div.block34{width: 3400px;}
+div.zoom_lvl_2 div.block35{width: 3500px;}
+div.zoom_lvl_2 div.block36{width: 3600px;}
+div.zoom_lvl_2 div.block37{width: 3700px;}
+div.zoom_lvl_2 div.block38{width: 3800px;}
+div.zoom_lvl_2 div.block39{width: 3900px;}
+div.zoom_lvl_2 div.block40{width: 4000px;}
+div.zoom_lvl_2 div.block41{width: 4100px;}
+div.zoom_lvl_2 div.block42{width: 4200px;}
+div.zoom_lvl_2 div.block43{width: 4300px;}
+div.zoom_lvl_2 div.block44{width: 4400px;}
+div.zoom_lvl_2 div.block45{width: 4500px;}
+div.zoom_lvl_2 div.block46{width: 4600px;}
+div.zoom_lvl_2 div.block47{width: 4700px;}
+div.zoom_lvl_2 div.block48{width: 4800px;}
+div.zoom_lvl_2 div.block49{width: 4900px;}
+div.zoom_lvl_2 div.block50{width: 5000px;}
+div.zoom_lvl_2 div.block51{width: 5100px;}
+div.zoom_lvl_2 div.block52{width: 5200px;}
+div.zoom_lvl_2 div.block53{width: 5300px;}
+div.zoom_lvl_2 div.block54{width: 5400px;}
+div.zoom_lvl_2 div.block55{width: 5500px;}
+div.zoom_lvl_2 div.block56{width: 5600px;}
+div.zoom_lvl_2 div.block57{width: 5700px;}
+div.zoom_lvl_2 div.block58{width: 5800px;}
+div.zoom_lvl_2 div.block59{width: 5900px;}
+div.zoom_lvl_2 div.block60{width: 6000px;}
+div.zoom_lvl_2 div.block61{width: 6100px;}
+div.zoom_lvl_2 div.block62{width: 6200px;}
+div.zoom_lvl_2 div.block63{width: 6300px;}
+div.zoom_lvl_2 div.block64{width: 6400px;}
+div.zoom_lvl_2 div.block65{width: 6500px;}
+div.zoom_lvl_2 div.block66{width: 6600px;}
+div.zoom_lvl_2 div.block67{width: 6700px;}
+div.zoom_lvl_2 div.block68{width: 6800px;}
+div.zoom_lvl_2 div.block69{width: 6900px;}
+div.zoom_lvl_2 div.block70{width: 7000px;}
+div.zoom_lvl_2 div.block71{width: 7100px;}
+div.zoom_lvl_2 div.block72{width: 7200px;}
+div.zoom_lvl_2 div.block73{width: 7300px;}
+div.zoom_lvl_2 div.block74{width: 7400px;}
+div.zoom_lvl_2 div.block75{width: 7500px;}
+div.zoom_lvl_2 div.block76{width: 7600px;}
+div.zoom_lvl_2 div.block77{width: 7700px;}
+div.zoom_lvl_2 div.block78{width: 7800px;}
+div.zoom_lvl_2 div.block79{width: 7900px;}
+div.zoom_lvl_2 div.block80{width: 8000px;}
+div.zoom_lvl_2 div.block81{width: 8100px;}
+div.zoom_lvl_2 div.block82{width: 8200px;}
+div.zoom_lvl_2 div.block83{width: 8300px;}
+div.zoom_lvl_2 div.block84{width: 8400px;}
+div.zoom_lvl_2 div.block85{width: 8500px;}
+div.zoom_lvl_2 div.block86{width: 8600px;}
+div.zoom_lvl_2 div.block87{width: 8700px;}
+div.zoom_lvl_2 div.block88{width: 8800px;}
+div.zoom_lvl_2 div.block89{width: 8900px;}
+div.zoom_lvl_2 div.block90{width: 9000px;}
+div.zoom_lvl_2 div.block91{width: 9100px;}
+div.zoom_lvl_2 div.block92{width: 9200px;}
+div.zoom_lvl_2 div.block93{width: 9300px;}
+div.zoom_lvl_2 div.block94{width: 9400px;}
+div.zoom_lvl_2 div.block95{width: 9500px;}
+div.zoom_lvl_2 div.block96{width: 9600px;}
+div.zoom_lvl_2 div.block97{width: 9700px;}
+div.zoom_lvl_2 div.block98{width: 9800px;}
+div.zoom_lvl_2 div.block99{width: 9900px;}
+div.zoom_lvl_2 div.block100{width: 10000px;}
+div.zoom_lvl_2 div.block101{width: 10100px;}
+div.zoom_lvl_2 div.block102{width: 10200px;}
+div.zoom_lvl_2 div.block103{width: 10300px;}
+div.zoom_lvl_2 div.block104{width: 10400px;}
+div.zoom_lvl_2 div.block105{width: 10500px;}
+div.zoom_lvl_2 div.block106{width: 10600px;}
+div.zoom_lvl_2 div.block107{width: 10700px;}
+div.zoom_lvl_2 div.block108{width: 10800px;}
+div.zoom_lvl_2 div.block109{width: 10900px;}
+div.zoom_lvl_2 div.block110{width: 11000px;}
+div.zoom_lvl_2 div.block111{width: 11100px;}
+div.zoom_lvl_2 div.block112{width: 11200px;}
+div.zoom_lvl_2 div.block113{width: 11300px;}
+div.zoom_lvl_2 div.block114{width: 11400px;}
+div.zoom_lvl_2 div.block115{width: 11500px;}
+div.zoom_lvl_2 div.block116{width: 11600px;}
+div.zoom_lvl_2 div.block117{width: 11700px;}
+div.zoom_lvl_2 div.block118{width: 11800px;}
+div.zoom_lvl_2 div.block119{width: 11900px;}
+div.zoom_lvl_2 div.block120{width: 12000px;}
+div.zoom_lvl_2 div.block121{width: 12100px;}
+div.zoom_lvl_2 div.block122{width: 12200px;}
+div.zoom_lvl_2 div.block123{width: 12300px;}
+div.zoom_lvl_2 div.block124{width: 12400px;}
+div.zoom_lvl_2 div.block125{width: 12500px;}
+div.zoom_lvl_2 div.block126{width: 12600px;}
+div.zoom_lvl_2 div.block127{width: 12700px;}
+div.zoom_lvl_2 div.block128{width: 12800px;}
+div.zoom_lvl_2 div.block129{width: 12900px;}
+div.zoom_lvl_2 div.block130{width: 13000px;}
+div.zoom_lvl_2 div.block131{width: 13100px;}
+div.zoom_lvl_2 div.block132{width: 13200px;}
+div.zoom_lvl_2 div.block133{width: 13300px;}
+div.zoom_lvl_2 div.block134{width: 13400px;}
+div.zoom_lvl_2 div.block135{width: 13500px;}
+div.zoom_lvl_2 div.block136{width: 13600px;}
+div.zoom_lvl_2 div.block137{width: 13700px;}
+div.zoom_lvl_2 div.block138{width: 13800px;}
+div.zoom_lvl_2 div.block139{width: 13900px;}
+div.zoom_lvl_2 div.block140{width: 14000px;}
+div.zoom_lvl_2 div.block141{width: 14100px;}
+div.zoom_lvl_2 div.block142{width: 14200px;}
+div.zoom_lvl_2 div.block143{width: 14300px;}
+div.zoom_lvl_2 div.block144{width: 14400px;}
+div.zoom_lvl_2 div.block145{width: 14500px;}
+div.zoom_lvl_2 div.block146{width: 14600px;}
+div.zoom_lvl_2 div.block147{width: 14700px;}
+div.zoom_lvl_2 div.block148{width: 14800px;}
+div.zoom_lvl_2 div.block149{width: 14900px;}
+div.zoom_lvl_2 div.block150{width: 15000px;}
+
+div.zoom_lvl_1 div.block1{width: 70px;}
+div.zoom_lvl_1 div.block2{width: 140px;}
+div.zoom_lvl_1 div.block3{width: 210px;}
+div.zoom_lvl_1 div.block4{width: 280px;}
+div.zoom_lvl_1 div.block5{width: 350px;}
+div.zoom_lvl_1 div.block6{width: 420px;}
+div.zoom_lvl_1 div.block7{width: 490px;}
+div.zoom_lvl_1 div.block8{width: 560px;}
+div.zoom_lvl_1 div.block9{width: 630px;}
+div.zoom_lvl_1 div.block10{width: 700px;}
+div.zoom_lvl_1 div.block11{width: 770px;}
+div.zoom_lvl_1 div.block12{width: 840px;}
+div.zoom_lvl_1 div.block13{width: 910px;}
+div.zoom_lvl_1 div.block14{width: 980px;}
+div.zoom_lvl_1 div.block15{width: 1050px;}
+div.zoom_lvl_1 div.block16{width: 1120px;}
+div.zoom_lvl_1 div.block17{width: 1190px;}
+div.zoom_lvl_1 div.block18{width: 1260px;}
+div.zoom_lvl_1 div.block19{width: 1330px;}
+div.zoom_lvl_1 div.block20{width: 1400px;}
+div.zoom_lvl_1 div.block21{width: 1470px;}
+div.zoom_lvl_1 div.block22{width: 1540px;}
+div.zoom_lvl_1 div.block23{width: 1610px;}
+div.zoom_lvl_1 div.block24{width: 1680px;}
+div.zoom_lvl_1 div.block25{width: 1750px;}
+div.zoom_lvl_1 div.block26{width: 1820px;}
+div.zoom_lvl_1 div.block27{width: 1890px;}
+div.zoom_lvl_1 div.block28{width: 1960px;}
+div.zoom_lvl_1 div.block29{width: 2030px;}
+div.zoom_lvl_1 div.block30{width: 2100px;}
+div.zoom_lvl_1 div.block31{width: 2170px;}
+div.zoom_lvl_1 div.block32{width: 2240px;}
+div.zoom_lvl_1 div.block33{width: 2310px;}
+div.zoom_lvl_1 div.block34{width: 2380px;}
+div.zoom_lvl_1 div.block35{width: 2450px;}
+div.zoom_lvl_1 div.block36{width: 2520px;}
+div.zoom_lvl_1 div.block37{width: 2590px;}
+div.zoom_lvl_1 div.block38{width: 2660px;}
+div.zoom_lvl_1 div.block39{width: 2730px;}
+div.zoom_lvl_1 div.block40{width: 2800px;}
+div.zoom_lvl_1 div.block41{width: 2870px;}
+div.zoom_lvl_1 div.block42{width: 2940px;}
+div.zoom_lvl_1 div.block43{width: 3010px;}
+div.zoom_lvl_1 div.block44{width: 3080px;}
+div.zoom_lvl_1 div.block45{width: 3150px;}
+div.zoom_lvl_1 div.block46{width: 3220px;}
+div.zoom_lvl_1 div.block47{width: 3290px;}
+div.zoom_lvl_1 div.block48{width: 3360px;}
+div.zoom_lvl_1 div.block49{width: 3430px;}
+div.zoom_lvl_1 div.block50{width: 3500px;}
+div.zoom_lvl_1 div.block51{width: 3570px;}
+div.zoom_lvl_1 div.block52{width: 3640px;}
+div.zoom_lvl_1 div.block53{width: 3710px;}
+div.zoom_lvl_1 div.block54{width: 3780px;}
+div.zoom_lvl_1 div.block55{width: 3850px;}
+div.zoom_lvl_1 div.block56{width: 3920px;}
+div.zoom_lvl_1 div.block57{width: 3990px;}
+div.zoom_lvl_1 div.block58{width: 4060px;}
+div.zoom_lvl_1 div.block59{width: 4130px;}
+div.zoom_lvl_1 div.block60{width: 4200px;}
+div.zoom_lvl_1 div.block61{width: 4270px;}
+div.zoom_lvl_1 div.block62{width: 4340px;}
+div.zoom_lvl_1 div.block63{width: 4410px;}
+div.zoom_lvl_1 div.block64{width: 4480px;}
+div.zoom_lvl_1 div.block65{width: 4550px;}
+div.zoom_lvl_1 div.block66{width: 4620px;}
+div.zoom_lvl_1 div.block67{width: 4690px;}
+div.zoom_lvl_1 div.block68{width: 4760px;}
+div.zoom_lvl_1 div.block69{width: 4830px;}
+div.zoom_lvl_1 div.block70{width: 4900px;}
+div.zoom_lvl_1 div.block71{width: 4970px;}
+div.zoom_lvl_1 div.block72{width: 5040px;}
+div.zoom_lvl_1 div.block73{width: 5110px;}
+div.zoom_lvl_1 div.block74{width: 5180px;}
+div.zoom_lvl_1 div.block75{width: 5250px;}
+div.zoom_lvl_1 div.block76{width: 5320px;}
+div.zoom_lvl_1 div.block77{width: 5390px;}
+div.zoom_lvl_1 div.block78{width: 5460px;}
+div.zoom_lvl_1 div.block79{width: 5530px;}
+div.zoom_lvl_1 div.block80{width: 5600px;}
+div.zoom_lvl_1 div.block81{width: 5670px;}
+div.zoom_lvl_1 div.block82{width: 5740px;}
+div.zoom_lvl_1 div.block83{width: 5810px;}
+div.zoom_lvl_1 div.block84{width: 5880px;}
+div.zoom_lvl_1 div.block85{width: 5950px;}
+div.zoom_lvl_1 div.block86{width: 6020px;}
+div.zoom_lvl_1 div.block87{width: 6090px;}
+div.zoom_lvl_1 div.block88{width: 6160px;}
+div.zoom_lvl_1 div.block89{width: 6230px;}
+div.zoom_lvl_1 div.block90{width: 6300px;}
+div.zoom_lvl_1 div.block91{width: 6370px;}
+div.zoom_lvl_1 div.block92{width: 6440px;}
+div.zoom_lvl_1 div.block93{width: 6510px;}
+div.zoom_lvl_1 div.block94{width: 6580px;}
+div.zoom_lvl_1 div.block95{width: 6650px;}
+div.zoom_lvl_1 div.block96{width: 6720px;}
+div.zoom_lvl_1 div.block97{width: 6790px;}
+div.zoom_lvl_1 div.block98{width: 6860px;}
+div.zoom_lvl_1 div.block99{width: 6930px;}
+div.zoom_lvl_1 div.block100{width: 7000px;}
+div.zoom_lvl_1 div.block101{width: 7070px;}
+div.zoom_lvl_1 div.block102{width: 7140px;}
+div.zoom_lvl_1 div.block103{width: 7210px;}
+div.zoom_lvl_1 div.block104{width: 7280px;}
+div.zoom_lvl_1 div.block105{width: 7350px;}
+div.zoom_lvl_1 div.block106{width: 7420px;}
+div.zoom_lvl_1 div.block107{width: 7490px;}
+div.zoom_lvl_1 div.block108{width: 7560px;}
+div.zoom_lvl_1 div.block109{width: 7630px;}
+div.zoom_lvl_1 div.block110{width: 7700px;}
+div.zoom_lvl_1 div.block111{width: 7770px;}
+div.zoom_lvl_1 div.block112{width: 7840px;}
+div.zoom_lvl_1 div.block113{width: 7910px;}
+div.zoom_lvl_1 div.block114{width: 7980px;}
+div.zoom_lvl_1 div.block115{width: 8050px;}
+div.zoom_lvl_1 div.block116{width: 8120px;}
+div.zoom_lvl_1 div.block117{width: 8190px;}
+div.zoom_lvl_1 div.block118{width: 8260px;}
+div.zoom_lvl_1 div.block119{width: 8330px;}
+div.zoom_lvl_1 div.block120{width: 8400px;}
+div.zoom_lvl_1 div.block121{width: 8470px;}
+div.zoom_lvl_1 div.block122{width: 8540px;}
+div.zoom_lvl_1 div.block123{width: 8610px;}
+div.zoom_lvl_1 div.block124{width: 8680px;}
+div.zoom_lvl_1 div.block125{width: 8750px;}
+div.zoom_lvl_1 div.block126{width: 8820px;}
+div.zoom_lvl_1 div.block127{width: 8890px;}
+div.zoom_lvl_1 div.block128{width: 8960px;}
+div.zoom_lvl_1 div.block129{width: 9030px;}
+div.zoom_lvl_1 div.block130{width: 9100px;}
+div.zoom_lvl_1 div.block131{width: 9170px;}
+div.zoom_lvl_1 div.block132{width: 9240px;}
+div.zoom_lvl_1 div.block133{width: 9310px;}
+div.zoom_lvl_1 div.block134{width: 9380px;}
+div.zoom_lvl_1 div.block135{width: 9450px;}
+div.zoom_lvl_1 div.block136{width: 9520px;}
+div.zoom_lvl_1 div.block137{width: 9590px;}
+div.zoom_lvl_1 div.block138{width: 9660px;}
+div.zoom_lvl_1 div.block139{width: 9730px;}
+div.zoom_lvl_1 div.block140{width: 9800px;}
+div.zoom_lvl_1 div.block141{width: 9870px;}
+div.zoom_lvl_1 div.block142{width: 9940px;}
+div.zoom_lvl_1 div.block143{width: 10010px;}
+div.zoom_lvl_1 div.block144{width: 10080px;}
+div.zoom_lvl_1 div.block145{width: 10150px;}
+div.zoom_lvl_1 div.block146{width: 10220px;}
+div.zoom_lvl_1 div.block147{width: 10290px;}
+div.zoom_lvl_1 div.block148{width: 10360px;}
+div.zoom_lvl_1 div.block149{width: 10430px;}
+div.zoom_lvl_1 div.block150{width: 10500px;}
+
+
+
+/* Makes space smaller on zoom out */
+div.zoom_lvl_2 div.leftlink, div.zoom_lvl_2 div.rightlink, div.zoom_lvl_2 div.bottomlink {font-size: 10px;}
+div.zoom_lvl_1 div.leftlink, div.zoom_lvl_1 div.rightlink, div.zoom_lvl_1 div.bottomlink {font-size: 8px;}
+
+/*
+div.tree:hover a.reorder_row {visibility: visible;}
+a.reorder_row {visibility: hidden; margin-right: 70px; position: relative; float: right; font-size: 10px; filter:alpha(opacity=30);-moz-opacity: .3;opacity: .3; margin-top: -15px;}
+a.reorder_row:hover {filter:alpha(opacity=100);-moz-opacity: 1;opacity: 1;}
+*/
+
+/*
+div.tree:hover {background: #ffffcd url("../images/tree_bg.gif") top repeat-x;}
+*/
+
+div.zoom_lvl_3 div.blocknode {min-width: 120px;}
+div.zoom_lvl_2 div.blocknode {min-width: 80px; }
+div.zoom_lvl_1 div.blocknode {min-width: 57px; }
+
+/*div.block {padding: 0; clear: both; margin-right: auto; margin-left: auto;}
+*/
+div.sib_right div.leftlink{border-top: 1px solid #cccccc; border-right: 1px solid #cccccc; }
+
+div.sib_middle div.rightlink {border-top: 1px solid #cccccc; }
+div.sib_middle div.leftlink {border-right: 1px solid #cccccc; border-top: 1px solid #cccccc;}
+
+div.child div.leftlink {border-right: 1px solid #cccccc;}
+div.sib_left div.rightlink {border-top: 1px solid #cccccc; border-left: 1px solid #cccccc;}
+
+/* Edit and Trash Icons*/
+/*
+div.tree div.block a.edit_icon, div#head_block a.edit_icon{position: absolute; margin-left: 35px; margin-top: 3px; visibility: hidden; width: 20px; height: 15px; text-decoration: none; float: left; display: block; background: transparent url('/images/edit_icon.gif') no-repeat;}
+div.tree div.block a.edit_icon span, div#head_block a.edit_icon span {visibility: hidden;}
+div.tree div.block:hover a.edit_icon, div#head_block:hover a.edit_icon {visibility: visible;}
+div.tree div.block a.hover a.edit_icon, div#head_block:hover a.hover a.edit_icon{visibility: visible;}
+div.tree div.block a.edit_icon:hover, div#head_block a.edit_icon:hover{background: transparent url('/images/edit_icon_hover.gif') no-repeat;}
+
+div.tree div.block a.details_icon, div#head_block a.details_icon{position: absolute; margin-left: -1px; margin-top: 3px; visibility: hidden; width: 20px; height: 15px; text-decoration: none; float: left; display: block; background: transparent url('/images/details_icon.gif') no-repeat;}
+div.tree div.block a.details_icon span, div#head_block a.details_icon span {visibility: hidden;}
+div.tree div.block:hover a.details_icon, div#head_block:hover a.details_icon {visibility: visible;}
+div.tree div.block a.hover adetails_icon, div#head_block:hover a.hover a.details_icon{visibility: visible;}
+div.tree div.block a.details_icon:hover, div#head_block a.details_icon:hover{background: transparent url('/images/details_icon_hover.gif') no-repeat;}
+
+div#shell_0 div.block a.edit_icon {background: transparent url('/images/edit_gray.gif') no-repeat;}
+div#shell_0 div.block a.edit_icon:hover {background: transparent url('/images/edit_gray_hover.gif') no-repeat;}
+div#shell_0 div.block a.unmap, div#shell_0 div.block a.edit_icon, div#shell_0 div.block a.unmap, div#shell_0 div.block a.details_icon{display: none;}
+div#shell_0 div.bottomlink {border: 0;}
+*/
+
+/*
+#block_0 a.unmap, div.block_0 div.leftlink, div.head div.rightlink {display: none;}
+div.tree div.block:hover a.unmap {margin-top: 3px;  visibility: visible;}
+div.tree div.block a.hover a.unmap {visibility: visible;}
+div.tree div.block a.unmap {margin-left: 70px; position: absolute; visibility: hidden; text-decoration: none; height:16px; width: 30px; background: transparent url('/images/unmap.gif') no-repeat;}
+div.tree div.block a.unmap:hover{background: transparent url('/images/unmap_hover.gif') no-repeat;}
+div.tree a.unmap span {visibility: hidden;}
+*/
+/* Blocks in Chart*/
+div.zoom_lvl_3 div#chart_container div.block {min-height: 75px; font-family:"Trebuchet MS", sans-serif; text-align: left;  padding: 0; width: 120px; overflow: hidden;}
+div.zoom_lvl_3 div#chart_container div.blocktop a {font-size: 12px; padding: 0; margin: 0;}
+div.zoom_lvl_3 div#chart_container div.block div.blockbottom span {display: block; font-size: 10px; padding: 0; margin: 0; }
+div.zoom_lvl_3 div#chart_container div.blocktop {font-size: 12px; background: transparent url("/images/nodetop.png") left top no-repeat; padding: 10px 12px 4px 10px; width: 98px; margin: 0; display: block; }
+div.zoom_lvl_3 div#chart_container div.blockbottom {padding: 4px 12px 25px 10px; width: 98px;  margin: 0; background: transparent url("/images/nodebottom.png") left bottom no-repeat;}
+
+div.zoom_lvl_2 div#chart_container div.block {min-height: 70px; font-family:"Trebuchet MS", sans-serif; text-align: left; background: transparent url("/images/nodebottom_z2.gif") left bottom no-repeat;; padding: 0; width: 80px !important; overflow: hidden;  }
+div.zoom_lvl_2 div#chart_container div.blocktop a {font-size: 10px; display: inline; padding: 0; margin: 0; width: auto; height: auto; line-height: 140%}
+div.zoom_lvl_2 div#chart_container div.block div.blockbottom span {font-size: 10px; padding: 0; margin: 0; line-height: 120%;}
+div.zoom_lvl_2 div#chart_container div.blocktop {font-size: 10px; overflow: hidden; background: transparent url("/images/nodetop_z2.gif") left top no-repeat; padding: 10px 10px 20px 8px; width: 62px;}
+div.zoom_lvl_2 div#chart_container div.blockbottom {background: transparent; padding: 4px 12px 25px 10px; width: auto; display: none;}
+
+div.zoom_lvl_1 div#chart_container div.block {height: 51px !important; font-family:"Trebuchet MS", sans-serif; text-align: left; background: transparent url("/images/block_z1.gif") left top no-repeat;; padding: 0; width: 57px !important; overflow: hidden;  }
+div.zoom_lvl_1 div#chart_container div.blocktop a {font-size: 10px; display: block; padding: 0; width: 35px; overflow: hidden; margin: 0; line-height: 12px; width: auto; height: auto;  white-space: nowrap;}
+div.zoom_lvl_1 div#chart_container div.block div.blockbottom span {display: none; font-size: 10px; padding: 0; margin: 0; line-height: 120%;}
+div.zoom_lvl_1 div#chart_container div.blocktop {font-size: 10px; background: transparent; padding: 10px 0px 4px 8px; overflow: hidden !important; width: 40px;}
+div.zoom_lvl_1 div#chart_container div.blockbottom {display: none;}
+
+/*
+div.zoom_lvl_3 div#chart_container div#shell_0 div.blockbottom {background: transparent url("../images/blockbottom_gray.png") left bottom no-repeat;}
+div.zoom_lvl_3 div#chart_container div#shell_0 div.blocktop {background: transparent url("../images/nodetop_gray.png") left top no-repeat;}
+
+div.zoom_lvl_2 div#chart_container div#shell_0 div.block {background: transparent url("../images/blockbottom_z2_gray.gif") left bottom no-repeat;}
+div.zoom_lvl_2 div#chart_container div#shell_0 div.blocktop {background: transparent url("../images/nodetop_z2_gray.gif") left top no-repeat;}
+
+div.zoom_lvl_1 div#chart_container div#shell_0 div.block {background: transparent url("../images/block_z1_gray.gif") left bottom no-repeat;}
+*/
+#tree_0 {min-width: 400px;}
+
+
+div#chart div#main div#chart_container div#shell_0 {text-align: center; padding-bottom: 0px; }
+div#chart div#main div#chart_container div#shell_0 div.leftlink, #chart div#chart_container div#shell_0 div.rightlink,  #chart div#chart_container div#shell_0 div.bottomlink {display: none;}
+div#chart div#main div#chart_container div#shell_0 div.block {height: auto !important; text-align: center; float: none; width: 100% !important; padding: 0 0 0px 0px !important; margin: 0 auto 0 auto; background: transparent; min-height: 0;}
+div#chart div#main div#chart_container div#shell_0 div.block div.blockbottom {height: auto; margin: 0 auto 0 auto; padding: 0; display: block !important; visibility: visible;  width: auto !important;  background: transparent;}
+div#chart div#main div#chart_container div#shell_0 div.block div.blockbottom span {visibility: visible; color: #000000; font-size: 12px; display: block !important;}
+div#chart div#main div#chart_container div#shell_0 div.block div.blocktop span {display: inline; background: transparent url(/images/chart_icon.gif) 0 3px no-repeat; padding-left: 28px;  white-space: normal !important; visibility: visible;   color: #db7714;}
+div#chart div#main div#chart_container div#shell_0 div.block div.blocktop  {height: auto !important; text-align: center; width: auto; background: transparent url(/images/chart_icon.gif) top left no-repeat; margin: 0 auto 0 auto; padding: 0 0 0px 0px !important; background: transparent;}
+div#chart div#main div#chart_container div#shell_0 a.edit_icon {display: none;}
+
+div.zoom_lvl_3 div#chart_container div#shell_0 div.block div.blocktop span {font-size: 20px;}
+div.zoom_lvl_2 div#chart_container div#shell_0 div.block div.blocktop span {font-size: 18px;}
+div.zoom_lvl_1 div#chart_container div#shell_0 div.block div.blocktop span {font-size: 15px;}
+/* Unmapped Blocks*/
+#unused div.block { position: static !important; white-space: normal; height: auto; height: 64px; padding: 5px 0px 10px 0px; width: 104px; overflow: hidden;  clear: none; float: none; display: block; background: transparent url("/images/unused_block.png") left top no-repeat; margin: 0 0px 0 0;  }
+#unused div.blockbottom span {color: #000000 !important;  margin-bottom: 8px; height: 23px; overflow: hidden; text-align: center; padding-top: 0px; display: block; color: #ffffff; font-size: 10px;}
+#unused div.blocktop a{margin: 0; display: inline; text-decoration: underline; color: #ffffff; font-size: 10px;}
+#unused div.blocktop {color: #ffffff; font-size: 10px; height: 20px; overflow: hidden; margin: 0; font-size: 10px; width: auto; text-align: center; padding: 10px 10px 5px 10px;}
+#unused div.blockbottom {color: #000000 !important; padding-top: 2px; text-align: center; padding-left: 10px; padding-right: 10px;}
+
+/* Hides Lines*/
+
+#unused div.tree {background: transparent; margin: 0 10px 0 0 !important; padding: 0 !important; width: auto !important; white-space: normal !important; float: left;}
+#unused div.blocknode {min-width: 0; background: transparent; padding: 0; margin: 0; width: auto; white-space: normal;}
+#unused div.rightlink, div#unused div.leftlink, #unused div.bottomlink {display: none;}
+
+/* Changes Edit and Trash when unmapped*/
+/*
+#unused div.block a.unmap{position: static; float: right; margin: -11px 0 0 0px; overflow: hidden; visibility: visible; width: 11px; height: 12px; background: transparent url('/images/delete_block.gif') no-repeat;}
+#unused div.block a.unmap:hover{background: transparent url('/images/delete_block_hover.gif') no-repeat;}
+#unused div.block a.unmap span, #unused div.block a.edit_icon span{visibility: hidden;}
+
+#unused div.block a.edit_icon{position: static; float: left; margin: -10px 0 0 20px; visibility: visible; overflow: hidden; height: 13px; width: 16px; background-image: url("/images/edit_icon_gray.gif");}
+#unused div.block a.edit_icon:hover{background: transparent url('/images/edit_icon_gray_h.gif') no-repeat;}
+
+#unused div.block a.details_icon{position: static; float: left; margin: -10px 0 0 -3px; visibility: visible; overflow: hidden; height: 13px; width: 16px; background-image: url("/images/details_icon_gray.gif");}
+#unused div.block a.details_icon:hover{background: transparent url('/images/details_icon_gray_h.gif') no-repeat;}
+*/
+div.save_buttons {position: absolute; padding: 25px 40px; width: 250px; }
+
+/* Scrolling -- this was taken out
+#scroll_down {display: block; height: 15px;  margin: 0 auto 0px auto; padding: 3px 0 3px 0;}
+#scroll_up {position: absolute; margin-top: 3px; display: block; height: 15px; width: 100%;  margin: 0px auto 0 auto; padding:3px 0 3px 0;}
+#scroll_left {position: absolute;  display: block; width: 15px;  left: 0px; margin-bottom: auto; height: 100px; padding:0px 2px 0px 2px;}
+#scroll_right {position: absolute;  float: right;  width: 15px;  right: 0px; margin-bottom: auto; height: 100px; padding:0px 2px 0px 2px;}
+
+a.chart_scroll {text-decoration: none; z-index: 1; filter:alpha(opacity=40); -moz-opacity: .4;opacity: .4; vertical-align: middle;}
+a.chart_scroll:hover {filter:alpha(opacity=80); -moz-opacity: .8;opacity: .8; background: #ffffe5;}
+a.chart_scroll span {margin: 0px auto 0px auto; display: block; width: 22px; height: 12px; overflow: hidden; }
+#scroll_left span, #scroll_right span {width: 12px; height: 22px; position: relative; top: 40%;}
+#scroll_up span{background: transparent url("../images/chart_scroll_top.gif") no-repeat; }
+#scroll_down span{background: transparent url("../images/chart_scroll_bottom.gif") no-repeat;}
+#scroll_left span{background: transparent url("../images/chart_scroll_left.gif") no-repeat; }
+#scroll_right span{background: transparent url("../images/chart_scroll_right.gif") no-repeat; }
+
+a.chart_scroll span span {visibility: hidden; width: auto; height: auto; display: inline; margin: 0; }
+*/
+
+/* Unmapped People*/
+span#unmapped_num {color: #FFFFFF; font-size: 11px; font-weight: bold; padding-right: 15px; }
+div#unmapped_people {background: #e7eaea; padding: 5px 0px 0px 0px; width: 100%; overflow: hidden;}
+div.unmapped_toggle {margin-left: 0px;padding-left: 18px; height: 23px; float: left; width: 245px; background: transparent url("/images/unmapped_tab.gif") 18px 0  no-repeat; overflow: hidden;}
+div#unmapped_people h4.unmapped {margin-left: 0px; padding-left: 10px;}
+div#unmapped_people h4.unmapped a{width: 100%; display: block; font-size: 14px;}
+div.unmapped_open h4.unmapped {background: transparent url("/images/unmapped_people_open.gif") 10px 5px no-repeat; }
+div.unmapped_closed h4.unmapped {background: transparent url("/images/unmapped_people_closed.gif") 10px 5px no-repeat;}
+div#unmapped_people a.add_person {color: #FFFFFF; padding-left: 20px; font-size: 11px;}
+div#unmapped_people a.add_person:hover {color: #db7714; text-decoration: underline; font-size: 11px;}
+div.tools {height: 23px; overflow: hidden;}
+
+fieldset.zoom, fieldset.drag, fieldset.find_person {height: 23px; float: left; background: transparent url("/images/tools_divider.gif") right no-repeat;}
+
+fieldset.find_person select{width: 138px;}
+
+div#unmapped_people h4 {height: 17px; width: 125px; display: block; float: left; font-weight: normal; background-repeat: no-repeat; margin: 0 0 0 0px; padding: 0;}
+div#unmapped_people h4 span {visibility: hidden; text-align: left; margin: 0; padding: 0;}
+div#unmapped_people a{font-size: 75%; text-decoration: none;}
+a.zoom_1, a.zoom_2, a.zoom_3 {margin-top: 3px; width: 15px; height: 15px; display:block; float: left; margin-right: 1px;}
+a.zoom_1 span, a.zoom_2 span, a.zoom_3 span{visibility: hidden;}
+
+/* taken out on redesign
+div#unmapped_people h4.drag_parent, div#unmapped_people h4.drag_sib{width: 135px; display: block; padding: 0px 0 3px 0;}
+div#unmapped_people h4.drag_parent a, div#unmapped_people h4.drag_sib a{width: 135px; display: block; padding: 0px 0 0px 0;}
+div#unmapped_people h4.drag_parent a{ height: 20px; width: 150px; background: transparent url("../images/drag_parent.gif") 0 1px no-repeat;}
+div#unmapped_people h4.drag_parent a:hover {background: transparent url("../images/drag_parent_hover.gif") 0 1px no-repeat;}
+div#unmapped_people h4.drag_sib a{height: 20px;  width: 150px; background: transparent url("../images/drag_sib.gif") 0 1px no-repeat;}
+div#unmapped_people h4.drag_sib a:hover {background: transparent url("../images/drag_sib_hover.gif") 0 1px no-repeat;}
+*/
+
+div#unmapped_people h4.map_tools {padding: 0; margin: 6px 0 0 5px; overflow: hidden; background: transparent url("/images/arrange_people.gif") no-repeat; width: 94px; height: 14px; font-size: 12px;}
+div#unmapped_people fieldset.drag {padding-left: 0px; margin-left: 0; padding-top: 2px; padding-bottom: 0; margin-bottom: 0; height: 18px;}
+div#unmapped_people fieldset.drag input {border: 0; float: left; display: block; margin: 0px 3px 0 5px; padding: 0;}
+fieldset.drag label{margin-top: 5px; height: 11px; overflow: hidden; background-repeat: no-repeat; display: block; float: left;}
+fieldset.drag label span {visibility:hidden; font-size: 60%; line-height: 10px; display: block;}
+label.drag_peer {width: 28px; background-image: url("/images/peer.gif");}
+label.drag_sub {width: 70px; background-image: url("/images/sub.gif");}
+div#unmapped_people fieldset.zoom h4 {margin-top: 2px;}
+div#unmapped_people fieldset.find_person h4 {margin-top: 2px;}
+div#unmapped_people h4.rss_pic {padding: 0; margin: 3px 0 0 10px; overflow: hidden; background: transparent url("/images/feed-icon-16x16.gif") no-repeat; width: 16px; height: 16px; font-size: 12px;}
+
+
+/* taken out on redesign
+a.zoom_1 {background: transparent url("../images/zoom_1.gif") no-repeat;}
+a.zoom_2 {background: transparent url("../images/zoom_2.gif") no-repeat;}
+a.zoom_3 {background: transparent url("../images/zoom_3.gif") no-repeat;}
+div.zoom_lvl_1 a.zoom_1, a.zoom_1:hover {background: transparent url("../images/zoom_1_hover.gif") no-repeat;}
+div.zoom_lvl_2 a.zoom_2, a.zoom_2:hover{background: transparent url("../images/zoom_2_hover.gif") no-repeat;}
+div.zoom_lvl_3 a.zoom_3, a.zoom_3:hover{background: transparent url("../images/zoom_3_hover.gif") no-repeat;}
+*/
+
+div#unmapped_people h4.zoom {background: transparent url("/images/zoom.gif") 0 5px no-repeat; width: 43px; }
+div#unmapped_people h4.find_person {background: transparent url("/images/find_person.gif") 0 5px no-repeat; white-space: nowrap; width: 110px;}
+
+div#unmapped_people fieldset{margin: 0; padding: 0px 15px 0 15px; text-align: left; float: left;}
+div#unmapped_people fieldset select {font-size: 70%;}
+div#unmapped_people fieldset h4 {margin-left: 0;}
+
+div.unmapped_container {z-index: 2; min-width: 900px; width: 100%; position: absolute; -moz-opacity: .9;opacity: .9; }
+
+/* This Changes the size when rollover*/
+
+div.unmapped_closed div#scroll_container {display: none;}
+div.unmapped_open div#scroll_container {display: block;}
+div.unmapped_closed div#unused {display: none;}
+div.unmapped_closed div#window, div.unmapped_closed div#content {display: none; visibility: hidden; background: transparent;} 
+div.unmapped_closed div#track_container {visibility: hidden;}
+div.unmapped_closed {margin-top: -3px; overflow: hidden;}
+div.unmapped_open {margin-top: -115px;}
+
+
+/* Scroll*/
+div#scroll_container {clear: both; margin: 0px 0 10px 0 !important; background: #e7eaea; padding: 0 18px 0 18px; overflow: hidden;}
+
+/* This is Offset Using Java */
+#window{border-top: 1px solid #898989; border-bottom: 1px solid #898989; background: #c5cccc; position: relative; float: left; padding: 0; margin: 0 0px 0 0px; height: 110px; white-space: nowrap; width: 95%; overflow: hidden !important; }
+#content {position: relative; height: auto; margin: 0;  width: 100%; padding-left: 10px;  padding-top: 6px; padding-bottom: 25px; }
+#unused {padding: 0; margin: 0; position: static !important; overflow: hidden;}
+
+div#scroll_container a#left_arrow, div#scroll_container a#right_arrow {text-decoration: none; display: block; width: 16px; height: 110px; background-color: #c5cccc; }
+div#scroll_container a#left_arrow span, div#scroll_container a#right_arrow span{visibility: hidden;}
+a#left_arrow {background-image: url(/images/left_arrow.gif); float: left; border: 1px solid #898989; border-right: 0}
+a#left_arrow:hover {background-image: url(/images/left_arrow_hover.gif);}
+a#right_arrow {float: left; background-image: url(/images/right_arrow.gif); border: 1px solid #898989; border-left: 0;}
+a#right_arrow:hover {background-image: url(/images/right_arrow_hover.gif);}
+
+/* Handle*/
+div#track_container {position: absolute; background: #c5cccc; clear: both; margin-left: 41px; margin-top: -20px; width: 90%; z-index: 2; }
+div#testTrack {height: 13px; background: transparent url("/images/scroll_track.gif") 0 5px repeat-x;;}
+div#testTrack .leftlink{height:13px; float: left; width: 14px;  background: transparent url("/images/track_left.gif") 0 5px no-repeat;}
+div#testTrack .rightlink{height:13px; float: right; width: 14px;  background:  transparent url("/images/track_right.gif") 0 5px no-repeat;}
+
+div#testHandle {width: 41px; height: 13px; cursor:move; background: transparent url("/images/scroll_handle.gif") no-repeat;}
+div.footer {height: 0px; line-height: 1px; clear: both; font-size: 1%;}

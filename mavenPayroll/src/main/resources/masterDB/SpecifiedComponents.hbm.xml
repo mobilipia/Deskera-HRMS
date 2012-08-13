@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="masterDB.SpecifiedComponents" table="specifiedcomponents">
+    <id name="id" type="string">
+      <column length="255" name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="operator" type="string">
+      <column length="1" name="operator" not-null="true"/>
+    </property>
+    <property name="coefficient" type="integer">
+      <column length="11" name="coefficient" not-null="true"/>
+    </property>
+    <many-to-one class="masterDB.Componentmaster" fetch="select" name="component">
+      <column length="255" name="component" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="masterDB.Componentmaster" fetch="select" name="masterComponent">
+      <column length="255" name="mastercomponent"/>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

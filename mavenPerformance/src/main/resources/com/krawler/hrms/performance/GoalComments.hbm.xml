@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.GoalComments" table="hrms_goalcomments">
+    <id column="commentid" name="commentid">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" name="userid" not-null="true"/>
+    <many-to-one class="com.krawler.hrms.performance.Finalgoalmanagement" name="goalid" not-null="true"/>
+    <property name="comment" type="text">
+      <column name="comment"/>
+    </property>
+    <property name="createdon" type="date">
+      <column name="createdon"/>
+    </property>
+  </class>
+</hibernate-mapping>

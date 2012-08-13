@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.ess.Emphistory" table="hrms_Emphistory">
+    <id column="hid" name="hid" type="string">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" column="userid" name="userid" not-null="true"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="designation" name="designation"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="department" name="department"/>
+    <property name="salary" type="string">
+      <column length="255" name="salary"/>
+    </property>
+    <property name="empid" type="integer">
+      <column name="empid"/>
+    </property>
+    <property name="joindate" type="date">
+      <column name="joindate"/>
+    </property>
+    <property name="enddate" type="date">
+      <column name="enddate"/>
+    </property>
+    <property name="updatedon" type="date">
+      <column name="updatedon"/>
+    </property>
+    <property name="category" type="string">
+      <column length="255" name="category"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" column="updatedby" name="updatedby" not-null="true"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="masterDB.PayrollHistory" table="payrollhistory">
+    <id name="historyid" type="string">
+      <column name="historyid"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column name="name"/>
+    </property>
+    <property name="jobtitle" type="string">
+      <column name="jobtitle"/>
+    </property>
+    <property name="costcenter" type="string">
+      <column name="costcenter"/>
+    </property>
+    <property name="contracthours" type="double">
+      <column default="0" name="contracthours"/>
+    </property>
+    <property name="absencehours" type="double">
+      <column default="0" name="absencehours"/>
+    </property>
+    <property name="actualhours" type="double">
+      <column default="0" name="actualhours"/>
+    </property>
+    <property name="employementdate" type="date">
+      <column length="10" name="employementdate"/>
+    </property>
+    <property name="contractdate" type="date">
+      <column length="10" name="contractdate"/>
+    </property>
+    <property name="net" type="double">
+      <column name="net" default="0"/>
+    </property>
+    <property name="earning" type="double">
+      <column name="earning"  default="0"/>
+    </property>
+    <property name="deduction" type="double">
+      <column name="deduction"  default="0"/>
+    </property>
+    <property name="tax" type="double">
+      <column name="tax"  default="0"/>
+    </property>
+    <property name="otherRemuneration" type="double">
+      <column name="otherremuneration"  default="0"/>
+    </property>
+    <property name="paymonth" type="string">
+      <column name="paymonth"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" fetch="select" name="user">
+      <column name="user" not-null="true"/>
+    </many-to-one>
+    <property name="createdon" type="date">
+      <column length="10" name="createdon"/>
+    </property>
+    <property name="generatedon" type="date">
+      <column length="10" name="generatedon"/>
+    </property>
+    <property name="paycyclestartdate" type="date">
+      <column length="10" name="paycyclestartdate"/>
+    </property>
+    <property name="paycycleenddate" type="date">
+      <column length="10" name="paycycleenddate"/>
+    </property>
+    <property name="unpaidleaves" type="double">
+      <column default="0" name="unpaidleaves"/>
+    </property>
+    <property name="unpaidleavesAmount" type="double">
+      <column default="0" name="unpaidleavesamount"/>
+    </property>
+    <property name="incometaxAmount" type="double">
+      <column default="0" name="incometaxamount"/>
+    </property>
+    <property name="salarystatus" type="integer">
+      <column name="salarystatus"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.CostCenter" fetch="select" name="costCenter">
+      <column name="costcenterid" />
+    </many-to-one>
+    <many-to-one class="com.krawler.hrms.master.MasterData" fetch="select" name="jobTitle">
+      <column name="jobtitleid"/>
+    </many-to-one>
+    <property name="paymentdate" type="date">
+      <column length="10" name="paymentdate"/>
+    </property>
+    <property name="payspecification" type="string">
+      <column name="payspecification" length="1024"/>
+    </property>
+    <property name="paysliptxt1" type="string">
+      <column name="paysliptxt1" length="512"/>
+    </property>
+    <property name="paysliptxt2" type="string">
+      <column name="paysliptxt2" length="512"/>
+    </property>
+    <property name="paysliptxt3" type="string">
+      <column name="paysliptxt3" length="512"/>
+    </property>
+    <property name="frequency" type="string">
+      <column name="frequency"/>
+    </property>
+    <property name="comment" type="string">
+      <column name="comment" length="1024"/>
+    </property>
+  </class>
+</hibernate-mapping>

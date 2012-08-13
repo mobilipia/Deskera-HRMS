@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.Recruiter" table="recruiter">
+    <id column="rid" name="rid" type="string">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" column="recid" name="recruit" not-null="true"/>
+    <property name="delflag" type="int">
+      <column name="delflag"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.recruitment.Allapplications" column="allapplication" name="allapplication"  />
+  </class>
+</hibernate-mapping>

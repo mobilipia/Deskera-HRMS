@@ -1,0 +1,20 @@
+<chart>
+  <series>
+    <value xid="0">21 Jan</value>
+  </series>
+  <graphs>
+   
+    <graph gid="0">
+      <value xid="0">91</value>
+    </graph>
+    <graph gid="1">
+      <value xid="0">96</value>
+    </graph>
+    <graph gid="2">
+      <value xid="0">96</value>
+    </graph>
+     <graph gid="3">
+      <value xid="0">96</value>
+    </graph>
+  </graphs>
+</chart>

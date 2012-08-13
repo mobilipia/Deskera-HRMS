@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.competencyAvg" table="competencyAvg">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" name="employee"/>
+    <many-to-one class="com.krawler.hrms.performance.Managecmpt" name="competency"/>
+    <many-to-one class="com.krawler.hrms.performance.Appraisalcycle" name="appcycle"/>
+    <property name="manavg" type="double">
+      <column name="manavg"/>
+    </property>
+  </class>
+</hibernate-mapping>

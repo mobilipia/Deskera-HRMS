@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaFormCP21" table="malaysia_form_cp21">
+        <id name="id" type="string">
+            <column name="id"/>
+            <generator class="uuid"/>
+        </id>
+        <property name="empfilerefno" type="string">
+            <column name="empfilerefno"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="user">
+          <column name="user" not-null="true"/>
+        </many-to-one>
+        <property name="expDateToLeave" type="timestamp">
+            <column name="expdatetoleave"/>
+        </property>
+        <property name="passportno" type="string">
+            <column name="passportno"/>
+        </property>
+        <property name="natureofemployment" type="integer">
+            <column name="natureofemployment"/>
+        </property>
+        <property name="reasonForDeparture" type="string">
+            <column name="reasonfordeparture"/>
+        </property>
+        <property name="corresspondenceAddress" type="string">
+            <column name="corresspondenceaddress"/>
+        </property>
+        <property name="dateOfReturn" type="timestamp">
+            <column name="dateofreturn"/>
+        </property>
+        <property name="amountdue" type="double">
+            <column name="amountdue" default="0"/>
+        </property>
+        <property name="dateOfSubmission" type="timestamp">
+            <column name="dateofsubmission"/>
+        </property>
+        <property name="salaryFrom" type="timestamp">
+            <column name="salaryfrom"/>
+        </property>
+        <property name="salaryTo" type="timestamp">
+            <column name="salaryto"/>
+        </property>
+        <property name="salaryAmount" type="double">
+            <column name="salaryamount" default="0"/>
+        </property>
+        <property name="leavePayFrom" type="timestamp">
+            <column name="leavepayfrom"/>
+        </property>
+        <property name="leavePayTo" type="timestamp">
+            <column name="leavepayto"/>
+        </property>
+        <property name="leavePayAmount" type="double">
+            <column name="leavepayamount" default="0"/>
+        </property>
+        <property name="bonusFrom" type="timestamp">
+            <column name="bonusfrom"/>
+        </property>
+        <property name="bonusTo" type="timestamp">
+            <column name="bonusto"/>
+        </property>
+        <property name="bonusAmount" type="double">
+            <column name="bonusamount" default="0"/>
+        </property>
+        <property name="gratuityFrom" type="timestamp">
+            <column name="gratuityfrom"/>
+        </property>
+        <property name="gratuityTo" type="timestamp">
+            <column name="gratuityto"/>
+        </property>
+        <property name="gratuityAmount" type="double">
+            <column name="gratuityamount" default="0"/>
+        </property>
+        <property name="allowanceFrom" type="timestamp">
+            <column name="allowancefrom"/>
+        </property>
+        <property name="allowanceTo" type="timestamp">
+            <column name="allowanceto"/>
+        </property>
+        <property name="allowanceAmount" type="double">
+            <column name="allowanceamount" default="0"/>
+        </property>
+        <property name="pensionFrom" type="timestamp">
+            <column name="pensionfrom"/>
+        </property>
+        <property name="pensionTo" type="timestamp">
+            <column name="pensionto"/>
+        </property>
+        <property name="pensionAmount" type="double">
+            <column name="pensionamount" default="0"/>
+        </property>
+        <property name="residenceFrom" type="timestamp">
+            <column name="residencefrom"/>
+        </property>
+        <property name="residenceTo" type="timestamp">
+            <column name="residenceto"/>
+        </property>
+        <property name="residenceAmount" type="double">
+            <column name="residenceamount" default="0"/>
+        </property>
+        <property name="allowanceinkindFrom" type="timestamp">
+            <column name="allowanceinkindfrom"/>
+        </property>
+        <property name="allowanceinkindTo" type="timestamp">
+            <column name="allowanceinkindto"/>
+        </property>
+        <property name="allowanceinkindAmount" type="double">
+            <column name="allowanceinkindamount" default="0"/>
+        </property>
+        <property name="providentFundFrom" type="timestamp">
+            <column name="providentfundfrom"/>
+        </property>
+        <property name="providentFundTo" type="timestamp">
+            <column name="providentfundto"/>
+        </property>
+        <property name="providentFundAmount" type="double">
+            <column name="providentfundamount" default="0"/>
+        </property>
+        <property name="natureofpayment" type="integer">
+            <column name="natureofpayment"/>
+        </property>
+        <property name="paymentDate" type="timestamp">
+            <column name="paymentdate"/>
+        </property>
+        <property name="amountToBePaid" type="double">
+            <column name="amounttobepaid" default="0"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <property name="authorizeStatus" type="integer">
+            <column name="authorizestatus" default="0"/>
+        </property>
+
+    </class>
+  
+
+</hibernate-mapping>

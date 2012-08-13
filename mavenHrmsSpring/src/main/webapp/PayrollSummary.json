@@ -1,0 +1,33 @@
+{"valid":true,"data":{"totalcount":5,
+
+"data":[
+{"empname":"Rob","empid":"161364f8-545a-4b11-bd00-c370c7e8df4b","nric":"2100","epfnumber":"12345","basicsalary":"20000","netsalary":"38950","epfemployer":"780","epfemployee":"780"},
+{"empname":"Michelle","empid":"166dc7db-b3fa-4e04-8b22-07684e811fcd","nric":"2108","epfnumber":"23456","basicsalary":"21000","netsalary":"41850","epfemployer":"800","epfemployee":"800"},
+{"empname":"Ryan","empid":"17dc8630-8004-4d0a-a948-0fa3ef4e0702","nric":"2200","epfnumber":"34567","basicsalary":"22000","netsalary":"43250","epfemployer":"900","epfemployee":"900"},
+{"empname":"Courtney","empid":"1da93309-13f1-4599-8a6d-72099d8572b0","nric":"2250","epfnumber":"45788","basicsalary":"23000","netsalary":"44890","epfemployer":"890","epfemployee":"950"},
+{"empname":"Joseph","empid":"3df48c1c-a49a-4f6f-b799-d44d9ae466d0","nric":"2150","epfnumber":"56789","basicsalary":"24000","netsalary":"45550","epfemployer":"950","epfemployee":"950"}]
+
+,"success":true}}
+
+
+CREATE TABLE `hrmstemp`.`payrollsummary` (
+  `id` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  `empname` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  `empid` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  `nric` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  `grosssalary` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  `epfemployer` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  `epfemployee` VARCHAR(255)  NOT NULL DEFAULT ' ',
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB
+CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+ALTER TABLE `hrmstemp`.`payrollsummary` ADD COLUMN `epfnumber` VARCHAR(255)  NOT NULL DEFAULT ' ' AFTER `epfemployee`;
+
+ALTER TABLE `hrmstemp`.`payrollsummary` ADD COLUMN `month` VARCHAR(2)  NOT NULL DEFAULT ' ' AFTER `basicsalary`;
+
+ALTER TABLE `hrmstemp`.`payrollsummary` DROP COLUMN `basicsalary`;
+
+ALTER TABLE `hrmstemp`.`payrollsummary` ADD COLUMN `deleteflag` CHAR(1)  NOT NULL DEFAULT 'F' AFTER `basicsalary`;
+

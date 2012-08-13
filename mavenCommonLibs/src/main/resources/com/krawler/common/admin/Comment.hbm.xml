@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.Comment" table="crm_comment">
+    <id name="Id" type="java.lang.String">
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" fetch="select" name="userId">
+      <column default="" name="userid"/>
+    </many-to-one>
+    <property name="leadid" type="string">
+      <column default="" name="leadid"/>
+    </property>
+    <property name="comment" type="string">
+      <column name="comment"/>
+    </property>
+    <property name="relatedto" type="string">
+      <column default="" name="relatedto"/>
+    </property>
+    <property name="postedon" type="timestamp">
+      <column length="19" name="postedon"/>
+    </property>
+  </class>
+</hibernate-mapping>

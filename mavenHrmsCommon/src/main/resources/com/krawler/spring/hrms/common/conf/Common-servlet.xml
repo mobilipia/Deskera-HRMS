@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- alternate XML view resolver, invoked if view returned from controller matches views.xml mapping -->
+    <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="1" />
+    </bean>
+
+<import resource="classpath:com/krawler/spring/hrms/commonlibs/conf/Commonlibs-servlet.xml"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+    </bean>
+
+
+    <bean id="sessionvalidator"  name="sessionvalidator" class="com.krawler.esp.handlers.sessionAdvisor"/>
+
+    <bean name="proxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="beanNames" value="*Controller"/>
+        <property name="interceptorNames">
+            <list>
+                <value>sessionvalidator</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="auditTrailController" class="com.krawler.spring.hrms.common.auditTrailController">
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+
+    <bean id="hrmsCommondao" class="com.krawler.spring.hrms.common.hrmsCommonDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+        <property name="storageHandlerImpl">
+            <ref bean="storageHandlerdao"/>
+        </property>
+        <property name="customcolDAO">
+            <ref bean="customcoldao"/>
+        </property>
+    </bean>
+    <bean id="hrmsCommonController" class="com.krawler.spring.hrms.common.hrmsCommonController">
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="exportDAOImpl">
+            <ref bean="exportdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="customcolDAO">
+            <ref bean="customcoldao"/>
+        </property>
+        <property name="organizationChartDAO">
+            <ref bean="organizationChartdao"/>
+        </property>
+        <property name="organizationServiceDAO">
+            <ref bean="organizationService"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsDashboarddao" class="com.krawler.spring.dashboard.hrmsDashboardDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsDashboardController" class="com.krawler.spring.dashboard.hrmsDashboardController">
+        <property name="hrmsDashboardDAO">
+            <ref bean="hrmsDashboarddao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="widgetDAO">
+            <ref bean="widgetdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <!--Auth Handler Controller-->
+    <bean id="authHandlerdao" class="com.krawler.spring.authHandler.authHandlerDAOImpl">
+      <property name="sessionFactory"><ref bean="mySessionFactory"/></property>
+      <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+      </property>
+    </bean>
+    <bean id="authHandlercontroller" class="com.krawler.spring.authHandler.authHandlerController">
+        <property name="authHandlerDAO">
+            <ref bean="authHandlerdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="permissionHandlerDAO">
+            <ref bean="permissionHandlerdao"/>
+        </property>
+        <property name="companyDetailsDAO">
+            <ref bean="companyDetailsdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+<bean id="hrmsMasterConfigdao" class="com.krawler.spring.hrms.masterconfig.hrmsMasterConfigDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsMasterConfigController" class="com.krawler.spring.hrms.masterconfig.hrmsMasterConfigController">
+        <property name="hrmsMasterConfigDAO">
+            <ref bean="hrmsMasterConfigdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsExtApplDocsdao" class="com.krawler.spring.hrms.common.hrmsExtApplDocsDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+        <property name="storageHandlerImpl">
+            <ref bean="storageHandlerdao"/>
+      </property>
+    </bean>
+
+    <bean id="documentController" class="com.krawler.spring.hrms.common.hrmsDocumentController">
+        <property name="documentDAO">
+            <ref bean="documentdao"/>
+        </property>
+        <property name="hrmsExtApplDocsDAO">
+            <ref bean="hrmsExtApplDocsdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="storageHandlerImpl">
+            <ref bean="storageHandlerdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="permissionHandlerHrmsController" class="com.krawler.spring.permissionHandler.permissionHandlerHrmsController">
+        <property name="permissionHandlerDAO">
+            <ref bean="permissionHandlerdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsTemplatedao" class="com.krawler.spring.hrms.template.hrmsTemplateDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+
+     <!--Organization Controller-->
+    <bean id="organizationChartdao" class="com.krawler.spring.organizationChart.organizationChartDAOImpl">
+      <property name="sessionFactory"><ref bean="mySessionFactory"/></property>
+    </bean>
+    
+    <bean id="organizationService" class="com.krawler.spring.organizationChart.bizservice.OrganizationServiceDAOImpl">
+        <property name="organizationChartDAO">
+            <ref bean="organizationChartdao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+    </bean>
+
+    
+    <bean id="organizationChartController" class="com.krawler.spring.organizationChart.organizationChartController">
+        <property name="organizationServiceDAO">
+            <ref bean="organizationService"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsTemplateController" class="com.krawler.spring.hrms.template.hrmsTemplateController">
+         <property name="hrmsTemplateDAO">
+            <ref bean="hrmsTemplatedao"/>
+        </property>
+<!--        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>-->
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+       
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    
+        <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/OrganizationChart/*.common">organizationChartController</prop>
+                <prop key="/Common/*.common">hrmsCommonController</prop>
+                <prop key="/AuthHandler/*.common">authHandlercontroller</prop>
+                <prop key="/Dashboard/*.common">hrmsDashboardController</prop>
+                <prop key="/Common/ExportPdfTemplate/*.common">exportPdfTemplateController</prop>
+                <prop key="/Common/Export/*.common">exportdao</prop>
+                <prop key="/Common/Document/*.common">documentController</prop>
+                <prop key="/Common/AuditTrail/*.common">auditTrailController</prop>
+                <prop key="/Common/Master/*.common">hrmsMasterConfigController</prop>
+                <prop key="/Common/Permission/*.common">permissionHandlerHrmsController</prop>
+                <prop key="/Common/Template/*.common">hrmsTemplateController</prop>
+                    <!--prop key="/Common/KwlCommonTables/*.common">kwlCommonTablesController</prop-->
+            </props>
+        </property>
+        <property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor" />
+            </list>
+        </property>
+    </bean>
+</beans>

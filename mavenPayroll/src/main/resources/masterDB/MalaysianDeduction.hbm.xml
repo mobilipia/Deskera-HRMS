@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="masterDB.MalaysianDeduction" table="malaysian_deductions">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="name" type="string">
+          <column length="255" name="name"/>
+        </property>
+        <property name="description" type="string">
+          <column length="1024" name="description"/>
+        </property>
+        <property name="amount" type="string">
+          <column name="amount"/>
+        </property>
+        <property name="type" type="integer">
+          <column name="type"/>
+        </property>
+        <property name="taxdate" type="date">
+     		<column name="taxdate"/>
+    	</property>
+        <property name="categoryId" type="string">
+          <column length="255" name="categoryid"/>
+        </property>
+        <property name="dataType" type="integer">
+          <column name="datatype"/>
+        </property>
+        <property name="methodCall" type="string">
+          <column length="255" name="methodcall"/>
+        </property>
+        <many-to-one class="masterDB.MalaysianDeduction" name="parent">
+      		<column name="parent"/>
+    	</many-to-one>
+        <property name="uniqueCode" type="integer">
+            <column name="uniquecode" not-null="true" unique="true"/>
+        </property>
+     </class>
+</hibernate-mapping>

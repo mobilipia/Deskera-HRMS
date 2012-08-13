@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaFormCP39A" table="malaysia_form_cp39a">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="incomeTaxFileNumber" type="string">
+          <column name="incometaxfilenumber"/>
+        </property>
+        <property name="oldIdentificationNumber" type="string">
+          <column name="oldidentificationnumber"/>
+        </property>
+        <property name="newIdentificationNumber" type="string">
+          <column name="newidentificationnumber"/>
+        </property>
+        <property name="passportNumber" type="string">
+          <column name="passportnumber"/>
+        </property>
+        <property name="countryCode" type="string">
+          <column name="countrycode"/>
+        </property>
+        <property name="deductionAmountForCP38" type="double">
+          <column name="deductionamountforcp38" default="0"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.Useraccount" fetch="select" name="useraccount">
+          <column name="useraccount" not-null="true"/>
+        </many-to-one>
+        <property name="authorizeStatus" type="integer">
+            <column name="authorizestatus" default="0"/>
+        </property>
+  </class>
+</hibernate-mapping>

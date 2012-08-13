@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.Finalgoalmanagement" table="finalgoalmanagement">
+    <id column="id" name="id">
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" column="userid" name="userID" not-null="true"/>
+    <property name="goalname" not-null="true" type="string">
+      <column length="255" name="goalname"/>
+    </property>
+    <property name="goaldesc" not-null="true" type="text">
+      <column name="goaldesc"/>
+    </property>
+    <property name="goalwth" not-null="true" type="integer">
+      <column name="goalwth"/>
+    </property>
+    <property name="priority" not-null="true" type="string">
+      <column length="50" name="priority"/>
+    </property>
+    <property name="context" not-null="true" type="string">
+      <column length="100" name="context"/>
+    </property>
+    <property name="startdate" not-null="true" type="date">
+      <column name="startdate"/>
+    </property>
+    <property name="enddate" not-null="true" type="date">
+      <column name="enddate"/>
+    </property>
+    <property name="comment" type="text">
+      <column name="comment"/>
+    </property>
+    <property name="assignedby" not-null="true" type="string">
+      <column length="100" name="assignedby"/>
+    </property>
+    <property name="createdon" type="date">
+      <column name="createdon"/>
+    </property>
+    <property name="updatedon" type="date">
+      <column name="updatedon"/>
+    </property>
+    <property name="archivedflag" type="int">
+      <column name="archivedflag"/>
+    </property>
+    <property name="deleted" type="true_false">
+      <column name="deleteflag"/>
+    </property>
+    <property name="internal" type="true_false">
+      <column name="internal"/>
+    </property>
+    <property name="completed" type="true_false">
+      <column name="completed"/>
+    </property>
+    <property name="percentcomplete" type="integer">
+      <column name="percentcomplete"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" name="manager"/>
+    <many-to-one class="com.krawler.common.admin.User" name="updatedBy"/>
+  </class>
+</hibernate-mapping>

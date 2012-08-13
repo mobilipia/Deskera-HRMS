@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!--
+Declare Spring's View Resolvers for Jasper
+
+Based on the bean names we can infer that:
+        * pdfReport is for generating PDFs
+        * xlsReport is for Excel format reports
+        * htmlReport is for HTML reports
+        * csvReport is for CSV reports
+-->
+<!--
+id: the name to be used as a reference in the controller
+url: the path where the Jasper JRXML file is located
+reportDateKey: the name of the datasource. This is passed by the controller
+-->
+
+<!-- TerFacilitatorDetail CSV Export-->
+
+<bean id="pdfAmanahSahamNasional"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/amanahsahamnasional/AmanahSahamNasional.jrxml"
+        p:headers="Content-Disposition : attachment; filename=AmanahSahamNasional.pdf;"
+        p:reportDataKey="datasource" >
+        <property name="subReportUrls">
+            <map>
+                <entry key="ProductsSubReport" value="classpath:com/krawler/spring/hrms/payroll/statutoryform/amanahsahamnasional/AmanahSahamNasionalEmployeeList.jrxml"/>
+            </map>
+        </property>
+        <property name="subReportDataKeys" value="SubReportData"/>
+</bean>
+
+<bean id="pdfTabungHaji"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/tabunghaji/TabungHaji.jrxml"
+        p:headers="Content-Disposition : attachment; filename=TabungHaji.pdf;"
+        p:reportDataKey="datasource" >
+        <property name="subReportUrls">
+            <map>
+                <entry key="ProductsSubReport" value="classpath:com/krawler/spring/hrms/payroll/statutoryform/tabunghaji/TabungHajiList.jrxml"/>
+            </map>
+        </property>
+        <property name="subReportDataKeys" value="SubReportData"/>
+</bean>
+
+<bean id="pdfCPTwnetyOne"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/cp21/cp21.jrxml"
+        p:headers="Content-Disposition : attachment; filename=CukaiPendapatan21.pdf;"
+        p:reportDataKey="datasource" >
+      
+</bean>
+
+<bean id="pdfTPOne"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/tp1/TP1.jrxml"
+        p:headers="Content-Disposition : attachment; filename=TP1.pdf;"
+        p:reportDataKey="datasource" >
+
+</bean>
+
+<bean id="pdfHRDLevy"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/hrdlevy/HRDLevy.jrxml"
+        p:headers="Content-Disposition : attachment; filename=HRDLevy.pdf;"
+        p:reportDataKey="datasource" >
+        <property name="subReportUrls">
+            <map>
+                <entry key="ProductsSubReport" value="classpath:com/krawler/spring/hrms/payroll/statutoryform/hrdlevy/HRDLevyEmployee.jrxml"/>
+            </map>
+        </property>
+        <property name="subReportDataKeys" value="SubReportData"/>
+</bean>
+
+<bean id="pdfCP39"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/cp39/CP39.jrxml"
+        p:headers="Content-Disposition : attachment; filename=CP39.pdf;"
+        p:reportDataKey="datasource" >
+        <property name="subReportUrls">
+            <map>
+                <entry key="ProductsSubReport" value="classpath:com/krawler/spring/hrms/payroll/statutoryform/cp39/CP39Employee.jrxml"/>
+            </map>
+        </property>
+        <property name="subReportDataKeys" value="SubReportData"/>
+        
+</bean>
+
+
+<bean id="pdfCP39A"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/cp39a/CP39A.jrxml"
+        p:headers="Content-Disposition : attachment; filename=CP39A.pdf;"
+        p:reportDataKey="datasource" >
+        <property name="subReportUrls">
+            <map>
+                <entry key="ProductsSubReport" value="classpath:com/krawler/spring/hrms/payroll/statutoryform/cp39a/CP39AEmployee.jrxml"/>
+            </map>
+        </property>
+        <property name="subReportDataKeys" value="SubReportData"/>
+        
+</bean>
+
+<bean id="pdfPCBTwo"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/pcb2/PCB2.jrxml"
+        p:headers="Content-Disposition : attachment; filename=PCB2.pdf;"
+        p:reportDataKey="datasource" >
+        <property name="subReportUrls">
+            <map>
+                <entry key="ProductsSubReport" value="classpath:com/krawler/spring/hrms/payroll/statutoryform/pcb2/PCB2Employee.jrxml"/>
+            </map>
+        </property>
+        <property name="subReportDataKeys" value="SubReportData"/>
+
+</bean>
+
+
+<bean id="pdfTP2"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/tp2/TP2.jrxml"
+        p:headers="Content-Disposition : attachment; filename=TP2.pdf;"
+        p:reportDataKey="datasource" >
+      
+</bean>
+
+<bean id="pdfTP3"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/tp3/TP3.jrxml"
+        p:headers="Content-Disposition : attachment; filename=TP3.pdf;"
+        p:reportDataKey="datasource" >
+      
+</bean>
+
+<bean id="pdfEA"
+        class="org.springframework.web.servlet.view.jasperreports.JasperReportsPdfView"
+        p:url="classpath:com/krawler/spring/hrms/payroll/statutoryform/ea/EA.jrxml"
+        p:headers="Content-Disposition : attachment; filename=EA.pdf;"
+        p:reportDataKey="datasource" >
+</bean>
+
+</beans>
+

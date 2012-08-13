@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    
+    <bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName"><value>com.mysql.jdbc.Driver</value></property>
+        <property name="url"><value>jdbc:mysql://192.168.0.83:3306/staginghrms151010</value></property>
+        <property name="username"><value>krawler</value></property>
+        <property name="password"><value>krawler</value></property>
+    </bean>
+
+    <bean id ="openSessionInViewInterceptor" name="openSessionInViewInterceptor"
+        class="org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory" />
+        </property>
+        <property name="flushMode">
+			<bean id="org.springframework.orm.hibernate3.HibernateAccessor.FLUSH_AUTO" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"/>
+		</property>
+    </bean>
+
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="mySessionFactory" />
+    </bean>
+    
+    <bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource"><ref bean="myDataSource"/></property>
+        <property name="mappingResources">
+            <list><value>/com/krawler/common/admin/User.hbm.xml</value>
+            <value>/com/krawler/common/admin/RoleUserMapping.hbm.xml</value>
+            <value>/com/krawler/common/admin/Useraccount.hbm.xml</value>
+            <value>/com/krawler/common/admin/UserLogin.hbm.xml</value>
+            <value>/com/krawler/common/admin/Company.hbm.xml</value>
+            <value>/com/krawler/common/admin/KWLTimeZone.hbm.xml</value>
+            <value>/com/krawler/common/admin/KWLDateFormat.hbm.xml</value>
+            <value>/com/krawler/common/admin/ProjectFeature.hbm.xml</value>
+            <value>/com/krawler/common/admin/ProjectActivity.hbm.xml</value>
+            <value>/com/krawler/common/admin/UserPermission.hbm.xml</value>
+            <value>/com/krawler/common/admin/KWLCurrency.hbm.xml</value>
+            <value>/com/krawler/common/admin/Country.hbm.xml</value>
+            <value>/com/krawler/common/admin/CompanyHoliday.hbm.xml</value>
+            <value>/com/krawler/common/admin/AuditGroup.hbm.xml</value>
+            <value>/com/krawler/common/admin/AuditAction.hbm.xml</value>
+            <value>/com/krawler/common/admin/AuditTrail.hbm.xml</value>
+            <value>/com/krawler/common/admin/ResetPassword.hbm.xml</value>
+            <value>/com/krawler/common/admin/ConfigType.hbm.xml</value>
+            <value>/com/krawler/common/admin/ConfigData.hbm.xml</value>
+            <value>/com/krawler/common/admin/ConfigMaster.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Applicants.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Positionmain.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/allapplications.hbm.xml</value>
+            <value>/com/krawler/hrms/master/master.hbm.xml</value>
+            <value>/com/krawler/hrms/master/masterdata.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Managecmpt.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Mastercmpt.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/appraisalmanagement.hbm.xml</value>
+            <value>/com/krawler/hrms/timesheet/timesheet.hbm.xml</value>
+            <value>/com/krawler/hrms/compennsation/Compensation.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/finalgoalmanagement.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Agency.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Recruiter.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Assignmanager.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Applyagency.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/ConfigRecruitment.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/ConfigRecruitmentData.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/ConfigRecruitmentMaster.hbm.xml</value>
+            <value>/com/krawler/common/admin/Role.hbm.xml</value>
+            <value>/com/krawler/common/admin/Rolelist.hbm.xml</value>
+            <value>/com/krawler/hrms/ess/Empprofile.hbm.xml</value>
+            <value>/com/krawler/hrms/ess/Empexperience.hbm.xml</value>
+            <value>/com/krawler/hrms/common/docs/HrmsDocmap.hbm.xml</value>
+            <value>/com/krawler/hrms/common/docs/HrmsDocs.hbm.xml</value>
+            <value>/com/krawler/common/admin/Docmap.hbm.xml</value>
+            <value>/com/krawler/common/admin/Docs.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Jobapplicant.hbm.xml</value>
+            <value>/com/krawler/hrms/recruitment/Jobprofile.hbm.xml</value>
+            <!--value>/com/krawler/common/docs/PDFReportTemplate.hbm.xml</value-->
+            <value>/com/krawler/common/admin/Projreport_Template.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Appraisal.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/GoalComments.hbm.xml</value>
+            <value>/com/krawler/hrms/ess/Emphistory.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Assignreviewer.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Appraisalcycle.hbm.xml</value>
+            <value>/com/krawler/common/admin/CompanyPreferences.hbm.xml</value>
+            <value>/com/krawler/common/admin/SystemTimeZone.hbm.xml</value>
+            <value>/com/krawler/common/admin/hrms_Modules.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/Goalrating.hbm.xml</value>
+            <value>/com/krawler/common/admin/widgetManagement.hbm.xml</value>
+            <value>/com/krawler/common/admin/hrms_EmailTemplates.hbm.xml</value>
+            <value>/com/krawler/hrms/performance/competencyAvg.hbm.xml</value>
+            <value>/masterDB/Payhistory.hbm.xml</value>
+            <value>/masterDB/Historydetail.hbm.xml</value>
+            <value>/masterDB/AudittrailPayroll.hbm.xml</value>
+            <value>/masterDB/Template.hbm.xml</value>
+            <value>/masterDB/Wagemaster.hbm.xml</value>
+            <value>/masterDB/Deductionmaster.hbm.xml</value>
+            <value>/masterDB/Taxmaster.hbm.xml</value>
+            <value>/masterDB/Templatemapdeduction.hbm.xml</value>
+            <value>/masterDB/Templatemaptax.hbm.xml</value>
+            <value>/masterDB/Templatemapwage.hbm.xml</value>
+            <value>/masterDB/TempTemplatemaptax.hbm.xml</value>
+            <value>/masterDB/TempTemplateMagDeduction.hbm.xml</value>
+            <value>/masterDB/TempTemplatemapwage.hbm.xml</value>
+            <value>/masterDB/TempTemplate.hbm.xml</value>
+            <value>/com/krawler/common/admin/Apiresponse.hbm.xml</value>
+            <value>/com/krawler/common/admin/UserSearchState.hbm.xml</value>
+            
+            <value>/com/krawler/spring/hrms/template/db/HtmlTemplate.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/PlaceHolder.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/PlaceHolderLookup.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/PlaceHolderMapping.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/TargetList.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/TargetListTargets.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/LetterHistory.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/EmailTemplateFiles.hbm.xml</value>
+            <value>/com/krawler/spring/hrms/template/db/ThemeImages.hbm.xml</value>
+            <value>/masterDB/userSalaryTemplateMap.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">com.krawler.hql.payroll.ExHibernate.ExMySQLInnoDBDialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.ess.Empprofile" table="hrms_empprofile">
+    <id column="userid" name="userID">
+      <generator class="foreign">
+        <param name="property">userLogin</param>
+      </generator>
+    </id>
+    <property name="DoB" type="date">
+      <column name="DoB"/>
+    </property>
+    <property name="gender" type="string">
+      <column length="20" name="gender"/>
+    </property>
+    <property name="marriage" type="string">
+      <column length="20" name="marriage"/>
+    </property>
+    <property name="bloodgrp" type="string">
+      <column length="20" name="bloodgrp"/>
+    </property>
+    <property name="fathername" type="string">
+      <column length="250" name="fathername"/>
+    </property>
+    <property name="fatherDoB" type="date">
+      <column name="fatherDoB"/>
+    </property>
+    <property name="mothername" type="string">
+      <column length="250" name="mothername"/>
+    </property>
+    <property name="motherDoB" type="date">
+      <column name="motherDoB"/>
+    </property>
+    <property name="spousename" type="string">
+      <column length="250" name="spousename"/>
+    </property>
+    <property name="spouseDoB" type="date">
+      <column name="spouseDoB"/>
+    </property>
+    <property name="child1name" type="string">
+      <column length="250" name="child1name"/>
+    </property>
+    <property name="child1DoB" type="date">
+      <column name="child1DoB"/>
+    </property>
+    <property name="child2name" type="string">
+      <column length="250" name="child2name"/>
+    </property>
+    <property name="child2DoB" type="date">
+      <column name="child2DoB"/>
+    </property>
+    <property name="bankacc" type="string">
+      <column length="100" name="bankacc"/>
+    </property>
+    <property name="bankname" type="string">
+      <column length="250" name="bankname"/>
+    </property>
+    <property name="bankbranch" type="string">
+      <column length="250" name="bankbranch"/>
+    </property>
+    <property name="panno" type="string">
+      <column length="100" name="panno"/>
+    </property>
+    <property name="pfno" type="string">
+      <column length="100" name="pfno"/>
+    </property>
+    <property name="drvlicense" type="string">
+      <column length="100" name="drvlicense"/>
+    </property>
+    <property name="passportno" type="string">
+      <column length="100" name="passportno"/>
+    </property>
+    <property name="exppassport" type="date">
+      <column name="exppassport"/>
+    </property>
+    <property name="mobno" type="string">
+      <column length="20" name="mobno"/>
+    </property>
+    <property name="workno" type="string">
+      <column length="20" name="workno"/>
+    </property>
+    <property name="landno" type="string">
+      <column length="20" name="landno"/>
+    </property>
+    <property name="presentaddr" type="string">
+      <column length="255" name="presentaddr"/>
+    </property>
+    <property name="presentcity" type="string">
+      <column length="255" name="presentcity"/>
+    </property>
+    <property name="presentstate" type="string">
+      <column length="255" name="presentstate"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="presentcountry" name="presentcountry" lazy="false"/>
+    <property name="permaddr" type="string">
+      <column length="255" name="permaddr"/>
+    </property>
+    <property name="permcity" type="string">
+      <column length="255" name="permcity"/>
+    </property>
+    <property name="permstate" type="string">
+      <column length="255" name="permstate"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="permcountry" name="permcountry" lazy="false"/>
+    <property name="mailaddr" type="string">
+      <column length="255" name="mailaddr"/>
+    </property>
+    <property name="emgname" type="string">
+      <column length="255" name="emgname"/>
+    </property>
+    <property name="emgreln" type="string">
+      <column length="50" name="emgreln"/>
+    </property>
+    <property name="emghome" type="string">
+      <column length="20" name="emghome"/>
+    </property>
+    <property name="emgwork" type="string">
+      <column length="20" name="emgwork"/>
+    </property>
+    <property name="emgmob" type="string">
+      <column length="20" name="emgmob"/>
+    </property>
+    <property name="emgaddr" type="string">
+      <column length="255" name="emgaddr"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" name="reportto" lazy="false"/>
+    <property name="joindate" type="date">
+      <column name="joindate"/>
+    </property>
+    <property name="confirmdate" type="date">
+      <column name="confirmdate"/>
+    </property>
+    <property name="relievedate" type="date">
+      <column name="relievedate"/>
+    </property>
+    <property name="trainperiod" type="string">
+      <column length="20" name="trainperiod"/>
+    </property>
+    <property name="probperiod" type="string">
+      <column length="20" name="probperiod"/>
+    </property>
+    <property name="noticeperiod" type="string">
+      <column length="20" name="noticeperiod"/>
+    </property>
+    <property name="emptype" type="string">
+      <column length="100" name="emptype"/>
+    </property>
+    <property name="middlename" type="string">
+      <column length="255" name="middlename"/>
+    </property>
+    <property name="workmail" type="string">
+      <column length="255" name="workmail"/>
+    </property>
+    <property name="othermail" type="string">
+      <column length="255" name="othermail"/>
+    </property>
+    <property name="commid" type="string">
+      <column length="255" name="commid"/>
+    </property>
+    <property name="branchcode" type="string">
+      <column length="255" name="branchcode"/>
+    </property>
+    <property name="branchaddr" type="string">
+      <column length="255" name="branchaddr"/>
+    </property>
+    <property name="branchcity" type="string">
+      <column length="255" name="branchcity"/>
+    </property>
+    <property name="keyskills" type="string">
+      <column length="1000" name="keyskills"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="branchcountry" name="branchcountry" lazy="false"/>
+    <property name="updated_by" type="string">
+      <column length="255" name="updated_by"/>
+    </property>
+    <property name="updated_on" type="date">
+      <column length="255" name="updated_on"/>
+    </property>
+    <property name="status" type="string">
+      <column length="255" name="status"/>
+    </property>
+    <property name="wkstarttime" type="string">
+      <column length="255" name="wkstarttime"/>
+    </property>
+    <property name="savings" type="double">
+          <column name="savings" default="0"/>
+        </property>
+    <property name="wkendtime" type="string">
+      <column length="255" name="wkendtime"/>
+    </property>
+    <property name="weekoff" type="string">
+      <column length="255" name="weekoff"/>
+    </property>
+    <one-to-one class="com.krawler.common.admin.UserLogin" constrained="true" name="userLogin" lazy="false"/>
+    <one-to-one class="com.krawler.common.admin.Useraccount" name="useraccount" lazy="false"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="Termination_Cause" name="tercause" lazy="false"/>
+    <property name="terReason" type="string">
+      <column length="255" name="terReason"/>
+    </property>
+    <property name="termnd" type="true_false">
+      <column name="terminateflag"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" column="terminatedby" name="terminatedby" lazy="false"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaCompanyForm" table="malaysia_form_company">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="amanahSahamNasionalPaymentType" type="integer">
+          <column name="amanahSahamnasionalpaymenttype"/>
+        </property>
+        <property name="hrdLevyPaymentType" type="integer">
+          <column name="hrdlevypaymenttype"/>
+        </property>
+        <property name="tabungHajiPaymentType" type="integer">
+          <column name="tabunghajipaymenttype"/>
+        </property>
+        <property name="amanahSahamNasionalChequeno" type="string">
+          <column name="amanahsahamnasionalchequeno"/>
+        </property>
+        <property name="hrdLevyChequeno" type="string">
+          <column name="hrdlevychequeno"/>
+        </property>
+        <property name="tabungHajiChequeno" type="string">
+          <column name="tabunghajichequeno"/>
+        </property>
+        <property name="cp21EmployerFileRefno" type="string">
+            <column name="cp21employerfilerefno"/>
+        </property>
+        <property name="branch" type="string">
+            <column name="branch"/>
+        </property>
+        <property name="employerno" type="string">
+            <column name="employerno"/>
+        </property>
+        <property name="employernoHQ" type="string">
+            <column length="25" name="employernohq"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="amanahSahamNasionalUser">
+          <column name="amanahsahamnasionaluser" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="tabungHajiUser">
+          <column name="tabunghajiuser" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="tp1User">
+          <column name="tp1user" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="tp2User">
+          <column name="tp2user" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="tp3User">
+          <column name="tp3user" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="cp39User">
+          <column name="cp39user" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="cp39AUser">
+          <column name="cp39auser" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="pcb2User">
+          <column name="pcb2user" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="eaUser">
+          <column name="eauser" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="com.krawler.common.admin.Company" fetch="select" name="company">
+          <column name="company" not-null="true"/>
+        </many-to-one>
+  </class>
+</hibernate-mapping>

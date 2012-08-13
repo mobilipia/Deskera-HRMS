@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PCB2" pageWidth="612" pageHeight="1224" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<parameter name="ProductsSubReport" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SubReportData" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<field name="fullName" class="java.lang.String"/>
+	<field name="designation" class="java.lang.String"/>
+	<field name="telephoneNumber" class="java.lang.String"/>
+	<field name="tarikh" class="java.lang.String"/>
+	<field name="branchIncomeTax" class="java.lang.String"/>
+	<field name="year" class="java.lang.String"/>
+	<field name="janRMPCB" class="java.lang.String"/>
+	<field name="janRMCP38" class="java.lang.String"/>
+	<field name="janNoResitPCB" class="java.lang.String"/>
+	<field name="janNoResitCP38" class="java.lang.String"/>
+	<field name="janTarikhPCB" class="java.lang.String"/>
+	<field name="janTarikhCP38" class="java.lang.String"/>
+	<field name="febRMPCB" class="java.lang.String"/>
+	<field name="febRMCP38" class="java.lang.String"/>
+	<field name="febNoResitPCB" class="java.lang.String"/>
+	<field name="febNoResitCP38" class="java.lang.String"/>
+	<field name="febTarikhPCB" class="java.lang.String"/>
+	<field name="febTarikhCP38" class="java.lang.String"/>
+	<field name="macRMPCB" class="java.lang.String"/>
+	<field name="macRMCP38" class="java.lang.String"/>
+	<field name="macNoResitPCB" class="java.lang.String"/>
+	<field name="macNoResitCP38" class="java.lang.String"/>
+	<field name="macTarikhPCB" class="java.lang.String"/>
+	<field name="macTarikhCP38" class="java.lang.String"/>
+	<field name="aprilRMPCB" class="java.lang.String"/>
+	<field name="aprilRMCP38" class="java.lang.String"/>
+	<field name="aprilNoResitPCB" class="java.lang.String"/>
+	<field name="aprilNoResitCP38" class="java.lang.String"/>
+	<field name="aprilTarikhPCB" class="java.lang.String"/>
+	<field name="aprilTarikhCP38" class="java.lang.String"/>
+	<field name="meiRMPCB" class="java.lang.String"/>
+	<field name="meiRMCP38" class="java.lang.String"/>
+	<field name="meiNoResitPCB" class="java.lang.String"/>
+	<field name="meiNoResitCP38" class="java.lang.String"/>
+	<field name="meiTarikhPCB" class="java.lang.String"/>
+	<field name="meiTarikhCP38" class="java.lang.String"/>
+	<field name="junRMPCB" class="java.lang.String"/>
+	<field name="junRMCP38" class="java.lang.String"/>
+	<field name="junNoResitPCB" class="java.lang.String"/>
+	<field name="junNoResitCP38" class="java.lang.String"/>
+	<field name="junTarikhPCB" class="java.lang.String"/>
+	<field name="junTarikhCP38" class="java.lang.String"/>
+	<field name="julaiRMPCB" class="java.lang.String"/>
+	<field name="julaiTarikhCP38" class="java.lang.String"/>
+	<field name="julaiTarikhPCB" class="java.lang.String"/>
+	<field name="julaiNoResitCP38" class="java.lang.String"/>
+	<field name="julaiNoResitPCB" class="java.lang.String"/>
+	<field name="julaiRMCP38" class="java.lang.String"/>
+	<field name="ogosRMPCB" class="java.lang.String"/>
+	<field name="ogosRMCP38" class="java.lang.String"/>
+	<field name="ogosNoResitPCB" class="java.lang.String"/>
+	<field name="ogosNoResitCP38" class="java.lang.String"/>
+	<field name="ogosTarikhPCB" class="java.lang.String"/>
+	<field name="ogosTarikhCP38" class="java.lang.String"/>
+	<field name="septRMPCB" class="java.lang.String"/>
+	<field name="septRMCP38" class="java.lang.String"/>
+	<field name="septNoResitPCB" class="java.lang.String"/>
+	<field name="septNoResitCP38" class="java.lang.String"/>
+	<field name="septTarikhPCB" class="java.lang.String"/>
+	<field name="septTarikhCP38" class="java.lang.String"/>
+	<field name="oktoRMPCB" class="java.lang.String"/>
+	<field name="oktoRMCP38" class="java.lang.String"/>
+	<field name="oktoNoResitPCB" class="java.lang.String"/>
+	<field name="oktoNoResitCP38" class="java.lang.String"/>
+	<field name="oktoTarikhPCB" class="java.lang.String"/>
+	<field name="oktoTarikhCP38" class="java.lang.String"/>
+	<field name="novRMPCB" class="java.lang.String"/>
+	<field name="novRMCP38" class="java.lang.String"/>
+	<field name="novNoResitPCB" class="java.lang.String"/>
+	<field name="novNoResitCP38" class="java.lang.String"/>
+	<field name="novTarikhPCB" class="java.lang.String"/>
+	<field name="novTarikhCP38" class="java.lang.String"/>
+	<field name="desRMPCB" class="java.lang.String"/>
+	<field name="desRMCP38" class="java.lang.String"/>
+	<field name="desNoResitPCB" class="java.lang.String"/>
+	<field name="desNoResitCP38" class="java.lang.String"/>
+	<field name="desTarikhPCB" class="java.lang.String"/>
+	<field name="desTarikhCP38" class="java.lang.String"/>
+	<field name="companyReferenceNumber" class="java.lang.String"/>
+	<field name="newIdentificationNumber" class="java.lang.String"/>
+	<field name="incomeTaxFileNumber" class="java.lang.String"/>
+	<field name="employeeNumber" class="java.lang.String"/>
+	<field name="incomeTaxDeductionYear" class="java.lang.String"/>
+	<field name="totalForPCB" class="java.lang.String"/>
+	<field name="totalForCP38" class="java.lang.String"/>
+	<field name="personInCharge" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="1184" splitType="Stretch">
+			<frame>
+				<reportElement x="5" y="0" width="562" height="1179"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<staticText>
+					<reportElement x="9" y="3" width="334" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PENYATA BAYARAN CUKAI OLEH MAJIKAN]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="437" y="3" width="104" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[PCB 2(II)-Pin .2005]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="40" width="304" height="49"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Ketua Eksekutif/Ketua Pengarah Hasil Dalam Negeri
+Lembaga Hasil Dalam Negeri
+Cawangan Pungutan  ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="120" width="100" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Tuan,]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="1006" width="124" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Sekian, Dimaklumkan.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="1036" width="69" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Yang benar,]]></text>
+				</staticText>
+				<line>
+					<reportElement x="11" y="1083" width="199" height="1"/>
+				</line>
+				<staticText>
+					<reportElement x="11" y="1104" width="69" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Nama:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="1128" width="69" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Jawatan:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="1153" width="70" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No. Telefon:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="373" y="1104" width="168" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[(Cop Rasmi Syarikat / Majikan)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="430" y="23" width="48" height="20"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Tarikh :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="23" width="100" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Kepada:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="87" y="1128" width="199" height="20"/>
+					<box leftPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="87" y="1153" width="199" height="20"/>
+					<box leftPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{telephoneNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="12" y="86" width="321" height="36"/>
+					<box leftPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{branchIncomeTax}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="476" y="24" width="65" height="20"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{tarikh}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="371" y="1084" width="168" height="1"/>
+				</line>
+				<subreport>
+					<reportElement stretchType="RelativeToBandHeight" x="5" y="606" width="536" height="360"/>
+					<dataSourceExpression><![CDATA[$P{SubReportData}]]></dataSourceExpression>
+					<subreportExpression class="net.sf.jasperreports.engine.JasperReport" ><![CDATA[$P{ProductsSubReport}]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="88" y="1104" width="198" height="20"/>
+					<box leftPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{personInCharge}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="6" y="140" width="561" height="480"/>
+				<staticText>
+					<reportElement x="10" y="52" width="167" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No. Fail Cukai Pendapatan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="257" y="68" width="265" height="20"/>
+					<box leftPadding="3" bottomPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom"/>
+					<textFieldExpression><![CDATA[$F{employeeNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="119" width="418" height="20"/>
+					<box bottomPadding="1"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[2.Potongan-potongan yang telah dibuat untak pekerja dalam tahun semasa ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="257" y="52" width="265" height="20"/>
+					<box leftPadding="3" bottomPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom"/>
+					<textFieldExpression><![CDATA[$F{incomeTaxFileNumber}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="257" y="85" width="265" height="20"/>
+					<box leftPadding="3" bottomPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom"/>
+					<textFieldExpression><![CDATA[$F{companyReferenceNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="10" y="35" width="167" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No. Kad Pengenalan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="17" width="167" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Nama Pekerja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="435" y="119" width="122" height="20"/>
+					<box bottomPadding="1"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[adalah seperti berikut]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="376" y="119" width="48" height="20"/>
+					<box leftPadding="0" bottomPadding="1">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="104" width="332" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Dengan hormatnya saya merujuk kepada pekara di atas.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="257" y="2" width="265" height="20"/>
+					<box leftPadding="3" bottomPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom"/>
+					<textFieldExpression><![CDATA[$F{incomeTaxDeductionYear}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="10" y="85" width="167" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No. Rujukan Fail Majikan (E)]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="257" y="35" width="265" height="20"/>
+					<box leftPadding="3" bottomPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom"/>
+					<textFieldExpression><![CDATA[$F{newIdentificationNumber}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="68" width="166" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No. Pekerja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="10" y="2" width="247" height="20"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Potongan Cukai Yang Dibuat Dalam Tahun]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="407" y="143" width="145" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Tarikh Resit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="143" width="80" height="20"/>
+					<box leftPadding="3">
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Bulan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="91" y="143" width="147" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Amaun (RM)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="238" y="143" width="169" height="20"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[No. Resit]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="319" y="163" width="88" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[CP 38]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="407" y="163" width="71" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[PCB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="238" y="163" width="81" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[PCB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="163" y="163" width="75" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[CP 38]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="91" y="163" width="72" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[PCB]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="163" width="80" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="478" y="163" width="74" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[CP 38]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="183" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{janRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="183" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{janNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="183" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Januari]]></text>
+				</staticText>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="183" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{janTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="183" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{janRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="183" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{janNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="183" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{janTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="203" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="203" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="203" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="223" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{macTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="203" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="223" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{macNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="223" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{macNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="203" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="223" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{macRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="203" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{febNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="223" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{macRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="223" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{macTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="203" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Februari]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="223" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Mac]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="283" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junRMCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="263" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Mei]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="243" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aprilNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="263" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meiRMCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="243" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[April]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="283" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="283" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="263" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meiNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="243" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aprilRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="263" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meiRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="283" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="263" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meiTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="263" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meiTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="263" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{meiNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="283" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="243" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aprilNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="243" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aprilTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="243" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aprilTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="283" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{junRMPCB}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="283" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Jun]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="243" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{aprilRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="343" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="303" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julaiNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="303" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julaiRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="343" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="323" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ogosNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="303" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julaiNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="343" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="323" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ogosRMCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="343" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[September]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="343" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="363" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oktoNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="303" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julaiRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="343" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="363" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oktoTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="303" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julaiTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="323" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ogosNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="363" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oktoTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="323" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Ogos]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="87" y="323" width="76" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ogosRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="363" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oktoNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="363" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oktoRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="323" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ogosTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="363" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{oktoRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="303" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{julaiTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="363" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Oktober]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="343" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{septNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="323" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{ogosTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="303" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Julai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="423" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[JUMLAH]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="403" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="383" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{novTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="383" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{novTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="383" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[November]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="11" y="403" width="80" height="20"/>
+					<box leftPadding="3">
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Disember]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="383" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{novNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="403" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="478" y="403" width="74" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desTarikhCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="91" y="383" width="72" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{novRMPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="403" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="238" y="383" width="81" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{novNoResitPCB}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="319" y="403" width="88" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desNoResitCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="163" y="383" width="75" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{novRMCP38}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+					<reportElement x="407" y="403" width="71" height="20"/>
+					<box rightPadding="3">
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desTarikhPCB}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="91" y="423" width="72" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{totalForPCB}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="163" y="423" width="75" height="20"/>
+					<box>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{totalForCP38}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="257" y="17" width="265" height="20"/>
+					<box leftPadding="3" bottomPadding="3">
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Bottom"/>
+					<textFieldExpression><![CDATA[$F{fullName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="9" y="449" width="542" height="29"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[3. Potongan-potongan yang telah dibuat bagi pekerja untak tahun kebelakangan adalah seperti berikut:]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

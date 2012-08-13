@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="nutch-conf.xsl"?>
+
+
+<krawler-conf>
+
+<property>
+  <name>deskerasuperuser</name>
+  <value>ff808081227de9f701227de9fb4b0002</value>
+</property>
+<property>
+  <name>forum_base_url</name>
+  <value>http://192.168.0.221/deskerasupport/</value>
+</property>
+<property>
+  <name>base_urlformat</name>
+  <value>http://staging.hrms.deskera.com/a/%s/</value>
+</property>
+<property>
+    <name>ProfileImagePathBase</name>
+    <value>/home/krawler/store/profile/</value>
+</property>
+<property>
+      <name>base_urlformat_unprotected</name>
+      <value>http://192.168.0.83:8084/HrmsSpring/b/%s/</value>
+    </property>
+<property>
+    <name>DocStorePath0</name>
+    <value>/home/krawler/store/HRMS/</value>
+</property>
+<property>
+<name>DocStorePath1</name>
+<value>/home/krawler/store/HRMS/</value>
+</property>
+<property>
+    <name>audittrailindex</name>
+    <value>/home/krawler/store/HRMS/audittrailindex</value>
+</property>
+<property>
+    <name>audittraildocindex</name>
+    <value>/home/krawler/HRMS/audittraildocindex</value>
+</property>
+<property>
+    <name>SMTPPath</name>
+    <value>192.168.0.4</value>
+</property>
+<property>
+    <name>SMTPPort</name>
+    <value>25</value>
+</property>
+<property>
+    <name>remoteapikey</name>
+    <value>krawler</value>
+</property>
+<property>
+    <name>HRMSStandAlone</name>
+    <value>false</value>
+</property>
+<property>
+    <name>serverIP</name>
+    <value>192.168.0.86</value>
+</property>
+<property>
+    <name>port</name>
+    <value>3306</value>
+</property>
+<property>
+    <name>dbName</name>
+    <value>hrmstemp</value>
+</property>
+<property>
+    <name>userName</name>
+    <value>krawler</value>
+</property>
+<property>
+    <name>password</name>
+    <value>krawler</value>
+</property>
+<property>
+    <name>driver</name>
+    <value>com.mysql.jdbc.Driver</value>
+</property>
+</krawler-conf>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="masterDB.MalaysianUserTaxBenefits" table="malaysian_user_taxbenefits">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="paidZakat" type="double">
+          <column name="paidzakat" default="0"/>
+        </property>
+        <property name="paidEPF" type="double">
+          <column name="paidepf" default="0"/>
+        </property>
+        <property name="paidLICAndOther" type="double">
+          <column name="paidlicandother" default="0"/>
+        </property>
+        <property name="paidBIK" type="double">
+          <column name="paidbik" default="0"/>
+        </property>
+        <property name="paidOtherDeduction" type="double">
+          <column name="paidotherdeduction" default="0"/>
+        </property>
+        <many-to-one class="masterDB.PayrollHistory" name="payrollHistory">
+      		<column name="payrollhistory"/>
+    	</many-to-one>
+     </class>
+</hibernate-mapping>

@@ -1,0 +1,63 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package com.krawler.esp.database;
+
+import com.krawler.common.service.ServiceException;
+import com.krawler.esp.hibernate.impl.HibernateUtil;
+import com.krawler.esp.handlers.*;
+import com.krawler.hrms.*;
+import java.util.HashMap;
+import javax.servlet.http.HttpServletRequest;
+import org.hibernate.*;
+import com.krawler.utils.json.base.*;
+/**
+ *
+ * @author krawler
+ */
+public class hrmsDbcon {
+
+public static String getDemo(HttpServletRequest request) throws ServiceException, JSONException {
+        JSONObject jobj = new JSONObject();
+        Session session = null;
+        Transaction tx = null;
+        String str="";
+        try {
+            session = HibernateUtil.getCurrentSession();
+            tx = session.beginTransaction();
+            str =hrmsManager.getDummyFunction(session, request);
+            tx.commit();
+        }
+        catch (Exception ex) {
+                if (tx!=null) tx.rollback();
+                throw ServiceException.FAILURE(ex.getMessage(), ex);
+        } finally {
+                HibernateUtil.closeSession(session);
+        }
+       return str;
+    }
+public static String addDemo(HttpServletRequest request) throws ServiceException, JSONException {
+        JSONObject jobj = new JSONObject();
+        Session session = null;
+        Transaction tx = null;
+        String str="";
+        try {
+            session = HibernateUtil.getCurrentSession();
+            tx = session.beginTransaction();
+            hrmsHandler.Insertdummyfunction(session, request);
+            str = "{\"success\":\"true\"}";
+            tx.commit();
+        }
+        catch (Exception ex) {
+                if (tx!=null) tx.rollback();
+                throw ServiceException.FAILURE(ex.getMessage(), ex);
+        } finally {
+                HibernateUtil.closeSession(session);
+        }
+       return str;
+    }
+
+}
+

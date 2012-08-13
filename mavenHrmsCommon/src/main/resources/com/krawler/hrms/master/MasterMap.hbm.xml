@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.hrms.master.MasterMap" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="MasterMap" >
+
+        <id name="id"  type="string" >
+            <column name="id" length="32" />
+            <generator class="uuid" />
+        </id>
+
+        <property name="masterdataid1" length="32" not-null="false" type="string" >
+            <column name="masterdataid1" />
+        </property>
+
+        <property name="masterdataid2" length="32" not-null="false" type="string" >
+            <column name="masterdataid2" />
+        </property>
+
+        <many-to-one name="MasterDataId1" insert="false" update="false"  class="com.krawler.hrms.master.MasterData" column="masterdataid1" />
+        <many-to-one name="MasterDataId2" insert="false" update="false"  class="com.krawler.hrms.master.MasterData" column="masterdataid2" />
+
+    </class>
+
+</hibernate-mapping>

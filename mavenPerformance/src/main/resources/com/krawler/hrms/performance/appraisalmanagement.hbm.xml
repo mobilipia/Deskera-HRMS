@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.Appraisalmanagement" table="appraisalmanagement">
+    <id name="appraisalid" type="string">
+      <column name="appraisalid"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" name="employee"/>
+    <many-to-one class="com.krawler.common.admin.User" name="manager"/>
+    <property name="appraisaltype" type="string">
+      <column length="40" name="appraisaltype"/>
+    </property>
+    <property name="startdate" type="date">
+      <column name="startdate"/>
+    </property>
+    <property name="enddate" type="date">
+      <column name="enddate"/>
+    </property>
+    <property name="appraisalstatus" type="string">
+      <column length="50" name="appraisalstatus"/>
+    </property>
+    <property name="employeecomment" type="text">
+      <column name="employeecomment"/>
+    </property>
+    <property name="employeegapscore" type="double">
+      <column name="employeegapscore"/>
+    </property>
+    <property name="employeecompscore" type="double">
+      <column name="employeecompscore"/>
+    </property>
+    <property name="employeegoalscore" type="double">
+      <column name="employeegoalscore"/>
+    </property>
+    <property name="managercomment" type="text">
+      <column name="managercomment"/>
+    </property>
+    <property name="managergapscore" type="double">
+      <column name="managergapscore"/>
+    </property>
+    <property name="managercompscore" type="double">
+      <column name="managercompscore"/>
+    </property>
+    <property name="managergoalscore" type="double">
+      <column name="managergoalscore"/>
+    </property>
+    <property name="totalscore" type="double">
+      <column name="totalscore"/>
+    </property>
+    <property name="employeesubmitdate" type="date">
+      <column name="employeesubmitdate"/>
+    </property>
+    <property name="managersubmitdate" type="date">
+      <column name="managersubmitdate"/>
+    </property>
+    <property name="reviewersubmitdate" type="date">
+      <column name="reviewersubmitdate"/>
+    </property>
+    <property name="employeestatus" type="integer">
+      <column name="employeestatus"/>
+    </property>
+    <property name="managerstatus" type="integer">
+      <column name="managerstatus"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="performance"/>
+    <property name="reviewstatus" type="integer">
+      <column name="reviewstatus"/>
+    </property>
+    <property name="reviewercomment" type="text">
+      <column name="reviewercomment"/>
+    </property>
+    <property name="salaryrecommend" type="integer">
+      <column name="salaryrecommend"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="newdepartment"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="newdesignation"/>
+    <property name="salaryincrement" type="float">
+      <column name="salaryincrement"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.performance.Appraisalcycle" name="appcycle"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="reviewdepartment"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="originaldepartment"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="originaldesignation"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="reviewdesignation"/>
+    <property name="reviewsalaryincrement" type="float">
+      <column default="0" name="reviewsalaryincrement"/>
+    </property>
+    <property name="employeedraft" type="integer">
+      <column name="employeedraft"/>
+    </property>
+    <property name="managerdraft" type="integer">
+      <column name="managerdraft"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="empdesid"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="managerdesid"/>
+    <set name="competencyQuestions" table="appraisalcyclecompetencyquestions" cascade="all">
+    	<key column="appraisalid" />
+        <many-to-many column="competencyquestion"  class="com.krawler.hrms.performance.CompetencyQuestion" />
+    </set>
+  </class>
+</hibernate-mapping>

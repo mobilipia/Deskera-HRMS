@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.spring.hrms.template.db.TargetList" table="targetlist" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="id" type="string">
+            <column name="id"/>
+            <generator class="uuid"/>
+        </id>
+        <property name="name" type="string">
+            <column length="50" name="name"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description"/>
+        </property>
+        <property name="createdon" type="timestamp">
+            <column length="50" name="createdon"/>
+        </property>
+        <property name="modifiedon" type="timestamp">
+            <column length="50" name="modifiedon"/>
+        </property>
+        <property name="deleted" type="integer">
+            <column default="0" length="2" name="deleted"/>
+        </property>
+        <property name="saveflag" type="integer">
+            <column name="saveflag" default='0'/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.User" name="creator" not-null="true"/>
+    </class>
+</hibernate-mapping>

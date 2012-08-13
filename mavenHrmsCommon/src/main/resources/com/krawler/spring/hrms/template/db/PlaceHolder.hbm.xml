@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.spring.hrms.template.db.PlaceHolder" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="placeholder">
+        <id name="id" column="id" type="string" length="36">
+            <generator class="uuid"/>
+        </id>
+        <property name="dest_table" type="string">
+            <column name="dest_table" length="256" not-null="true"/>
+        </property>
+        <property name="dest_column" type="string">
+            <column name="dest_column" length="256" not-null="true"/>
+        </property>
+        <property name="placeholder" type="string">
+            <column name="placeholder" length="256" not-null="true" unique="true"/>
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="256" not-null="true"/>
+        </property>
+        <property name="value" type="string">
+            <column name="value" length="256" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

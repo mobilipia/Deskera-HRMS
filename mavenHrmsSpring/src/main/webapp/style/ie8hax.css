@@ -1,0 +1,69 @@
+/* 
+    Document   : ie8hax
+    Created on : Aug 21, 2009, 12:30:00 AM
+    Author     : krawler
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.x-date-menu > ul{
+    display: inline;
+}
+
+.x-date-menu > ul li{
+    display: inline;
+}
+.x-form-invalid-icon {
+background:transparent url(../images/default/form/exclamation.gif) no-repeat scroll 0 2px;
+display:block;
+height:18px;
+left:0;
+position:relative;
+top:0;
+visibility:hidden;
+width:16px;
+}
+
+/*Button */
+.x-menu {
+    width: auto !important;
+}
+
+/*Checkbox*/
+#checkisdefault{
+    padding-top:2px !important;
+}
+
+/*Button Text position*/
+.x-btn-text-icon .x-btn-center .x-btn-text{
+    padding-top:1px !important;
+    padding-left:21px !important;
+}
+
+/*Combo & Date field*/
+.wtf-ie .x-form-text {
+    top:1px !important;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+/* to remove .. which is added before text Total in assign competency */
+.x-grid3-cell-inner{
+    padding-right : 0px !important;
+}
+.pwndRefresh{
+	 background-position: 0 -1011px !important;
+}
+
+#rules{
+	margin-bottom:5px !important;
+}
+
+#subrules{
+	padding-top:8px !important;
+	padding-bottom:10px !important;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : TempTemplateMagDeduction.hbm.xml
+    Created on : July 9, 2009, 11:43 AM
+    Author     : trainee
+    Description:
+        Purpose of the document follows.
+-->
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.TempTemplateMagDeduction" table="temptemplatemagdeduction">
+    <id name="id" type="string">
+      <column length="36" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="masterDB.Template" fetch="select" name="template">
+      <column length="36" name="templateid" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="masterDB.Deductionmaster" fetch="select" name="deductionmaster">
+      <column length="36" name="deductionid" not-null="true"/>
+    </many-to-one>
+    <property name="rate" type="string">
+      <column length="25" name="rate"/>
+    </property>
+  </class>
+</hibernate-mapping>

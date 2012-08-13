@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- alternate XML view resolver, invoked if view returned from controller matches views.xml mapping -->
+    <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="1" />
+    </bean>
+<import resource="classpath:com/krawler/spring/hrms/common/conf/Common-servlet.xml"/>
+<import resource="classpath:com/krawler/spring/hrms/performance/conf/Performance-servlet.xml"/>
+<import resource="classpath:com/krawler/spring/hrms/rec/conf/Rec-servlet.xml"/>
+<import resource="classpath:com/krawler/spring/hrms/payroll/conf/Payroll-servlet.xml"/>
+<import resource="classpath:com/krawler/spring/hrms/timesheet/conf/Timesheet-servlet.xml"/>
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+    </bean>
+
+
+  
+    <bean id="dashboardController" class="com.krawler.common.dashboard.dashboardController">
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="hrmsGoalDAO">
+            <ref bean="hrmsGoaldao"/>
+        </property>
+        <property name="hrmsRecJobDAO">
+            <ref bean="hrmsRecJobdao"/>
+        </property>
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="permissionHandlerDAO">
+            <ref bean="permissionHandlerdao"/>
+        </property>
+        <property name="hrmsTimesheetDAO">
+            <ref bean="hrmsTimesheetdao"/>
+        </property>
+        <property name="hrmsEmpDAO">
+            <ref bean="hrmsEmpdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+	<bean id="props2jsController" class="com.krawler.common.util.Props2jsController" />
+	<bean id="localejsController" class="com.krawler.common.util.LocaleJsController" />
+	
+    <bean id="generalController" class="com.krawler.common.wrapper.generalController">
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    <bean id="signOutcontroller" class="com.krawler.spring.common.signOutController">
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+    </bean>
+    
+        <bean id="errorMessagecontroller" class="com.krawler.hrms.errorMessageController">
+            <property name="authHandlerDAO">
+                <ref bean="authHandlerdao"/>
+            </property>
+            <property name="sessionHandlerImpl">
+                <ref bean="sessionHandlerdao"/>
+            </property>
+            <property name="companyDetailsDAO">
+                <ref bean="companyDetailsdao"/>
+            </property>
+    </bean>
+    
+    <!-- AOP (Around) : Call custome functinality around saveRecord() -->
+    <bean id="AroundImportRecord" name="AroundImportRecord" class="com.krawler.spring.common.ImportRecordAdvisor">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <!-- Proxy Implementation Class -->
+    <bean id = "ImportRecordProxy" class = "org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="beanNames" value="importDao"/>
+        <property name = "interceptorNames">
+            <list>
+                <value>AroundImportRecord</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- Import Data Beans-->
+    <bean id = "importDao" class = "com.krawler.spring.importFunctionality.ImportImpl">
+        <property name="sessionFactory"><ref bean="mySessionFactory"/></property>
+    </bean>
+    <bean id = "importHandler" class = "com.krawler.spring.importFunctionality.ImportHandler">
+        <property name="importDAO">
+            <ref bean="importDao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <!--property name="masterTables">
+            <list>
+                <value>MasterItem</value>
+                <value>com.krawler.hql.accounting.MasterItem</value>
+            </list>
+        </property-->
+    </bean>
+    <bean id = "importcontroller" class = "com.krawler.spring.importFunctionality.ImportController">
+        <property name="importDAO">
+            <ref bean="importDao"/>
+        </property>
+        <property name="importHandler">
+            <ref bean="importHandler"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+    </bean>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/ImportRecords/*.dsh">importcontroller</prop>
+                <prop key="/Dashboard/*.dsh">dashboardController</prop>
+                <prop key="/General/*.dsh">generalController</prop>
+                <prop key="error.dsh">errorMessagecontroller</prop>
+                <prop key="signOut.dsh">signOutcontroller</prop>
+				<prop key="/msgs/*.js">props2jsController</prop>
+                <prop key="/keys/*.js">props2jsController</prop>
+                <prop key="/wtf-lang-locale.js">localejsController</prop>
+                <!--prop key="/Common/KwlCommonTables/*.common">kwlCommonTablesController</prop-->
+            </props>
+        </property>
+        <property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor" />
+            </list>
+        </property>
+    </bean>
+</beans>

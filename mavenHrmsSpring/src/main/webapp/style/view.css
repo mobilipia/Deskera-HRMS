@@ -1,0 +1,1994 @@
+.pwnd{
+	 background: url(../images/tbar.gif) no-repeat !important;
+}
+.pwndHRMS{
+	 background: url(../images/hrms-tbar.gif) no-repeat !important;
+}
+.pwndCommon{
+	 background: url(../images/commontbar.gif) no-repeat !important;
+}
+.pwndExport{
+	 background: url(../images/tbar1.gif) no-repeat !important;
+}
+.pwndPrint{
+	 background: url(../images/tbar1.gif) no-repeat !important;
+}
+.pwndRefresh{
+	 background: url(../images/tbar1.gif) no-repeat !important;
+	 background-position: 0 -1012px !important;
+}
+.addbuttonIcon{
+    background-position: 0 -196px !important;
+}
+.editbuttonIcon{
+    background-position: 0 -316px !important;
+}
+.deletebuttonIcon{
+    background-position: 0 -387px !important;
+}
+
+.deletebuttonIconGrid{
+    background-position: 0 -387px !important;
+    height:16px;
+}
+
+.deletecolIcon{
+    background-position: 0 -1831px !important;
+}
+.assignbuttonIcon{
+    background-position: 0 -244px !important;
+}
+.viewbuttonIcon{
+    background-position: 0 -1203px !important;
+}
+.calculateIcon{
+    background-position: 0 -1588px !important;
+}
+.historyIcon{
+    background-position: 0 -1395px !important;
+}
+.empDetailsIcon{
+    background-position: 0 -1369px !important;
+}
+.manageAmountIcon{
+    background-position: 0 -1083px !important;
+}
+.assignComponentIcon{
+    background-position: 0 -1057px !important;
+}
+.authorizeComponentIcon{
+    background-position: 0 -315px !important;
+}
+.processComponentIcon{
+    background-position: 0 -723px !important;
+}
+.textFileIcon {
+    background-position: 0 -1107px !important;
+}
+.incometaxformIcon{
+    background-position: 0 -123px !important;
+}
+.incometaxformTabIcon{
+    background-position: 0 -121px !important;
+}
+.incometaxuserformTabIcon{
+    background-position: 0 -432px !important;
+}
+.incometaxuserformIcon{
+    background-position: 0 -434px !important;
+}
+.downloadIcon{
+    background-position: 0 -939px !important;
+}
+.printIcon{
+    background-position: 0 -1100px !important;
+}
+.calendarbuttonIcon{
+    background-position: 0 -244px !important;
+}
+.docuploadbuttonIcon{
+    background-position: 0 -435px !important;
+}
+.docdownloadbuttonIcon{
+    background-position: 0 -412px !important;
+}
+.cancelbuttonIcon{
+    background-position: 0 -268px !important;
+}
+.searchbuttonIcon{
+    background-position: 0 -892px !important;
+}
+.profilebuttonIcon{
+    background-position: 0 -580px !important;
+}
+.submitbuttonIcon{
+    background-position: 0 -724px !important;
+}
+.submitnexitbuttonIcon{
+    background-position: 0 -1851px !important;
+}
+.setbuttonIcon{
+    background-position: 0 -748px !important;
+}
+.archivebuttonIcon{
+    background-position: 0 -604px !important;
+}
+.checkbuttonIcon{
+    background-position: 0 -244px !important;
+}
+.reportbuttonIcon{
+    background-position: 0 -1059px !important;
+}
+.permissionbuttonIcon{
+    background-position: 0 -1012px !important;
+}
+.managerbuttonIcon{
+    background-position: 0 -172px !important;
+}
+.updatebuttonIcon{
+    background-position: 0 -1012px !important;
+}
+.emailbuttonIcon{
+    background-position: 0 -1468px !important;
+}
+.addjobstabIcon{
+    background-position: 0 -505px !important;
+}
+.managetabIcon{
+    background-position: 0 -673px !important;
+}
+.jobprofiletabIcon{
+    background-position: 0 -335px !important;
+}
+.agencytabIcon{
+    background-position: 0 -889px !important;
+}
+.pendingapptabIcon{
+    background-position: 0 -72px !important;
+}
+.selectedapptabIcon{
+    background-position: 0 -145px !important;
+}
+.rejectedapptabIcon{
+    background-position: 0 -97px !important;
+}
+.documenttabIcon{
+    background-position: 0 -1225px !important;
+}
+.documentButIcon{
+    background-position: 0 -1227px !important;
+}
+.prerequisitetabIcon{
+    background-position: 0 -336px !important;
+}
+.recruitertabIcon{
+    background-position: 0 -792px !important;
+}
+.jobboardtabIcon{
+    background-position: 0 -576px !important;
+}
+.applicanttabIcon{
+    background-position: 0 -649px !important;
+}
+.timesheettabIcon{
+    background-position: 0 -1129px !important;
+}
+.compensationtabIcon{
+    background-position: 0 -721px !important;
+}
+.myprofiletabIcon{
+    background-position: 0 -746px !important;
+}
+.personaldetailstabIcon{
+    background-position: 0 -865px !important;
+}
+.contactdetailstabIcon{
+    background-position: 0 -288px !important;
+}
+.organizationtabIcon{
+    background-position: 0 -793px !important;
+}
+.qualificationtabIcon{
+    background-position: 0 -481px !important;
+}
+.useradmintabIcon{
+    background-position: 0 -720px !important;
+}
+.audittabIcon{
+    background-position: 0 -144px !important;
+}
+.mastertabIcon{
+    background-position: 0 -144px !important;
+}
+.recruitmanagetabIcon{
+    background-position: 0 -889px !important;
+}
+.dashboardTabIcon{
+    background-position: 0 -1344px !important;
+}
+.performancetabIcon{
+    background-position: 0 -841px !important;
+}
+.competencytabIcon{
+    background-position: 0 -265px !important;
+}
+.profile2buttonIcon{
+    background-position: 0 -650px !important;
+}
+.initiatetabIcon{
+    background-position: 0 -528px !important;
+}
+.formtabIcon{
+    background-position: 0 -122px !important;
+}
+.payrollcompotabIcon{
+    background-position: 0 -696px !important;
+}
+.payrollmanagetabIcon{
+    background-position: 0 -816px !important;
+}
+.templatetabIcon{
+    background-position: 0 -1392px !important;
+}
+.reporttabIcon{
+    background-position: 0 -1056px !important;
+}
+.viewtabIcon{
+    background-position: 0 -1201px !important;
+}
+.timetabIcon{
+    background-position: 0 -745px !important;
+}
+.profiletabIcon{
+    background-position: 0 -576px !important;
+}
+.profile2tabIcon{
+    background-position: 0 -650px !important;
+}
+.profile2buttonIcon{
+    background-position: 0 -579px !important;
+}
+.archivetabIcon{
+    background-position: 0 -601px !important;
+}
+.configtabIcon{
+    background-position: 0 -696px !important;
+}
+.jobsearchtabIcon{
+    background-position: 0 -602px !important;
+}
+.jobstatustabIcon{
+    background-position: 0 -626px !important;
+}
+.salaryreporttabIcon{
+    background-position: 0 -1344px !important;
+}
+.mypaysliptabIcon{
+    background-position: 0 -1368px !important;
+}
+.reviewtabIcon{
+    background-position: 0 -1391px !important;
+}
+.appraisalreporttabIcon{
+    background-position: 0 -1417px !important;
+}
+.myappraisalreporttabIcon{
+    background-position: 0 -1442px !important;
+}
+.getEmployee{
+    background-position: 0 -1227px !important;
+}
+.gridApply {
+    background-position:0 -247px !important;
+    height:11px;
+}
+.gridCancel {
+    background-position:0 -269px !important;
+    height:13px;
+    margin-bottom:1px;
+}
+.rightbuttonIcon {
+    background-position:0 -0px !important;
+}
+.leftbuttonIcon {
+    background-position:0 -0px !important;
+}
+.addComment {
+    background-position: 0 -197px !important;
+    height:14px;
+}
+.viewComment{
+    background-position: 0 -1205px !important;
+    height:14px;
+}
+.viewGrid {
+    background-position: 0 -1200px !important;
+    height:13px;
+}
+.downloaddocs {
+    background-position:0 -412px !important;
+    height:16px;
+}
+.logoBrowse{
+    padding-left: 20px;
+}
+.defaultuser {
+    background-position:0 -580px !important;
+    height:16px;
+}
+html, body {
+    font-family: Tahoma, Verdana, Arial, Helvetica, sans-sarif;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    overflow: hidden;
+    height: 100%;
+    font-size: 12px;
+}
+
+#header {
+    font-size: 11px;
+    overflow: hidden;
+    padding: 5px;
+    border: 0 none;
+}
+
+.loading-indicator {
+    font-size: 8pt;
+    background: url('../images/loading.gif') no-repeat top left;
+    padding-left: 20px;
+    height: 18px;
+    text-align: left;
+}
+
+#loading, #docsloading {
+    position: absolute;
+    border: 1px solid #6593cf;
+    padding: 2px;
+    background: #c3daf9;
+    text-align: center;
+    z-index: 20001;
+}
+
+#loading {
+    left: 45%;
+    top: 40%;
+    width: 150px;
+}
+
+#loading .loading-indicator, #docsloading .loading-indicator {
+    border: 1px solid #a3bad9;
+    color: #003366;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 0;
+}
+
+#loading .loading-indicator {
+    background: white;
+    padding: 10px;
+}
+
+#docsloading {
+    left: 34%;
+    top: 34%;
+    width: 140px;
+}
+
+#docsloading .loading-indicator {
+    background-color: white;
+    padding: 3px;
+}
+
+#navcontainer {
+    /*position:absolute;*/
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+#navseparator {
+    background: #0000a0 url(../images/navseparator.png) repeat-x;
+    border-right: thin solid #0000a0;
+    height: 5px;
+    width: 100%;
+    left: 0;
+    /*bottom: 155px;*/ /*position:absolute; */
+    overflow: hidden;
+}
+
+#document-tree a, #mailtreemenu a, #mailtreemenu a .body, #navareadashboard a, #navareadashboard a .body {
+    background: none;
+    border: none;
+}
+
+#document-tree a, #mailtreemenu a, #navareadashboard a {
+    padding: 0;
+    display: inline;
+}
+
+.navitem-list a, .navitem-list a:hover, .navitem-list .selected:hover {
+    text-decoration: none;
+}
+
+.navitem-list a {
+    border: 1px solid #0000a0;
+    border-top: 0;
+    display: block;
+    background: #a5c4ee url('../images/navbg.png') repeat-x left -62px;
+}
+
+.navitem-list a:hover {
+    background: #fdf4be url('../images/navbg.png') repeat-x left -31px;
+}
+
+.navitem-list .selected:hover {
+    background: #f3ba59 url('../images/navbg.png') repeat-x left -93px;
+}
+
+.navitem-list .selected {
+    background: #f3ba59 url('../images/navbg.png') repeat-x;
+}
+
+.navitem-list a .body {
+    padding: 8px 2px 10px 32px;
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    font-size: 11px;
+    color: #2d5593;
+    display: block;
+    height: 12px;
+    cursor: hand;
+    -moz-outline: none;
+}
+
+.navitem-list #navdashboard .body {
+    background-image: url(../images/home.gif);
+}
+
+.navitem-list #navaccounting .body {
+    background-image: url(../images/dollar.gif);
+}
+
+.navitem-list #navproject .body {
+    background-image: url(../images/project.gif);
+}
+
+.navitem-list #navcommunity .body {
+    background-image: url(../images/community.gif);
+}
+
+.navitem-list #navfriends .body {
+    background-image: url(../images/network.gif);
+}
+
+.navitem-list #navdocs .body {
+    background-image: url(../images/document.gif);
+}
+
+.navitem-list #navcrm .body {
+    background-image: url(../images/customer.gif);
+}
+
+#navareadashboard {
+    width: 99%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#calContainer {
+    width: 99%;
+    height: 99%;
+    overflow-y: auto !important;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#calendartree-container, #calendartree-container .x-panel-bwrap {
+    width: 99%;
+    height: auto;
+}
+
+#calendartree-container .x-panel-bwrap {
+    overflow: hidden !important;
+}
+
+#calendarcontainer .x-panel-bwrap {
+    overflow: hidden !important;
+}
+
+#calendarcontainer {
+    overflow: hidden !important;
+    height: 190px;
+}
+
+#navarea a:hover {
+    background-color: #e0e0e5;
+}
+
+#navigation {
+    background-color: #c3daf9;
+}
+
+.x-pannel-hide {
+    display: none;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.navigationPanel {
+    width: 200px;
+    min-width: 75px;
+    max-width: 250px;
+}
+
+#pmessage .x-panel-bwrap {
+    overflow: auto !important;
+    height: 99%;
+    width: 99%;
+}
+
+#calpanel {
+    position: relative;
+}
+
+#calendarcontainer div {
+    position: relative;
+}
+
+#calpanel .x-panel-bwrap {
+    overflow: hidden;
+    height: 99%;
+    width: 99%;
+}
+
+#calContainer .x-date-mp {
+    width: 180px !important;
+    position: absolute !important;
+}
+
+#calContainer .x-date-mp table {
+    width: 100% !important;
+}
+
+#northNavRegion .x-tool-toggle {
+    background-position: 0 -195px !important;
+}
+
+#northNavRegion .x-tool-toggle-over {
+    background-position: -11pt -195px !important;
+}
+
+#northNavRegion .x-panel-collapsed .x-accordion-hd .x-tool-toggle {
+    background-position: 0 -210px !important;
+}
+
+#northNavRegion .x-panel-collapsed .x-accordion-hd .x-tool-toggle-over {
+    background-position: -11pt -210px !important;
+}
+
+.favwinIcon{
+	background-position:0 -247px !important;
+}
+
+.communityTabIcon {
+    background-position: 0 -1297px !important;
+}
+
+.projectTabIcon {
+    background-position: 0 -237px !important;
+}
+
+.userTabIcon {
+    background-position: 0 -1357px !important;
+}
+
+.doctabicon {
+    background-position: 0 -597px !important;
+}
+
+.searchdoc {
+    background-position: 0 -600px !important;
+}
+
+.accountTabIcon {
+    background-position: 0 -637px !important;
+}
+.permicon {
+    background-position: 0 -854px !important;
+}
+
+.managericon {
+    background-position: 0 -16px !important;
+}
+.accreportsTabIcon {
+    background-position: 0 -1791px !important;
+}
+
+.acccustomerTabIcon {
+    background-position: 0 -1296px !important;
+}
+.hrmsTabIcon {
+    background-image: url(../images/Online.png) !important;
+}
+.WinIcon {
+    background-image: url(../images/deskera.png) !important;
+}
+.hrmshomeTabIcon {
+    background-position: 0 -257px !important;
+}
+.reportusr {
+    background-position: 0 -658px !important;
+}
+.addgroup {
+   background-image: url(../images/User1.png) !important;
+}
+.assign {
+   background-image: url(../images/shield_add.gif) !important;
+}
+.inserttpl {
+    background-position: 0 -618px !important;
+}
+.addgroup {
+    background-image: url(../images/addgoal.gif) !important;
+}
+.createtpl {
+    background-position: 0 -558px !important;
+}
+.delicon {
+    background-position: 0 -218px !important;
+}
+.payrollTabIcon{
+    background-image: url(../images/payroll-management.gif) !important;
+}
+.hrmstimeTabIcon {
+    background-image: url(../images/time.gif) !important;
+}
+.hrmsperformanceTabIcon {
+    background-image: url(../images/performance.gif) !important;
+}
+.hrmsreportTabIcon {
+    background-image: url(../images/report.gif) !important;
+}
+.hrmscompensationTabIcon {
+    background-image: url(../images/money.gif) !important;
+}
+.hrmsmanagecompensationTabIcon {
+    background-image: url(../images/Manage.gif) !important;
+}
+.hrmsgoalsTabIcon {
+    background-image: url(../images/user16.png) !important;
+}
+.hrmsformTabIcon {
+    background-image: url(../images/user1.gif) !important;
+}
+.hrmsappraisalformTabIcon {
+    background-image: url(../images/applicationform.gif) !important;
+}
+.hrmsinitiateTabIcon {
+    background-image: url(../images/initiateappraisal.gif) !important;
+}
+.hrmsrejectappsTabIcon {
+    background-image: url(../images/applicationdelete.gif) !important;
+}
+.hrmsaddappsTabIcon {
+    background-image: url(../images/applicationadd.gif) !important;
+}
+.hrmsviewappsTabIcon {
+    background-image: url(../images/applicationview.gif) !important;
+}
+.hrmsmanageagencyTabIcon {
+    background-image: url(../images/Manage.gif) !important;
+}
+.hrmsrecruiterTabIcon {
+    background-image: url(../images/recruiterslist.gif) !important;
+}
+.hrmsinternaljobboardTabIcon {
+    background-image: url(../images/Manage.gif) !important;
+}
+.hrmsrecruitmentagencyTabIcon {
+    background-image: url(../images/Recruitment.gif) !important;
+}
+.hrmsinternaljobmanageTabIcon {
+    background-image: url(../images/Manage.gif) !important;
+}
+.hrmsexternalmanageTabIcon {
+    background-image: url(../images/Manage.gif) !important;
+}
+.hrmsinternalmanageTabIcon {
+    background-image: url(../images/Manage.gif) !important;
+}
+.hrmscompetencymasterTabIcon {
+    background-image: url(../images/competencymaster.gif) !important;
+}
+.hrmsdesignationTabIcon {
+    background-image: url(../images/designation.gif) !important;
+}
+.hrmsinitappTabIcon {
+    background-image: url(../images/initapp.gif) !important;
+}
+.hrmsinternaljobTabIcon {
+    background-image: url(../images/internaljob.gif) !important;
+}
+.hrmsexternaljobTabIcon {
+    background-image: url(../images/externaljob.gif) !important;
+}
+.hrmsjobboardTabIcon {
+    background-image: url(../images/jobboard.gif) !important;
+}
+.hrmsrecruitTabIcon {
+    background-image: url(../images/Recruit.gif) !important;
+}
+.hrmsviewtimesheetTabIcon {
+    background-image: url(../images/report2.gif) !important;
+}
+.hrmstimesheetTabIcon {
+    background-image: url(../images/time2.gif) !important;
+}
+.hrmskeyTabIcon {
+    background-image: url(../images/key.gif) !important;
+}
+.hrmssuccessionTabIcon {
+    background-image: url(../images/successionmanage.gif) !important;
+}
+.hrmspreinternalTabIcon {
+    background-image: url(../images/designation.gif) !important;
+}
+.hrmspreexternalTabIcon {
+    background-image: url(../images/designation.gif) !important;
+}
+.hrmsviewappTabIcon {
+    background-image: url(../images/user1.gif) !important;
+}
+.hrmsmygoalsTabIcon {
+    background-image: url(../images/addgoal.gif) !important;
+}
+.hrmsviewrecTabIcon {
+    background-image: url(../images/Recruit.gif) !important;
+}
+.hrmsrecTabIcon {
+    background-image: url(../images/assignrecruiters.gif) !important;
+}
+.hrmsauditTabIcon {
+    background-image: url(../images/AuditTrail.png) !important;
+}
+.hrmsassignjobsTabIcon {
+    background-image: url(../images/assignjob.gif) !important;
+}
+.hrmsmasterTabIcon {
+    background-image: url(../images/setting.gif) !important;
+}
+.hrmsrecruitmentTabIcon {
+    background-image: url(../images/Recruit.gif) !important;
+}
+.hrmsmygoalsTabIcon {
+    background-image: url(../images/user.gif) !important;
+}
+.hrmsarchiveTabIcon {
+    background-image: url(../images/zip.gif) !important;
+}
+.hrmsinitappTabIcon {
+    background-image: url(../images/initapp.gif) !important;
+}
+.hrmsmyprofileTabIcon {
+    background-image: url(../images/user16.png) !important;
+}
+.hrmsemployeeprofileTabIcon {
+    background-image: url(../images/my-profile.gif) !important;
+}
+.hrmsorganizationTabIcon {
+    background-image: url(../images/organisation-data.gif) !important;
+}
+.hrmscontactinfoTabIcon {
+    background-image: url(../images/contact-info.gif) !important;
+}
+.hrmspersonaldataTabIcon {
+    background-image: url(../images/personal-info.gif) !important;
+}
+.hrmsqualificationTabIcon {
+    background-image: url(../images/employmentinfo.gif) !important;
+}
+.hrmsdocumentTabIcon {
+    background-image: url(../images/document-upload.gif) !important;
+}
+.hrmsemployeelistTabIcon {
+    background-image: url(../images/employee-list.gif) !important;
+}
+.hrmsapplicantlistTabIcon {
+    background-image: url(../images/list-items.gif) !important;
+}
+.jobsearchTabIcon {
+    background-image: url(../images/jobsearch.jpg) !important;
+}
+.PaymasterTabIcon{
+	background-image: url(../images/master-configuration.gif) !important;
+}
+.hrmssaveIcon {
+    background-image: url(../images/add.gif) !important;
+}
+
+.paysaveIcon {
+    background-image: url(../images/save.gif) !important;
+}
+.salaryicon {
+    background-image: url(../images/edit.gif) !important;
+}
+.formstyleClass {
+    background:rgb(241,241,241);
+    padding-left:20px !important;
+    padding-top:10px !important;
+}
+.formstyleClass2 {
+    background:rgb(241,241,241);
+}
+.formstyleClass3 {
+    background:white;
+}
+.formstyleClass4 {
+        padding-left:50px !important;
+        padding-bottom:20px !important;
+        padding-top:25px !important;
+}
+.formstyleClass5 {
+    margin-bottom:5px;
+    padding-left:200px;
+    padding-right:205px;
+}
+.textfstyle {
+   text-align: center;
+   margin-right: 15px;
+}
+.panelstyleClass1 {
+     background:white;
+     border-bottom:1px solid #bfbfbf;
+}
+.panelstyleClass2 {
+     background:#f1f1f1;
+     font-size:10px;
+}
+
+
+.hrmsprofileTabIcon {
+    background-image: url(../images/user16.png) !important;
+}
+.hrmsjobexternalTabIcon {
+    background-image: url(../images/externaljob.gif) !important;
+}
+
+.iconaddClass{
+    background: transparent url(../images/add.gif) no-repeat scroll 0 4px !important;
+}
+.iconeditClass{
+    background: transparent url(../images/edit.gif) no-repeat scroll 0 4px !important;
+}
+.iconviewClass{
+    background: transparent url(../images/View.png) no-repeat scroll 0 4px !important;
+}
+.icondelClass{
+    background: transparent url(../images/Delete.gif) no-repeat scroll 0 4px !important;
+}
+.iconapplyClass{
+    background: transparent url(../images/check16.gif) no-repeat scroll 0 4px !important;
+}
+.iconsaveClass{
+    background: transparent url(../images/Save.gif) no-repeat scroll 0 4px !important;
+}
+.iconcalendarClass{
+    background: transparent url(../images/calendar2.gif) no-repeat scroll 0 4px !important;
+}
+.iconemailClass{
+    background: transparent url(../images/email.gif) no-repeat scroll 0 4px !important;
+}
+.iconprintClass{
+    background: transparent url(../images/Print.gif) no-repeat scroll 0 4px !important;
+}
+.iconcancelClass{
+    background: transparent url(../images/cancel.gif) no-repeat scroll 0 4px !important;
+}
+.iconcuserClass{
+    background: transparent url(../images/user_add.gif) no-repeat scroll 0 3px !important;
+}
+.iconarchiveClass{
+    background: transparent url(../images/zip.gif) no-repeat scroll 0 4px !important;
+}
+.icondiscardClass{
+    background: transparent url(../images/undo2.png) no-repeat scroll 0 4px !important;
+}
+.iconnewClass{
+    background: transparent url(../images/New.gif) no-repeat scroll 0 4px !important;
+}
+.iconsubmitClass{
+    background: transparent url(../images/submit.jpg) no-repeat scroll 0 4px !important;
+}
+.iconsearchClass{
+    background: transparent url(../images/search.jpg) no-repeat scroll 0 4px !important;
+}
+.iconprofileClass{
+    background: transparent url(../images/user16.png) no-repeat scroll 0 4px !important;
+}
+.iconjobsearchClass{
+    background: transparent url(../images/search.jpg) no-repeat scroll 0 4px !important;
+}
+.iconjobstatusClass{
+    background: transparent url(../images/externaljob.gif) no-repeat scroll 0 4px !important;
+}
+.iconuploadClass{
+    background: transparent url(../images/document-upload.gif) no-repeat scroll 0 4px !important;
+}
+.icondownloadClass{
+    background: transparent url(../images/document-download.gif) no-repeat scroll 0 4px !important;
+}
+.hrmsdocumentsTabIcon {
+    background-image: url(../images/document12.gif) !important;
+}
+.hrmsprospectTabIcon {
+    background-image: url(../images/user16.png) !important;
+}
+.hrmsprofileTabIcon {
+    background-image: url(../images/user16.png) !important;
+}
+.clearfilter{
+    background-position: 0 -2809px !important;
+}
+.addfilter{
+    background-position: 0 -2786px !important;
+}
+.filter{
+    background-position: 0 -2764px !important;
+}
+
+.accvendorTabIcon {
+    background-image: url(../images/vendor.gif) !important;
+}
+
+.accemployeeTabIcon {
+    background-image: url(../images/user_gray.gif) !important;
+}
+
+.crmTabIcon{
+    background-position: 0 -357px !important;
+}
+
+.teamcal {
+    background-position: 0 -357px !important;
+}
+
+.projplan {
+    background-position: 0 -1793px !important;
+}
+
+.communitydiscuss {
+    background-position: 0 -157px !important;
+}
+
+.pmsgicon {
+    background-position: 0 -1337px !important;
+}
+
+.admintab {
+    background-position: 0 -17px !important;
+}
+
+.conflicticon {
+    background-position: 0 0px !important;
+}
+
+.conflicttabicon {
+    background-position: 0 3px !important;
+}
+
+.chaticon {
+    background-position: 0 -160px !important;
+}
+
+.todolistpane {
+    background-position: 0 -1157px !important;
+}
+
+.searchtabpane {
+    background-position: 0 -280px !important;
+}
+
+.shortcuts, .userinfo, .mailTo {
+    color: gray;
+}
+
+.shortcuts {
+    float: right;
+    margin: 3px 4px;
+}
+
+.userinfo {
+    float: left;
+    margin: -2px 14px;
+}
+
+.shortcuts a, .userinfo a, .listpanelcontent a, .mailTo a {
+    text-decoration: none;
+}
+
+.shortcuts a {
+    margin-right: 3px;
+}
+
+.shortcuts a:link, .shortcuts a:visited, .userinfo a:link, .userinfo a:visited, .listpanelcontent a:link, .listpanelcontent a:visited,
+.mailTo a:link, .mailTo a:visited {
+    color: #083772;
+}
+
+.shortcuts a:hover, .userinfo a:hover, .listpanelcontent a:hover, .mailTo a:hover{
+    color: #456;
+    text-decoration: underline;
+}
+
+.editusericon {
+    background-position: 0 -1482px !important;
+}
+
+#companyLogo {
+    float: left;
+}
+
+#whoami {
+    font-weight: bold;
+    color: black;
+}
+
+#serchForIco {
+    position: absolute !important;
+    z-index: 1000 !important;
+}
+
+#searchBar {
+    float: right !important;
+    display: inline !important;
+}
+
+.scrollform {
+    font-size: 10px !important;
+    padding-bottom: 3px !important;
+    height: auto !important;
+}
+
+.scrollform .x-panel-bwrap .x-panel-body {
+    padding: 20px !important;
+    overflow-y: scroll !important;
+}
+
+.contactsTabIcon {
+    background-position: 0 -297px !important;
+}
+
+.searchall {
+    background-position: 0 -1320px !important;
+}
+
+.searchalltab {
+    background-position: 0 -1317px !important;
+}
+
+.searchpeople {
+    background-position: 0 -1360px !important;
+}
+
+.searchcommunity {
+    background-position: 0 -1300px !important;
+}
+
+.searchproject {
+    background-position: 0 -240px !important;
+}
+
+.appbg {
+    background: #6490CB url(../images/bgstrip.png) repeat-x;
+}
+
+.tool{
+    background:#366487;
+    color:white;
+}
+.tool h3{
+    font-weight:bold;
+    font-size:16px;
+}
+
+.newForm label{
+    margin-top:15px;
+
+    font-size:14px;
+    float:none !important;
+    width:auto !important;
+    word-spacing:normal;
+    font-weight:bold;
+}
+.newForm label span {
+    font-size:11px;
+    display:block;
+    margin-bottom:5px;
+    font-weight:normal;
+    color:#444;
+}
+
+.newForm .x-form-element{
+    padding-left:0px !important;
+}
+
+.newField{
+    float:none !important;
+    width:90% !important;
+}
+
+.newField input, .newField file {
+    float:none !important;
+    width:90% !important;
+}
+
+.messagePanelHeader{
+    margin:10px;
+}
+
+.messagePanelBody{
+    padding:10px;
+    margin:10px;
+}
+
+.messagePanelBody .x-panel-body{
+    overflow:auto !important;
+}
+
+.messagePanelHeader .x-panel-body{
+    border-bottom:thin solid #666;
+    width:98% !important;
+}
+
+.x-grid3 table {
+    table-layout:fixed;
+}
+.x-date-middle {
+    width:130px;
+}
+
+.x-panel-bbar td .x-form-field-wrap {
+    width:50px !important;
+}
+
+.x-panel-bbar td .x-combo-noedit {
+        width:25px !important;
+}
+
+.doclinks a {
+    color: white;
+    text-decoration: underline;
+}
+
+/*fix for firefox3 to display header label*/
+.userprofile-main .x-column {
+    float:none;
+}
+
+.head-label {
+    margin-right:5px;
+    color:#15428b;
+    font-weight:bold;
+}
+
+.messagePanelHeader ul{
+     line-height:20px;
+     list-style-type:none;
+}
+
+/*fix for grid rendering in Firefox 3 has no effect on firefox2 and ie 6 & 7*/
+.x-grid3 table {
+    table-layout:fixed;
+}
+
+.x-date-middle {
+    width:130px;
+}
+
+.x-panel-bbar td .x-form-field-wrap {
+    width:50px !important;
+}
+
+.x-panel-bbar td .x-combo-noedit {
+        width:25px !important;
+}
+
+/*fix for firefox3 to display header label*/
+.userprofile-main .x-column {
+    float:none;
+}
+
+#compLogoinfo {
+    padding-left:115px !important;
+    font-size:10px !important;
+    font-style:italic !important;
+    padding-left:125px !important;
+    color:gray !important;
+}
+.compLogoinfo11 {
+    font-size:13px !important;
+    font-style:italic !important;
+    padding-left:130px !important;
+    color:gray !important;
+}
+#attachmentlink{
+    padding-left:105px !important;
+}
+.fileattachremove{
+    padding-left:105px !important;
+    margin-bottom:3px;
+}
+.attachmentlink {
+    color: #083772;
+    text-decoration:none;
+}
+.attachmentlink:hover{
+    color: #456  !important;
+    text-decoration: underline  !important;
+}
+.dashboardcontent a {
+    text-decoration: none;
+}
+
+.dashboardcontent a:visited, .dashboardcontent a {
+    color: #083772;
+}
+
+.dashboardcontent a:hover {
+    color: #456;
+    text-decoration: underline;
+}
+.nonlink {
+    color: #083772;
+}
+
+.subpoints{
+    padding-left:28px;
+}
+
+.statuspanelouter {
+    width: 65%;
+/*    height: 100px;*/
+    float: left;
+}
+
+.statuspanelinner {
+    margin-right: 20px;
+}
+
+.statuspanelheader {
+    height: 24px;
+    border-bottom: 1px solid #D8DFEA;
+    color: #15428B;
+}
+
+.statuspanelheadergraph {
+    height: 24px;
+    border-bottom: 1px solid #D8DFEA;
+    color: #15428B;
+    margin-top:15px;
+   /* position:absolute;
+    top:450px;*/
+}
+
+.graphposition{
+   /*position:relative;*/
+   width:50%;
+   margin-top:15px;
+   display:block;
+}
+
+.linkspanel {
+    width: 33%;
+    float: right;
+}
+
+.contentpanel {
+    height: 300px;
+}
+
+.statuspanelheadertext {
+    font-weight: bold;
+}
+
+.duetask{
+	background: url('../images/duetask.png') no-repeat left top;
+}
+
+.newtask{
+	background: url('../images/newtask.png') no-repeat left top;
+}
+
+.overduetask{
+	background: url('../images/overduetask.png') no-repeat left top;
+}
+
+.statusitemimg {
+    width: 20px;
+	height: 20px;
+    float: left;
+}
+
+.statusitemcontent {
+    border-bottom: 1px solid #D8DFEA;
+    float: left;
+    width: 94%;
+	padding-bottom: 10px;
+}
+
+.statuspanelcontentiteminner{
+	padding-top: 10px;
+	padding-left: 4px;
+}
+
+.statusitemcmd {
+    float: right;
+}
+
+.statusclr {
+    clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+.linkspanel li {
+    background: transparent url(../images/bullet2.gif) no-repeat scroll 0 0;
+    padding-left: 16px;
+    margin: 4px;
+}
+.helppanel {
+    padding-left: 16px;
+    margin: 4px;
+}
+.helppanel li {
+    background: transparent url(../images/bullet2.gif) no-repeat scroll 0 0;
+    padding-left: 16px;
+    margin-top: 10px;
+}
+
+.iconTax{
+    background: url(../images/tax-details.gif) no-repeat 3px !important;
+}
+.iconDeduc{
+    background: url(../images/deduction-details.gif) no-repeat 3px !important;
+}
+
+.projlinks li {
+    background: transparent url(../images/project12.gif) no-repeat scroll 0 2px;
+}
+
+.dashboardcontent {
+    padding: 24px
+}
+
+.litetext{
+	color: gray;
+}
+.redtext{
+    color: #ff6666;
+}
+
+.subscriprojtext{
+    width:100px;
+}
+
+.subscrilabel{
+    font-weight:bold;
+    vertical-align:middle;
+    padding-bottom:10px;
+}
+.x-toolbar input, .x-toolbar span{
+    margin-left: 3px;
+}
+.gridHeader{
+    color: #15428B;
+    font-weight: bold;
+    font-size: 11px;
+    display: block;
+    width: 50%;
+    border-bottom: 1px solid #D8DFFF;
+    margin: 5px 0px 10px 0px;
+    height: 15px;
+}
+.expanderContainer{
+    margin-left: 65px;
+}
+.headerRow{
+    width: 12%;
+    display: block;
+    float: left;
+    font-weight: bold;
+}
+.gridRow{
+    width: 12%;
+    display: block;
+    float: left;
+    /*font-weight: bold;*/
+}
+
+.systemadmin{
+        background-image:url(../images/Manage.gif)!important;
+
+}
+
+
+.createUserIcon {
+    background-position: 0 -1258px !important;
+}
+.editUserIcon {
+    background-position: 0 -1482px !important;
+}
+.deleteUserIcon {
+    background-position: 0 -1278px !important;
+}
+.changepwdIcon {
+    background-position: 0 -1733px !important;
+}
+.resetpwdIcon {
+    background-position: 0 -1753px !important;
+}
+.usermanageIcon {
+    background: transparent url(../images/user16.png) no-repeat scroll 0 4px !important;
+}
+
+
+
+.list{
+        background: transparent url(../images/list-items.gif) no-repeat scroll 0 4px !important;
+}
+
+.delete{
+        background-image:url(../images/Delete.gif)!important;
+}
+
+.createcompany{
+       background: transparent url(../images/createcompany.gif) no-repeat scroll 0 4px !important;
+}
+
+.usermanage{
+        background-image:url(../images/Users1.png)!important;
+}
+
+.adminWinImg{
+    width:40px;
+    height:52px;
+    margin:5px 5px 5px 5px;
+}
+
+.deskeralogo{
+       background-image:url(../images/deskera.png)!important;
+}
+.leftArrowIcon {
+   background-image:url(../images/arrowleft.gif)!important;
+}
+.rightArrowIcon {
+    background-image:url(../images/arrowright.gif)!important;
+}
+.upArrowIcon{
+	 background: url(../images/arrow_up.gif) no-repeat !important;
+}
+.downArrowIcon{
+	 background: url(../images/arrow_down.gif) no-repeat !important;
+}
+.newcompany {
+    background: url('../images/new-company.gif') no-repeat scroll 0 3px !important;
+}
+.addgoal{
+    background-position:0 -27px !important;
+    float:left;
+    margin-right:0px;
+    padding-left:0px;
+}
+.hrmstimesheet {
+    background-position:0 -749px !important;
+    float:left;
+    margin-right:0px;
+    padding-left:0px;
+}
+.hrmsappraisal {
+    background-position:0 -531px !important;
+    float:left;
+    margin-right:0px;
+    padding-left:0px;
+}
+.iconWage{
+    background-position:0 -388px !important;
+    float:left;
+    margin-right:0px;
+    padding-left:0px;
+}
+
+.hrmssettimesheet {
+    background: url(../images/time.gif) no-repeat scroll 0 4px  !important;
+}
+
+/*.x-grid3-hd-row td {
+font-weight: bold;
+}*/
+.green-row
+{
+    background-color:#99CC99 !important;
+}
+
+.red-row
+{
+    background-color:#F5A9A9 !important;
+}
+
+.ux-grid-hd-group-cell {
+background:transparent url(../lib/resources/images/default/grid/grid3-hrow.gif) repeat-x scroll center bottom;
+}
+.iconwin{
+background-position:0 -336px !important;
+}
+
+.x-btn-text-icon .x-btn-center .x-btn-text {
+    background-position:0 2px;
+    background-repeat:no-repeat;
+    padding:0px 0 2px 18px;
+}
+
+.wtf-safari .x-btn-text-icon .x-btn-center .x-btn-text {
+    background-position:0 2px;
+    background-repeat:no-repeat;
+    padding:0px 0 4px 18px;
+}
+
+.currency{
+    float:right;
+    margin-right: 15px
+}
+
+.export{
+     background-position: 0 -1251px !important;
+}
+.exportcsv{
+     background-position: 0 -2740px !important;
+     height:17px;
+}
+.exportpdf{
+     background-position: 0 -2716px !important;
+}
+.fetch{
+     background-position: 0 -2788px !important;
+}
+.printData{
+     background-position: 0 -1081px !important;
+}
+.export-menubutton{
+     background-position: 0 -1252px !important;
+}
+.bodyFormat1 {
+   background:#F1F1F1 none repeat scroll 0 0;
+   border:1px solid #99BBE8;
+  margin:10px;
+}
+.reportfieldContainer{
+    padding-bottom: 6px;
+    padding-left: 35% !important;
+}
+.exportpdfbut{
+    margin-left:40%;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.customFieldSet {
+    margin-left: 7% !important;
+    margin-right: 10% !important;
+    margin-top: 5px !important;
+    width: 80%;
+}
+.reportContainerDiv{
+    margin: 20px auto auto auto;
+    width: 60% !important;
+    border: 1px solid black;
+}
+
+.subtitleAddRemove{
+    padding-left:24% !important;
+    margin-bottom:3px;
+}
+
+.descArea{
+    border: 1px solid #7EADD9;
+}
+.currency-view{
+    font-family:"arial,tahoma,helvetica,sans-serif";
+}
+.template_builder{
+    background-position: 0 -600px !important;
+}
+
+a.jumplink {
+    float: left;
+    margin: -2px 14px;
+    text-decoration: none;
+}
+
+a.jumplink:link, a.jumplink:visited{
+    color: #083772;
+}
+
+a.jumplink:hover{
+    color: #456;
+    text-decoration: underline;
+}
+
+.comment {
+background-position:0 -292px !important;
+}
+.dpTitleHead {
+    font-size:13px;
+    font-weight:bold;
+    padding-bottom:5px;
+    padding-top:10px;
+    font-family:"Trebuchet MS","Bitstream Vera Sans",verdana,lucida,arial,helvetica,sans-serif;
+}
+.commentTemplate{
+    margin:3px;
+    height:90%;
+    width:90%;
+}
+.commentTemplate1{
+    height: auto;
+    display:block;
+    overflow:auto;
+    margin-left:10px;
+    margin-top:20px
+}
+
+.chart1{
+    background-position: 0 -1081px !important;
+}
+a.grid-link-text:link, a.grid-link-text:visited{
+    color: #083772;
+}
+a.grid-link-text:hover{
+    color: #456;
+    text-decoration: underline;
+}
+.grid-link-text{
+    text-align:center;
+    font-size:16px;
+    font-weight:bold;
+    color: #083772;
+}
+.x-progress-bar {
+    background:#9CBFEE url(../images/custom-bar1.gif) repeat-x scroll left center;
+}
+ .x-progress-inner {
+    height:14px !important;
+}
+.addjobsDashboardIcon{
+    background-position: 0 -507px !important;
+}
+.personalActionIcon {
+background-position:0 -1370px !important;
+}
+.terminationIcon {
+background-position:0 -1526px !important;
+}
+.rehireIcon {
+background-position:0 -320px !important;
+}
+.emphistoryIcon {
+background-position:0 -660px !important;
+}
+.emphistoryTabIcon {
+background-position:0 -655px !important;
+}
+.myProfileIcon {
+background-position:0 -297px !important;
+}
+.x-grid3-summary-row {
+    border-left:1px solid #fff;
+    border-right:1px solid #fff;
+    color:#333;
+    background: #f1f2f4;
+}
+.x-grid3-summary-row .x-grid3-cell-inner {
+    font-weight:bold !important;
+    padding-bottom:4px;
+}
+.x-grid3-cell-first .x-grid3-cell-inner {
+    padding-left:16px;
+}
+.x-grid-hide-summary .x-grid3-summary-row {
+    display:none;
+}
+.x-grid3-summary-msg {
+    padding:4px 16px;
+    font-weight:bold !important;
+}
+.rowExpand td{
+    font-weight:bold
+}
+.commentSpan{
+    color:#666666;
+    display:block;
+}
+.valueSpan {
+    margin-right: 13px;
+    float:left
+}
+.draftbuttonIcon {
+background-position:0 -1658px !important;
+}
+.appraisalTemplate{
+    font-style:inherit;
+    background:transparent url(../../images/bullet2.gif) no-repeat scroll 0pt;
+    padding-left:20px;
+    padding-top:5px;
+}
+.appraisalTemplateData{
+    font-style:inherit;
+    padding-top:5px;
+}
+
+.templateTable {
+    padding:0px 8px;
+    font-size:12px;
+    width:100%;
+}
+
+.templateSubTable {
+    padding-left:50px;
+    font-size:12px;
+    width:100%;
+}
+
+.gridWithUl ul {
+    list-style-type:square;
+    padding-left:12px;
+}
+
+.gridWithUl ol {
+    list-style-type:decimal;
+    padding-left:12px;
+}
+.jobheader {
+    font-size:2em;
+}
+.jobheader1 {
+    font-size:1.1em;
+    font-weight:bold;
+    margin-left:2px;
+}
+.container-main {
+margin:auto;
+padding:0;
+width:100%;
+}
+.container {
+margin:auto;
+padding:0;
+width:800px;
+}
+.wrapper {
+float:left;
+margin:0;
+padding:0;
+width:800px;
+}
+.applybutton{
+background-color:#808080;
+color:#FFFFFF;
+cursor:pointer;
+}
+.closeformbutton{
+background-color:#808080;
+color:#FFFFFF;
+cursor:pointer;
+width: 60px;
+padding-left: 4px;
+font-size:1.3em;
+}
+.jobtext1{
+font-size:1em;
+margin-left:2px;
+}
+.jobtext{
+font-size:1em;
+font-weight:bold;
+margin-left:2px;
+}
+.resumeIcon{
+    background-position: 0 -1252px !important;
+    height : 16px;
+}
+.upbuttonIcon{
+    background-position: 0 -1276px !important;
+    height : 16px;
+}
+.downbuttonIcon{
+    background-position: 0 -1300px !important;
+    height : 16px;
+}
+.setmasterbuttonIcon{
+    background-position: 0 -1325px !important;
+    height : 16px;
+}
+.helpText
+{
+    color: #898989;
+    margin-left: 5px;
+}
+.filenameText
+{
+    margin-left: 5px;
+}
+.visibleDisabled .x-item-disabled
+{
+    opacity:1 !important;
+}
+.visibleDisabled .readOnly
+{
+    color: gray !important;
+}
+.appraisal-table .x-table-layout
+{
+    width: 100% !important;
+}
+.appraisal-table .x-form-element
+{
+    padding-left: 25px !important;
+}
+.appraisal-table .x-form-item-label
+{
+    width: 20px !important;
+    padding-top: 25px !important;
+}
+.appraisal-table .x-table-layout-cell
+{
+    vertical-align: top !important;
+}
+.x-form-extend-label
+{
+    padding: 3px 3px 3px 0;
+    display: block;
+}
+
+.x-edit-hr {background: url(../images/hr-icon.png) 0 0 no-repeat !important;}
+.x-edit-indent {background: url(../images/indent_editor.gif) 0 0 no-repeat !important;}
+.x-edit-char {background: url(../images/customCharacter.gif) 0 0 no-repeat !important;}
+.x-edit-outdent {background: url(../images/outdent.gif) 0 0 no-repeat !important;}
+.x-edit-subscript {background: url(../images/text_sub.png) 0 0 no-repeat !important;}
+.x-edit-superscript {background: url(../images/text_super.png) 0 0 no-repeat !important;}
+.x-edit-removeFormat {background: url(../images/exclamation.png) 0 0 no-repeat !important;}
+.x-edit-image {background: url(../images/image.gif) 0 0 no-repeat !important;}
+
+.char-item {
+	float: left;
+	border: 1px solid #99BBE8;
+	margin: 3px;
+	text-align: center;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	font-size: 14px;
+	color: #15428B;
+	cursor: pointer;
+}
+.char-item.x-view-selected {
+	background: url(../images/selected.gif);
+}
+.char-over {
+    border: 1px solid #C8A070;
+	background: url(../images/background.jpg);
+}
+.templateThumbImg {
+    margin-top: 8px;
+}
+.wtf-safari .x-small-editor .x-form-field-wrap .x-form-trigger{height:21px !important;}
+.wtf-safari .x-small-editor .x-form-text{height:20px!important;}
+.payrollcurrency{
+    float:right;
+    margin-right: 2px
+}
+.emptyGridText{
+    font-size:15px;
+    color:gray !important;
+    font-weight:bold !important;
+    margin-top:100px;
+    text-align:center;
+}
+.yscroll{
+    overflowY: auto !important;
+}
+
+#cmpts .x-panel-bwrap .x-panel-body,#myappraisal .x-panel-bwrap .x-panel-body {
+    overflow-x : hidden !important;
+    background :rgb(241,241,241) !important;
+}
+
+#competencyval  label {
+    font-size: 14px !important;
+}
+
+#textFieldContainer  label {
+    font-size: 14px !important;
+}
+
+.accWizardLink{
+    float: left;
+}
+.accWizardLink .awl-image{
+    width: 32px;
+    height: 23px;
+    margin: 0px auto;
+    background: transparent url(../images/setup-btn-arrow.gif) no-repeat scroll 0 0 !important;
+}
+.accWizardLink .img-visited{
+    cursor: pointer;
+    background-position:-33px 0px !important;
+}
+.accWizardLink .img-current{
+    background-position:-66px 0px !important;
+}
+.accWizardLink .awl-text{
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    color: #B8B8B8;
+    padding: 0px 5px;
+}
+.accWizardLink .text-visited{
+    color: #525252 !important;
+}
+.accWizardLink .text-current{
+    color: black !important;
+}
+.accWizardLink .awl-image-bg{
+    height: 23px;
+    background: transparent url(../images/setup-bg-line.jpg) repeat-x scroll 0 0 !important;
+}
+
+.accSWdata{
+    padding:5px 10px;
+    border-bottom:1px dotted #AAAAAA
+}
+
+.gridEdit {
+    background-position:0 -1590px !important;
+    height:13px;
+    margin-bottom:1px;
+}
+.disabled-record {
+	color:gray;
+}
+
+.announcementpan {
+    position: relative !important;
+    background-color: #fffed4;
+}
+.chkEmailNotificationPerUser{
+    top:5px !important;
+    left:0px !important;
+}
+
+.formHelpButton{
+   background: url(../images/help-12.gif) no-repeat !important;
+}
+.gridCommentButton{
+   background: url(../images/comment12.gif) no-repeat !important;
+}
+.helpButton{
+   background: url(../images/help.png) no-repeat !important;
+}
+
+.spFormula {
+    padding:5px !important;
+    width:320px;
+}
+.formFieldSet{
+     padding-left:20px;
+     padding-top:10px;
+}
+.disableFieldSet .wtf-el-mask {
+    opacity:0;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class dynamic-insert="false" dynamic-update="false" mutable="true" name="masterDB.CPFComponent" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>
+  <class name="masterDB.Wagemaster" table="wagemaster">
+    <id name="wageid" type="string">
+      <column length="36" name="wageid"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.Company" fetch="select" name="companydetails">
+      <column length="36" name="companyid" not-null="true"/>
+    </many-to-one>
+    <property name="wagetype" type="string">
+      <column length="100" name="wagetype" not-null="true"/>
+    </property>
+    <property name="rate" type="integer">
+      <column length="11" name="rate"/>
+    </property>
+    <property name="wcode" type="string">
+      <column length="36" name="wcode"/>
+    </property>
+    <property name="cash" type="double">
+      <column name="cash"/>
+    </property>
+    <property name="isdefault" type="true_false">
+      <column name="isdefault"/>
+    </property>
+    <property name="depwageid" type="string">
+      <column length="36" name="depwageid"/>
+    </property>
+    <property name="computeon" type="integer">
+      <column length="11" name="computeon"/>
+    </property>
+    <property name="expr" type="string">
+      <column length="1024" name="expr"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="masterDB.CompanyEPFInfo" table="companyepfinfo">
+    <id name="companyid" type="string">
+      <column name="companyid"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="companyname" type="string">
+      <column length="255" name="companyname"  default="' '"/>
+    </property>
+    <property name="companyaddress" type="string">
+      <column length="1024" name="companyaddress"  default="' '"/>
+    </property>
+    <property name="companyno" type="string">
+      <column length="255" name="companyno"  default="' '"/>
+    </property>
+    <property name="companyepfno" type="string">
+      <column length="255" name="companyepfno"  default="' '"/>
+    </property>
+     </class>
+  
+
+</hibernate-mapping>

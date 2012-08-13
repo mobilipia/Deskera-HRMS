@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaFormPCB2" table="malaysia_form_pcb2">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="deductionAmountForCP38" type="double">
+          <column name="deductionamountforcp38" default="0"/>
+        </property>
+        <property name="taxResitForPCB" type="string">
+          <column name="taxresitforpcb"/>
+        </property>
+        <property name="taxResitForPCBDate" type="date">
+          <column name="taxresitforpcbdate"/>
+        </property>
+        <property name="taxResitForCP38" type="string">
+          <column name="taxresitforcp38"/>
+        </property>
+        <property name="taxResitForCP38Date" type="date">
+          <column name="taxresitforcp38date"/>
+        </property>
+        <property name="newIdentificationNumber" type="string">
+          <column name="newidentificationnumber"/>
+        </property>
+        <property name="incomeTaxFileNumber" type="string">
+          <column name="incometaxfilenumber"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.Useraccount" fetch="select" name="useraccount">
+          <column name="useraccount" not-null="true"/>
+        </many-to-one>
+        <property name="authorizeStatus" type="integer">
+            <column name="authorizestatus" default="0"/>
+        </property>
+  </class>
+</hibernate-mapping>

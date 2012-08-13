@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- alternate XML view resolver, invoked if view returned from controller matches views.xml mapping -->
+    <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="1" />
+    </bean>
+
+    <import resource="classpath:com/krawler/spring/hrms/common/conf/Common-servlet.xml"/>
+    <import resource="jasperviews.xml"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+    </bean>
+
+   <bean id="hrmsPayrollTaxdao" class="com.krawler.spring.hrms.payroll.tax.hrmsPayrollTaxDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsPayrollTaxController" class="com.krawler.spring.hrms.payroll.tax.hrmsPayrollTaxController">
+        <property name="hrmsPayrollTemplateDAO">
+            <ref bean="hrmsPayrollTemplatedao"/>
+        </property>
+        <property name="hrmsPayrollTaxDAO">
+            <ref bean="hrmsPayrollTaxdao"/>
+        </property>
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+        <property name="hrmsPayrollWageDAO">
+            <ref bean="hrmsPayrollWagedao"/>
+        </property>
+        <property name="hrmsPayrollDeductionDAO">
+            <ref bean="hrmsPayrollDeductiondao"/>
+        </property>
+        <property name="hrmsPayrollEmployerContributionDAO">
+            <ref bean="hrmsPayrollEmployerContributiondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="hrmsEmpDAO">
+            <ref bean="hrmsEmpdao"/>
+        </property>
+         <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsPayrollDeductiondao" class="com.krawler.spring.hrms.payroll.deduction.hrmsPayrollDeductionDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsPayrollDeductionController" class="com.krawler.spring.hrms.payroll.deduction.hrmsPayrollDeductionController">
+        <property name="hrmsPayrollDeductionDAO">
+            <ref bean="hrmsPayrollDeductiondao"/>
+        </property>
+        <property name="hrmsPayrollTemplateDAO">
+            <ref bean="hrmsPayrollTemplatedao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="hrmsPayrollWageDAO">
+            <ref bean="hrmsPayrollWagedao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsPayrollEmployerContributionDAO">
+            <ref bean="hrmsPayrollEmployerContributiondao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+     <bean id="hrmsPayrollWagedao" class="com.krawler.spring.hrms.payroll.wages.hrmsPayrollWageDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsPayrollWageController" class="com.krawler.spring.hrms.payroll.wages.hrmsPayrollWageController">
+        <property name="hrmsPayrollWageDAO">
+            <ref bean="hrmsPayrollWagedao"/>
+        </property>
+        <property name="hrmsPayrollTemplateDAO">
+            <ref bean="hrmsPayrollTemplatedao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="exportDAOImpl">
+            <ref bean="exportdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsPayrollDeductionDAO">
+            <ref bean="hrmsPayrollDeductiondao"/>
+        </property>
+        <property name="hrmsPayrollTaxDAO">
+            <ref bean="hrmsPayrollTaxdao"/>
+        </property>
+        <property name="hrmsPayrollEmployerContributionDAO">
+            <ref bean="hrmsPayrollEmployerContributiondao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsPayrollTemplatedao" class="com.krawler.spring.hrms.payroll.template.hrmsPayrollTemplateDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsPayrollTemplateController" class="com.krawler.spring.hrms.payroll.template.hrmsPayrollTemplateController">
+        <property name="hrmsPayrollTemplateDAO">
+            <ref bean="hrmsPayrollTemplatedao"/>
+        </property>
+        <property name="hrmsPayrollEmployerContributionDAO">
+            <ref bean="hrmsPayrollEmployerContributiondao"/>
+        </property>
+        <property name="hrmsPayrollWageDAO">
+            <ref bean="hrmsPayrollWagedao"/>
+        </property>
+        <property name="hrmsPayrollTaxDAO">
+            <ref bean="hrmsPayrollTaxdao"/>
+        </property>
+        <property name="hrmsPayrollDeductionDAO">
+            <ref bean="hrmsPayrollDeductiondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+         <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="hrmsEmpDAO">
+            <ref bean="hrmsEmpdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsEmpdao" class="com.krawler.spring.hrms.employee.hrmsEmpDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsEmpController" class="com.krawler.spring.hrms.employee.hrmsEmpController">
+        <property name="hrmsEmpDAO">
+            <ref bean="hrmsEmpdao"/>
+        </property>
+        <property name="hrmsPayrollTemplateDAO">
+            <ref bean="hrmsPayrollTemplatedao"/>
+        </property>
+        <property name="hrmsPayrollWageDAO">
+            <ref bean="hrmsPayrollWagedao"/>
+        </property>
+        <property name="hrmsPayrollTaxDAO">
+            <ref bean="hrmsPayrollTaxdao"/>
+        </property>
+        <property name="hrmsPayrollDeductionDAO">
+            <ref bean="hrmsPayrollDeductiondao"/>
+        </property>
+        <property name="hrmsPayrollEmployerContributionDAO">
+            <ref bean="hrmsPayrollEmployerContributiondao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsPayrollEmployerContributiondao" class="com.krawler.spring.hrms.payroll.employercontribution.hrmsPayrollEmployerContributionDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsPayrollEmployerContributionController" class="com.krawler.spring.hrms.payroll.employercontribution.hrmsPayrollEmployerContributionController">
+        <property name="hrmsPayrollEmployerContributionDAO">
+            <ref bean="hrmsPayrollEmployerContributiondao"/>
+        </property>
+        <property name="hrmsPayrollWageDAO">
+            <ref bean="hrmsPayrollWagedao"/>
+        </property>
+        <property name="hrmsPayrollDeductionDAO">
+            <ref bean="hrmsPayrollDeductiondao"/>
+        </property>
+        <property name="hrmsPayrollTemplateDAO">
+            <ref bean="hrmsPayrollTemplatedao"/>
+        </property>
+        <property name="hrmsEmpDAO">
+            <ref bean="hrmsEmpdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    
+    <bean id="hrmsPayrolldao" class="com.krawler.spring.hrms.payroll.hrmsPayrollDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="malaysianIncomeTax" class="com.krawler.spring.hrms.payroll.incometax.MalaysianIncomeTax">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+        <property name="malaysianIncomeTaxDAO">
+            <ref bean="malaysianIncomeTaxDAO"/>
+        </property>
+        <property name="hrmsPayrollDAO">
+            <ref bean="hrmsPayrolldao"/>
+        </property>
+    </bean>
+
+    <bean id="hrmsPayrollController" class="com.krawler.spring.hrms.payroll.hrmsPayrollController">
+        <property name="hrmsPayrollDAO">
+            <ref bean="hrmsPayrolldao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <!--property name="exportDAOImpl">
+            <ref bean="exportdao"/>
+        </property-->
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="exportSalarySlipService">
+            <ref bean="exportSalarySlipService"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    
+    
+    <bean id="malaysianIncomeTaxDAO" class="com.krawler.spring.hrms.payroll.incometax.MalaysianIncomeTaxDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="malaysianIncomeTaxController" class="com.krawler.spring.hrms.payroll.incometax.MalaysianIncomeTaxController">
+    	<property name="malaysianIncomeTaxDAO">
+            <ref bean="malaysianIncomeTaxDAO"/>
+        </property>
+        <property name="hrmsPayrollDAO">
+            <ref bean="hrmsPayrolldao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="malaysianStatutoryFormDAO" class="com.krawler.spring.hrms.payroll.statutoryform.MalaysianStatutoryFormDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="malaysianStatutoryFormController" class="com.krawler.spring.hrms.payroll.statutoryform.MalaysianStatutoryFormController">
+    	<property name="hrmsPayrollDAO">
+            <ref bean="hrmsPayrolldao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="malaysianStatutoryFormDAO">
+            <ref bean="malaysianStatutoryFormDAO"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="malaysianIncomeTaxDAO">
+            <ref bean="malaysianIncomeTaxDAO"/>
+        </property>
+        <property name="exportSalarySlipService">
+            <ref bean="exportSalarySlipService"/>
+        </property>
+    </bean>
+    
+    <bean id="exportSalarySlipDAO" class="com.krawler.spring.hrms.payroll.salaryslip.ExportSalarySlipDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="exportSalarySlipService" class="com.krawler.spring.hrms.payroll.salaryslip.ExportSalarySlipService">
+        <property name="exportSalarySlipDAO">
+            <ref bean="exportSalarySlipDAO"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="hrmsPayrollDAO">
+            <ref bean="hrmsPayrolldao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="calculatorMap">
+            <map>
+              <entry key="137">
+                <ref bean="malaysianIncomeTax"/>
+              </entry>
+            </map>
+        </property>
+    </bean>
+    <bean id="exportSalarySlipController" class="com.krawler.spring.hrms.payroll.salaryslip.ExportSalarySlipController">
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="exportSalarySlipService">
+            <ref bean="exportSalarySlipService"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="bankPayrollReportController" class="com.krawler.spring.hrms.payroll.bank.BankPayrollReportController">
+        <property name="malaysianStatutoryFormDAO">
+            <ref bean="malaysianStatutoryFormDAO"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="hrmsPayrollDAO">
+            <ref bean="hrmsPayrolldao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        
+    </bean>
+    
+    
+    <bean id="exportPayslipController" class="com.krawler.spring.hrms.payroll.payslip.ExportPayslipController">
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="exportPayslipDAO">
+            <ref bean="exportPayslipDAO"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    
+    <bean id="exportPayslipDAO" class="com.krawler.spring.hrms.payroll.payslip.ExportPayslipDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    
+    
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/Payroll/Date/*.py">hrmsPayrollController</prop>
+                <prop key="/Payroll/Wage/*.py">hrmsPayrollWageController</prop>
+                <prop key="/Payroll/Tax/*.py">hrmsPayrollTaxController</prop>
+                <prop key="/Payroll/Deduction/*.py">hrmsPayrollDeductionController</prop>
+                <prop key="/Payroll/Template/*.py">hrmsPayrollTemplateController</prop>
+                <prop key="/Payroll/EmpContrib/*.py">hrmsPayrollEmployerContributionController</prop>
+                <prop key="/Emp/*.py">hrmsEmpController</prop>
+                <prop key="/Payroll/Salary/*.py">exportSalarySlipController</prop>
+                <prop key="/Payroll/MalaysianIncomeTax/*.py">malaysianIncomeTaxController</prop>
+                <prop key="/Payroll/MalaysianStatutoryForm/*.py">malaysianStatutoryFormController</prop>
+                <prop key="/Payroll/BankInterfaceFile/*.py">bankPayrollReportController</prop>
+                <prop key="/Payroll/Date/Salary/*.py">exportPayslipController</prop>
+            </props>
+        </property>
+        <property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor" />
+            </list>
+        </property>
+    </bean>
+
+</beans>

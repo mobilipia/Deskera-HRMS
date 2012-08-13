@@ -1,0 +1,47 @@
+<div id = "chartcontainer"></div>
+
+<script type="text/javascript">
+    var orgChartTab = Wtf.getCmp("tabmyorganizationpanel");
+    var projid=companyid;
+    var help = new Wtf.Toolbar.Button({
+        scope:this,
+        iconCls:'helpButton',
+        tooltip:{text:WtfGlobal.getLocaleText("hrms.common.help.text.orgnization")}
+        
+    });
+    orgChartTab.add(new Wtf.Panel({
+        id: projid + "orgChartContainer",
+        layout: "border",
+        tbar:['->',help],
+        border: false,
+        items: [{
+                region: "center",
+                layout: "fit",
+                border: false,
+                cls: "zoom_lvl_3",
+                items: new Wtf.ChartContainer({
+                            layout : "fit",
+                            id : projid + "chartContainer",
+                            projid: projid,
+                            bodyStyle: "background-color: white; position: absolute; overflow-x: auto; overflow-y: auto;",
+                            autoscroll: true
+                    })
+            }, {
+                title: WtfGlobal.getLocaleText("hrms.common.unassigned.users"),
+                region: "south",
+                layout: "fit",
+                height: 130,
+                split : true,
+                border: false,
+                items: new Wtf.UnmappedContainer({
+                            id: projid + "unmappedContainer",
+                            layout : "fit",
+                            projid: projid,
+                            bodyStyle: "background-color: white; overflow-x: hidden; overflow-y: auto;"
+                    })
+            }
+        ]
+    }));
+
+    orgChartTab.doLayout();
+</script>

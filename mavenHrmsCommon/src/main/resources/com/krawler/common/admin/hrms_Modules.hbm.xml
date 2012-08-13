@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.hrms_Modules" table="hrms_Modules">
+    <id column="moduleid" name="moduleID">
+      <generator class="uuid"/>
+    </id>
+    <property name="moduleName" type="string">
+      <column length="100" name="moduleName" not-null="true" unique="true"/>
+    </property>
+    <property name="displayModuleName" type="string">
+      <column length="100" name="displayModuleName" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

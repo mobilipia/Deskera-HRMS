@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.ConfigData" table="configData">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="referenceid" type="string">
+      <column name="referenceid"/>
+    </property>
+    <property name="col1" type="string">
+        </property>
+    <property name="col2" type="string">
+        </property>
+    <property name="col3" type="string">
+        </property>
+    <property name="col4" type="string">
+        </property>
+    <property name="col5" type="string">
+        </property>
+    <property name="col6" type="string">
+        </property>
+    <property name="col7" type="string">
+        </property>
+    <property name="col8" type="string">
+        </property>
+    <property name="col9" type="string">
+        </property>
+    <property name="col10" type="string">
+        </property>
+    <property name="col11" type="string">
+        </property>
+    <property name="col12" type="string">
+        </property>
+    <property name="col13" type="string">
+        </property>
+    <property name="col14" type="string">
+        </property>
+    <property name="col15" type="string">
+        </property>
+    <property name="col16" type="string">
+        </property>
+    <property name="col17" type="string">
+        </property>
+    <property name="col18" type="string">
+        </property>
+    <property name="col19" type="string">
+        </property>
+    <property name="col20" type="string">
+        </property>
+  </class>
+</hibernate-mapping>

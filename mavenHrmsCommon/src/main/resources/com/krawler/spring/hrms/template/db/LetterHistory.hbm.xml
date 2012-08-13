@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.spring.hrms.template.db.LetterHistory" table="letter_history" optimistic-lock="version" polymorphism="implicit" select-before-update="false">
+        <id name="id" column="id" type="string" length="36">
+            <generator class="uuid"/>
+        </id>
+        <many-to-one name="template" column="template" class="com.krawler.spring.hrms.template.db.HtmlTemplate"/>
+        <property name="templateName" column="template_name" type="string" length="64"/>
+        <!--<many-to-one name="user" column="user" class="com.krawler.common.admin.User"/>-->
+        <property name="applicantId" column="applicant_id" type="string" length="36"/>
+        <property name="emailId" column="email_id" type="string" length="100"/>
+        <property name="sentDate" column="sent_date" type="timestamp"/>
+        <property name="sent" type="integer" >
+            <column name="sent" default="0"/>
+        </property>
+        <property name="saveDate" column="save_date" type="timestamp"/>
+    </class>
+</hibernate-mapping>

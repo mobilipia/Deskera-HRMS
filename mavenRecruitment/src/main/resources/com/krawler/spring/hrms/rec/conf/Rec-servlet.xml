@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- alternate XML view resolver, invoked if view returned from controller matches views.xml mapping -->
+    <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="1" />
+    </bean>
+
+    <import resource="classpath:com/krawler/spring/hrms/common/conf/Common-servlet.xml"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+    </bean>
+
+
+
+
+    <bean id="hrmsRecJobdao" class="com.krawler.spring.hrms.rec.job.hrmsRecJobDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsRecJobController" class="com.krawler.spring.hrms.rec.job.hrmsRecJobController">
+        <property name="hrmsRecJobDAO">
+            <ref bean="hrmsRecJobdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+         <property name="customcolDAO">
+            <ref bean="customcoldao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="hrmsExtApplDocsDAO">
+            <ref bean="hrmsExtApplDocsdao"/>
+        </property>
+        <property name="exportDAOImpl">
+            <ref bean="exportdao"/>
+        </property>
+        <property name="storageHandlerImpl">
+            <ref bean="storageHandlerdao"/>
+        </property>
+        <property name="hrmsRecAgencyDAO">
+            <ref bean="hrmsRecAgencydao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    <bean id="hrmsRecJobcontroller" class="com.krawler.spring.hrms.rec.job.hrmsRecJobController">
+        <property name="hrmsRecJobDAO">
+            <ref bean="hrmsRecJobdao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+         <property name="customcolDAO">
+            <ref bean="customcoldao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="hrmsExtApplDocsDAO">
+            <ref bean="hrmsExtApplDocsdao"/>
+        </property>
+        <property name="exportDAOImpl">
+            <ref bean="exportdao"/>
+        </property>
+        <property name="storageHandlerImpl">
+            <ref bean="storageHandlerdao"/>
+        </property>
+        <property name="hrmsRecAgencyDAO">
+            <ref bean="hrmsRecAgencydao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    
+
+    <bean id="hrmsRecAgencydao" class="com.krawler.spring.hrms.rec.agency.hrmsRecAgencyDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsRecAgencyController" class="com.krawler.spring.hrms.rec.agency.hrmsRecAgencyController">
+        <property name="hrmsRecAgencyDAO">
+            <ref bean="hrmsRecAgencydao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="externalJobcontroller" class="com.krawler.spring.hrms.rec.job.ExternalJOb.externalJobcontroller">
+        <property name="customcolDAO">
+            <ref bean="customcoldao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/Rec/Job/*.rec">hrmsRecJobController</prop>
+                <prop key="/Rec/Jobs/*.rec">hrmsRecJobcontroller</prop>
+                <prop key="/Rec/Agency/*.rec">hrmsRecAgencyController</prop>
+                <prop key="/Rec/Job/ExternalJOb/*.rec">externalJobcontroller</prop>
+            </props>
+        </property>
+        <property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor" />
+            </list>
+        </property>
+    </bean>
+</beans>

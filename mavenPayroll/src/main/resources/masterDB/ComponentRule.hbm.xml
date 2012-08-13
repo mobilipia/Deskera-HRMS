@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="masterDB.ComponentRule" table="component_rule">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        
+        <property name="lowerLimit" type="double">
+          <column name="lowerlimit" default="0"/>
+        </property>
+        <property name="upperLimit" type="double">
+          <column name="upperlimit" default="0"/>
+        </property>
+        <property name="coefficient" type="double">
+          <column name="coefficient" default="0"/>
+        </property>
+        <many-to-one class="masterDB.Componentmaster" fetch="select" name="component" lazy="false">
+            <column name="component" not-null="true"/>
+        </many-to-one>
+  </class>
+</hibernate-mapping>

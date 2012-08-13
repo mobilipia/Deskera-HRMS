@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.Applicants" table="applicant">
+    <id name="appid" type="string">
+      <column name="appid"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one column="jobid" name="positionmain" not-null="true"/>
+    <many-to-one class="com.krawler.common.admin.User" column="empid" name="applempid" not-null="true"/>
+    <property name="empname" not-null="true" type="string">
+      <column length="75" name="empname"/>
+    </property>
+    <property name="status" not-null="true" type="string">
+      <column length="75" name="status"/>
+    </property>
+  </class>
+</hibernate-mapping>

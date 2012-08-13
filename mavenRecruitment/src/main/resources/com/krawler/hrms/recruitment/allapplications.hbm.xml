@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.Allapplications" table="allapplications">
+    <id column="id" name="id">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.hrms.recruitment.Positionmain" column="jobposid" name="position"/>
+    <many-to-one class="com.krawler.hrms.recruitment.Jobapplicant" column="jobapplicantid" name="jobapplicant"/>
+    
+    <many-to-one class="com.krawler.common.admin.User" column="employeeid" name="employee"/>
+    <property name="recruiter" type="string">
+      <column length="255" name="recruiter"/>
+    </property>
+    <property name="applydate" type="date">
+      <column name="applydate"/>
+    </property>
+    <property name="status" type="string">
+      <column length="100" name="status"/>
+    </property>
+    <property name="interviewdate" type="date">
+      <column name="interviewdate"/>
+    </property>
+    <property name="joiningdate" type="date">
+      <column name="joiningdate"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="rank" name="rank"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="callback" name="callback"/>
+    <property name="interviewplace" type="text">
+      <column name="interviewplace"/>
+    </property>
+    <property name="interviewcomment" type="text">
+      <column name="interviewcomment"/>
+    </property>
+    <property name="interviewtime" type="string">
+      <column length="50" name="interviewtime"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+    <property name="delflag" type="int">
+      <column name="delflag"/>
+    </property>
+    <property name="applicationflag" type="int">
+      <column name="applicationflag"/>
+    </property>
+    <property name="rejectedbefore" type="int">
+      <column name="rejectedbefore"/>
+    </property>
+    <property name="statuscomment" type="text">
+      <column name="statuscomment"/>
+    </property>
+    <property name="employeetype" type="int">
+      <column name="employeetype"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" column="contactperson" name="contactperson"/>
+    <many-to-one class="com.krawler.hrms.recruitment.ConfigRecruitmentData" column="configjobapplicant" name="configjobapplicant"/>
+  </class>
+</hibernate-mapping>

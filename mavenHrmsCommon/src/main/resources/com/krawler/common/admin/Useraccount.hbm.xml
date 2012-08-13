@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.Useraccount" table="useraccount">
+    <id column="userid" name="userID">
+      <generator class="foreign">
+        <param name="property">user</param>
+      </generator>
+    </id>
+    <property name="accno" type="string">
+      <column length="30" name="accno"/>
+    </property>
+    <property name="salary" type="string">
+      <column length="20" name="salary"/>
+    </property>
+    <property name="templateid" type="string">
+      <column length="36" name="templateid"/>
+    </property>
+    <property name="employeeid" type="integer">
+      <column name="employeeid"/>
+    </property>
+    <property name="employeeIdFormat" type="string">
+      <column length="50" name="employeeIdFormat" default="NULL"/>
+    </property>
+    <set cascade="all" inverse="true" name="assignmanagers">
+      <key column="empid"/>
+      <one-to-many class="com.krawler.hrms.performance.Assignmanager"/>
+    </set>
+    <set cascade="all" inverse="true" name="assignreviewers">
+      <key column="employee"/>
+      <one-to-many class="com.krawler.hrms.performance.Assignreviewer"/>
+    </set>
+    <set cascade="all" inverse="true" name="empexperience">
+      <key column="userid"/>
+      <one-to-many class="com.krawler.hrms.ess.Empexperience"/>
+    </set>
+    <many-to-one class="com.krawler.common.admin.Role" name="role"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="department"/>
+    <one-to-one class="com.krawler.common.admin.User" constrained="true" name="user"/>
+    <many-to-one class="com.krawler.common.admin.ConfigData" name="configdata" />
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="designationid" name="designationid"/>
+    <many-to-one class="com.krawler.common.admin.CostCenter" name="costCenter" >
+    	<column name="costcenter" />
+    </many-to-one>
+    <one-to-one cascade="all" class="com.krawler.hrms.ess.Empprofile" name="empProfile"/>
+    <property name="dummystatus" type="integer">
+      <column default="0" name="dummystatus"/>
+    </property>
+    <property name="salarymanager" type="true_false">
+      <column name="issalarymanager" default="false" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>

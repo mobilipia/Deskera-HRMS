@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false" default-lazy="false">
+  <class name="com.krawler.common.admin.Bookmarks" table="crm_bookmarks">
+
+    <id name="bookmarkid" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+
+    <property name="linkname" type="java.lang.String"/>
+    <property name="linkurl" type="java.lang.String"/>
+    <many-to-one cascade="delete" class="com.krawler.common.admin.User" column="userid" name="userid"/>
+
+  </class>
+</hibernate-mapping>

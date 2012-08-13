@@ -1,0 +1,1501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report5" pageWidth="612" pageHeight="800" whenNoDataType="BlankPage" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="107"/>
+	<field name="employerPhoneNo" class="java.lang.String"/>
+	<field name="fromAddress" class="java.lang.String"/>
+	<field name="toAddress" class="java.lang.String"/>
+	<field name="employeeFileRefNo" class="java.lang.String"/>
+	<field name="employerFileRefNo" class="java.lang.String"/>
+	<field name="expectedDateToLeaveMalaysia" class="java.lang.String"/>
+	<field name="employeeName" class="java.lang.String"/>
+	<field name="employeePassportNo" class="java.lang.String"/>
+	<field name="employeeAddress" class="java.lang.String"/>
+	<field name="employmentNature" class="java.lang.String"/>
+	<field name="reasonForDeparture" class="java.lang.String"/>
+	<field name="correspondenceAddress" class="java.lang.String"/>
+	<field name="probableDateOfReturn" class="java.lang.String"/>
+	<field name="salaryPeriod" class="java.lang.String"/>
+	<field name="salaryRM" class="java.lang.String"/>
+	<field name="salarySen" class="java.lang.String"/>
+	<field name="leavePeriod" class="java.lang.String"/>
+	<field name="leaveRM" class="java.lang.String"/>
+	<field name="leaveSen" class="java.lang.String"/>
+	<field name="bonusPeriod" class="java.lang.String"/>
+	<field name="bonusRM" class="java.lang.String"/>
+	<field name="bonusSen" class="java.lang.String"/>
+	<field name="gratuityPeriod" class="java.lang.String"/>
+	<field name="gratuityRM" class="java.lang.String"/>
+	<field name="gratuitySen" class="java.lang.String"/>
+	<field name="stateAllowancesPeriod" class="java.lang.String"/>
+	<field name="stateAllowancesRM" class="java.lang.String"/>
+	<field name="stateAllowancesSen" class="java.lang.String"/>
+	<field name="pensionPeriod" class="java.lang.String"/>
+	<field name="pensionRM" class="java.lang.String"/>
+	<field name="pensionSen" class="java.lang.String"/>
+	<field name="residenceValuebyEmployerPeriod" class="java.lang.String"/>
+	<field name="residenceValuebyEmployerRM" class="java.lang.String"/>
+	<field name="residenceValuebyEmployerSn" class="java.lang.String"/>
+	<field name="allowanceInKindPeriod" class="java.lang.String"/>
+	<field name="allowanceInKindRM" class="java.lang.String"/>
+	<field name="allowanceInKindSen" class="java.lang.String"/>
+	<field name="employeePFPeriod" class="java.lang.String"/>
+	<field name="employeePFRM" class="java.lang.String"/>
+	<field name="employeePFSen" class="java.lang.String"/>
+	<field name="dueAmount" class="java.lang.String"/>
+	<field name="paymentNature" class="java.lang.String"/>
+	<field name="paymentDate" class="java.lang.String"/>
+	<field name="paidAmount" class="java.lang.String"/>
+	<field name="currentDate" class="java.lang.String"/>
+	<field name="designation" class="java.lang.String"/>
+	<detail>
+		<band height="752" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="237" width="572" height="25"/>
+				<staticText>
+					<reportElement x="1" y="0" width="571" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Butir-Butir Pekerja Yang Akan Meninggalkan Malaysia]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="12" width="570" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Particulars Of An Employee Who Will Be Leaving Malaysia]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="263" width="193" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Tarikh dijangka meninggalkan Malaysia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="274" width="192" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Expected date to leave Malaysia]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="192" y="263" width="218" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{expectedDateToLeaveMalaysia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="285" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[1.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="285" width="118" height="12"/>
+				<box bottomPadding="0"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Nama penuh pekerja]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="131" y="285" width="439" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="306" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[2.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="306" width="152" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[No. Kad Pengenalan/No. Passport
+]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="165" y="306" width="149" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeePassportNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="306" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[3.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="306" width="86" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jenis pekerjaan]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="409" y="306" width="161" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employmentNature}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="327" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[4.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="327" width="141" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Alamat pekerja sekarang
+
+]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="154" y="327" width="416" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employeeAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="346" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[5.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="346" width="141" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Alasan meninggalkan negara ini
+
+]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="154" y="346" width="416" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reasonForDeparture}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="367" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[6.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="367" width="233" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Alamat di mana surat-menyurat akan dikemukakan]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="246" y="367" width="324" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{correspondenceAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="387" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[7.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="387" width="284" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika akan kembali ke Malaysia nyatakan tarikh dijangka kembali]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="297" y="387" width="273" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{probableDateOfReturn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="408" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[8.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="410" width="557" height="20"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Jika beliau tidak kembali, nyatakan di bawah ini emolumen dan caruman kepada mana-mana Kumpulan Wang yang diluluskan bagi tahun beliau meninggalkan negara ini -
+]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="13" y="443" width="559" height="300"/>
+				<staticText>
+					<reportElement x="0" y="40" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(a)]]></text>
+				</staticText>
+				<frame>
+					<reportElement x="274" y="0" width="149" height="285"/>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<staticText>
+						<reportElement x="0" y="0" width="149" height="20"/>
+						<box leftPadding="5" rightPadding="5"/>
+						<textElement textAlignment="Center">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[Tempoh dibayar atau akan dibayar dalam tahun
+]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="40" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{salaryPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="62" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{leavePeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="84" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{bonusPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="106" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{gratuityPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="128" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{stateAllowancesPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="150" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{pensionPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="172" width="149" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{residenceValuebyEmployerPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="194" width="149" height="51"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{allowanceInKindPeriod}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="245" width="149" height="39"/>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{employeePFPeriod}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="0" y="20" width="149" height="20"/>
+						<box leftPadding="5" rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center">
+							<font size="8" isItalic="true"/>
+						</textElement>
+						<text><![CDATA[Period of the year for which paid or to be paid]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement x="423" y="0" width="136" height="285"/>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<staticText>
+						<reportElement x="0" y="17" width="86" height="23"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[RM]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="86" y="17" width="48" height="23"/>
+						<box>
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<text><![CDATA[Sen]]></text>
+					</staticText>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="40" width="86" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{salaryRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="40" width="50" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{salarySen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="62" width="86" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{leaveRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="62" width="50" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{leaveSen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="84" width="86" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{bonusRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="84" width="49" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{bonusSen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="106" width="86" height="22"/>
+						<box rightPadding="5">
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0"/>
+							<leftPen lineWidth="0.0"/>
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{gratuityRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="106" width="50" height="22"/>
+						<box rightPadding="5">
+							<pen lineWidth="0.25"/>
+							<topPen lineWidth="0.0"/>
+							<leftPen lineWidth="0.0"/>
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{gratuitySen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="128" width="86" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{stateAllowancesRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="128" width="50" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{stateAllowancesSen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="150" width="50" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{pensionSen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="150" width="86" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{pensionRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="172" width="86" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{residenceValuebyEmployerRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="172" width="50" height="22"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{residenceValuebyEmployerSn}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="194" width="86" height="51"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{allowanceInKindRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="194" width="50" height="51"/>
+						<box rightPadding="5">
+							<bottomPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{allowanceInKindSen}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="0" y="245" width="86" height="39"/>
+						<box rightPadding="5">
+							<rightPen lineWidth="0.25"/>
+						</box>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{employeePFRM}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="86" y="246" width="47" height="39"/>
+						<box rightPadding="5"/>
+						<textElement textAlignment="Right" verticalAlignment="Bottom">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{employeePFSen}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<staticText>
+					<reportElement x="21" y="40" width="254" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Gaji, Bayaran, Upah dan Bayaran Kerja Lebih Masa]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="62" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(b)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="21" y="62" width="60" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Gaji Cuti]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="84" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(c)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="85" width="132" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Komisen atau Bonus]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="110" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(d)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="111" width="108" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Ganjaran Gratuity]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="129" width="15" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(e)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="130" width="206" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Elaun Tunai – nyatakan jenis elaun]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="152" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(f)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="152" width="148" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Pencen daripada majikan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="174" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(g)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="173" width="219" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Nilai kediaman yang disediakan oleh majikan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="196" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(h)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="21" y="197" width="252" height="30"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Elaun selain daripada wang contohnya nilai makanan, pakaian, lojing atau orang gaji yang disediakan atau dibayar oleh majikan
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="1" y="247" width="15" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(i)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="247" width="256" height="23"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Caruman pekerja kepada mana-mana Kumpulan Wang atau tabung yang diluluskan
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="389" y="288" width="88" height="12"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[lihat sebelah]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="480" y="288" width="76" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[see overleaf]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="22" y="52" width="219" height="10"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Salary, Fees, Wages and Overtime Pay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="21" y="73" width="62" height="10"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Leave Pay]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="96" width="113" height="10"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Commission or Bonus]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="21" y="141" width="179" height="10"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Allowances in Cash- state type of allowance]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="1" y="85" width="570" height="35"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.25"/>
+					<leftPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="0.25"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="561" height="23"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Borang Ini Hendaklah Dikembalikan Kepada Mana-Mana Cawangan Lembaga Hasil Dalam Negeri Malaysia Di Mana Pekerja
+Menjalankan Pekerjaan
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="23" width="561" height="12"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[This Form Is To Be Sent To Any Inland Revenue Board Malaysia Branches Where The Employee Is Exercising The Employment]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="10" y="124" width="280" height="28"/>
+				<staticText>
+					<reportElement x="0" y="1" width="143" height="12"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. Rujukan Fail Pekerja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="13" width="143" height="12"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Employee’s File Ref. No.]]></text>
+				</staticText>
+				<frame>
+					<reportElement x="143" y="0" width="135" height="28"/>
+					<box>
+						<pen lineWidth="0.25"/>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement x="1" y="0" width="132" height="28"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font size="8"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{employeeFileRefNo}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement x="10" y="156" width="101" height="12"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Kepada/To –]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="34" y="174" width="252" height="60"/>
+				<staticText>
+					<reportElement x="0" y="0" width="244" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Ketua Pengarah Hasil Dalam Negeri]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="11" width="244" height="12"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Director General of Inland Revenue]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="0" y="36" width="244" height="20"/>
+					<box>
+						<pen lineStyle="Dashed"/>
+						<topPen lineStyle="Dashed"/>
+						<leftPen lineStyle="Dashed"/>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+						<rightPen lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{toAddress}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="291" y="176" width="279" height="58"/>
+				<staticText>
+					<reportElement x="0" y="0" width="146" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No. Telefon Majikan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="12" width="146" height="12"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Employer’s Telephone No.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="146" y="0" width="132" height="24"/>
+					<box>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{employerPhoneNo}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="26" width="114" height="12"/>
+					<textElement>
+						<font size="8" isItalic="false"/>
+					</textElement>
+					<text><![CDATA[Daripada/From -]]></text>
+				</staticText>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="290" y="210" width="279" height="20"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="0.0" lineStyle="Dashed"/>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fromAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="572" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(SECTION 83(4) INCOME TAX ACT 1967)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="55" width="571" height="14"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif"/>
+				</textElement>
+				<text><![CDATA[NOTIFICATION BY EMPLOYER OF DEPARTURE FROM THE COUNTRY OF AN EMPLOYEE
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="39" width="572" height="18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(SEKSYEN 83(4) AKTA CUKAI PENDAPATAN 1967) ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="16" width="572" height="26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUKAI PENDAPATAN /INCOME TAX
+PEMBERITAHUAN OLEH MAJIKAN BAGI PEKERJA YANG HENDAK MENINGGALKAN NEGARA INI
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="0" width="110" height="16"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[L E A V E R ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="2" width="100" height="14"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MALAYSIA]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="297" y="124" width="274" height="28"/>
+				<staticText>
+					<reportElement x="0" y="0" width="130" height="12"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[No.Rujukan Fail Majikan]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="129" y="0" width="143" height="28"/>
+					<box>
+						<topPen lineWidth="0.25"/>
+						<leftPen lineWidth="0.25"/>
+						<bottomPen lineWidth="0.25"/>
+						<rightPen lineWidth="0.25"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{employerFileRefNo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="297" y="134" width="121" height="12"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Employer’s File Ref. No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="297" width="100" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Full name of employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="317" width="132" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Identity Card No/ Passport No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="318" width="132" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nature of employment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="338" width="132" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Present address of employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="358" width="132" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Reason for departure]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="378" width="219" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Address to which correspondece may be forwarded]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="398" width="219" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[If returning to Malaysia probable date of return]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="430" width="548" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[If not returning, state the emoluments and any approved Provident Fund contributions for the year of departure below -]]></text>
+			</staticText>
+		</band>
+		<band height="760">
+			<frame>
+				<reportElement x="0" y="299" width="572" height="443"/>
+				<staticText>
+					<reportElement x="0" y="9" width="295" height="16"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Seksyen 83(4) Akta Cukai Pendapatan 1967 -]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="36" width="523" height="45"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[“Jika seorang individu dikenakan cukai berkenaan dengan perolehan atau keuntungan daripada suatu penggajian yang pada pengetahuan majikannya akan meninggalkan atau bermaksud untuk meninggalkan Malaysia bagi suatu tempoh melebihi tigabulan, majikan hendaklah tidak kurang daripada satu bulan sebelum tarikh yang dijangkakan berangkat memberi suatu notis bertulis keberangkatan individu kepada Ketua Pengarah :
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="88" width="142" height="16"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Dengan syarat bahawa -]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="38" y="113" width="508" height="40"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[jika dia puas hati bahawa adalah munasabah berbuat sedemikian dalam hal keadaan-hal keadaan itu, Ketua Pengarah boleh menerima bagi maksud-maksud subseksyen ini suatu notis kurang daripada satu bulan sebelum keberangkatan ata suatunotis diberi pada atau selepas keberangkatan; dan
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="39" y="153" width="508" height="41"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[jika dia puas hati bahawa seorang individu adalah dikehendaki meninggalkan Malaysia pada lat tempoh yang kerap dalam menjalankan penggajiannya, Ketua Pengarah boleh mengenepikan pemakaian subseksyen ini berkenaan dengan individu itu”.
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="113" width="16" height="18"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(a)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="153" width="16" height="14"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(b)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="214" width="233" height="19"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Section 83(4) of the Income Tax 1967 -]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="255" width="523" height="54"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[“Where an individual chargeable to tax in respect of income in respect of gains or profits from an employment is to the knowledge of his employer about to leave or intending to leave Malaysia for a period exceeding three months, the employer shall not less than one month before the expected date of departure give written notice of the individual’s departure to the Director General :
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="315" width="95" height="15"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Provided that -]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="337" width="17" height="13"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(a)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="38" y="337" width="508" height="46"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[where he is satisfied that it is reasonable to do so in the circumstances, the Director General may accept for the purposes of this subsection a notice given less than one month before the departure or a notice given on or after the departure; and
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="23" y="386" width="17" height="17"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(b)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="40" y="383" width="506" height="50"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[where he is satisfied that an individual is required to leave Malaysia at frequent intervals in the course of his employment, the Director General may waive the application of this subsection as regards that individual”.
+]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="1" y="280" width="570" height="14"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[For immediate reference, section 83(4) Income Tax Act 1967 is reproduced below -
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="266" width="571" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Untuk rujukan segera, seksyen 83(4) Akta Cukai Pendapatan 1967 diperturunkan di bawah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="194" width="100" height="12"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="194" width="100" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tandatangan]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="416" y="214" width="101" height="20"/>
+				<box>
+					<pen lineStyle="Dashed"/>
+					<topPen lineStyle="Dashed"/>
+					<leftPen lineStyle="Dashed"/>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					<rightPen lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{designation}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="327" y="213" width="67" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jawatan ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="69" y="194" width="100" height="12"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Dashed"/>
+					<topPen lineWidth="0.0" lineStyle="Dashed"/>
+					<leftPen lineWidth="0.0" lineStyle="Dashed"/>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					<rightPen lineWidth="0.0" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{currentDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="194" width="65" height="12"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tarikh]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="66" y="122" width="449" height="72"/>
+				<staticText>
+					<reportElement x="0" y="2" width="15" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(a)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="2" width="87" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Jenis bayaran]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="223" y="2" width="226" height="12"/>
+					<box>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paymentNature}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="26" width="15" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(b)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="29" y="26" width="95" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Tarikh bayaran]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="223" y="26" width="226" height="12"/>
+					<box>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paymentDate}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="48" width="14" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[(c)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="48" width="150" height="12"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Amaun yang akan dibayar                              ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement x="223" y="50" width="226" height="12"/>
+					<box>
+						<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+					</box>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{paidAmount}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="201" y="50" width="22" height="12"/>
+					<textElement verticalAlignment="Bottom">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[RM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="57" width="84" height="10"/>
+					<textElement>
+						<font size="8" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Amount to be paid]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="18" y="98" width="554" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Sekiranya ada wang selain daripada di atas yang akan dibayar kepada pekerja berkenaan, sila nyatakan -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="98" width="17" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[10.]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="320" y="79" width="166" height="16"/>
+				<box>
+					<bottomPen lineWidth="0.25" lineStyle="Dashed"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dueAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="54" width="556" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Amaun wang yang akan dibayar kepada pekerja dan dipegang oleh majikan mengikut seksyen 83(5) Akta Cukai Pendapatan 1967]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="53" width="12" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[9.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="24" width="255" height="16"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[OTHER PARTICULARS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="39" y="24" width="228" height="16"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUTIR-BUTIR LAIN/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="302" y="79" width="18" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[RM]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="251" width="569" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="33" y="-146" width="179" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Pension from employer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="-124" width="206" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Value of any residence provided by the employer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="-82" width="245" height="20"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Allowances in kind, e.g., value of food, clothing, lodging or servants provided or paid for by the employer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="-40" width="253" height="20"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Employee's contribution to any approved Provident Fund or fund  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="205" width="48" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="205" width="48" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="235" width="48" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="66" width="556" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Amount of moneys due to employee and withheld by employer in accordance with section 83(5) Income tax act 1967]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="108" width="529" height="12"/>
+				<textElement verticalAlignment="Bottom">
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[If any amounts money be due to the employee other than those specified above, please specify -]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="135" width="84" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nature of Payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="158" width="84" height="10"/>
+				<textElement>
+					<font size="8" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Date of Payment]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

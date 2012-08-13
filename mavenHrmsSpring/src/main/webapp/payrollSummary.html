@@ -1,0 +1,619 @@
+<script type="text/javascript">
+Wtf.SunRiseCalibrationGrid = function(config) {
+    Wtf.apply(this, config);
+    this.record = Wtf.data.Record.create([
+        {name: 'empname'},
+        {name: 'id'},
+        {name: 'empid'},
+        {name: 'nric'},
+        {name: 'epfnumber'},
+        {name: 'grosssalary'},
+        {name: 'epfemployer'},
+        {name: 'epfemployee'},
+        {name: 'month'}]);
+
+    this.jsonReader = new Wtf.data.KwlJsonReader({
+        root: "data",
+        totalProperty:"totalCount"
+    }, this.record);
+
+    this.dstore = new Wtf.data.Store({
+        remoteSort:true,
+        url: "Payroll/Wage/getPayRollSummary.py",
+        params: {
+    		start : 0,
+    		limit: 25
+
+        },
+        reader: this.jsonReader
+    });
+    this.sm= new Wtf.grid.CheckboxSelectionModel({
+        singleSelect:false
+    });
+    var monthStore = new Wtf.data.SimpleStore({
+        fields:['id','name','hasAccess'],
+        data: [["1","January",false],
+            ["2","February",false],
+            ["3","March",false],
+            ["4","April",false],
+            ["5","May",false],
+            ["6","June",false],
+            ["7","July",false],
+            ["8","August",false],
+            ["9","September",false],
+            ["10","October",true],
+            ["11","November",true],
+            ["12","December",true]],
+         autoLoad: true
+    });
+    
+    this.summary = new Wtf.ux.grid.GridSummary();
+    this.cmodel = new Wtf.grid.ColumnModel([
+        new Wtf.grid.RowNumberer(),this.sm,{
+            dataIndex: 'empname',
+            header: 'Employee Name.',
+            editor: new Wtf.ux.TextField({
+                validateOnBlur: false,
+                validationDelay: 1000,
+                maxLength : 200
+            })
+            
+        },{
+            header: "Employee ID",
+            dataIndex: 'empid',
+            editor: new Wtf.ux.TextField({
+                validateOnBlur: false,
+                validationDelay: 1000,
+                maxLength : 200
+            })
+        },{
+            header: "NRIC",
+            dataIndex: 'nric',
+            editor: new Wtf.ux.TextField({
+                validateOnBlur: false,
+                validationDelay: 1000,
+                maxLength : 200
+            })
+        },{
+            header: "EPF Number",
+            dataIndex: 'epfnumber',
+            editor: new Wtf.ux.TextField({
+                validateOnBlur: false,
+                validationDelay: 1000,
+                maxLength : 200
+            })
+        },{
+            header: "Gross Salary (RM)",
+            dataIndex: 'grosssalary',
+            align:'right',
+            editor: new  Wtf.form.NumberField({
+                validateOnBlur: false,
+                validationDelay: 1000,
+                maxLength : 200
+            })
+        },{
+            header: "Employer Contribution (RM)",
+            align:'right',
+            summaryType:'sum',
+            summaryRenderer:WtfGlobal.currencyRendererEPF,
+            dataIndex: 'epfemployer'
+            
+        },{
+            header: "Employee Contribution (RM)",
+            align:'right',
+            summaryType:'sum',
+            summaryRenderer:WtfGlobal.currencyRendererEPF,
+            dataIndex: 'epfemployee'
+        },{
+            header: "Month",
+            dataIndex: 'month',
+            hidden:true,
+            editor: new Wtf.form.ComboBox({
+                id:this.id+'monthCombo',
+                selectOnFocus:true,
+                triggerAction: 'all',
+                mode: 'local',
+                editable:false,
+                store: monthStore,
+                displayField: 'name',
+                typeAhead: true,
+                allowBlank:false,
+                valueField:'id',
+                anchor:'100%',
+                emptyText:'--Select month--',
+                width:120,
+                tpl:Wtf.comboTemplate
+            }),
+            renderer:function(val){
+                var month ="";
+                if(val==1){
+                   month="January"
+                }else if(val==2){
+                   month="February"
+                }else if(val==3){
+                   month="March"
+                }else if(val==4){
+                   month="April"
+                }else if(val==5){
+                   month="May"
+                }else if(val==6){
+                   month="June"
+                }else if(val==7){
+                   month="July"
+                }else if(val==8){
+                   month="August"
+                }else if(val==9){
+                   month="September"
+                }else if(val==10){
+                   month="October"
+                }else if(val==11){
+                   month="November"
+                }else if(val==12){
+                   month="December"
+                }
+                return month;
+            }
+        }]);
+
+    this.deletebutton=new Wtf.Button({
+    	text:"Delete",
+        tooltip:{text:'Select row(s) to delete.'},
+        scope:this,
+        iconCls:getButtonIconCls(Wtf.btype.deletebutton),
+        disabled:false,
+        handler:this.deleteRecord
+    });
+
+    this.resetbutton=new Wtf.Button({
+    	text:"Reset",
+        tooltip:{text:'Click to reset.'},
+        scope:this,
+        iconCls:'pwndRefresh',
+       handler:function(){
+            this.quickSearchTF.setValue("");
+            this.dstore.load();
+        }
+    });
+
+    this.paymentbutton=new Wtf.Button({
+    	text:"Make Payment",
+        tooltip:{text:'Click to online payment service.'},
+        scope:this,
+       // disabled:true,
+        iconCls:getTabIconCls(Wtf.etype.hrmscompensation),
+        handler:function(){
+            var rec = this.getSelectionModel().getSelected();
+
+            var sm = this.getSelectionModel();
+            this.recs=sm.getSelections();
+            var amnt=0;
+            for(var i=0;i<this.recs.length;i++){
+                if(this.recs[i].data.epfemployer!=undefined){
+                    amnt +=this.recs[i].data.epfemployer*1
+                   
+                }
+                if(this.recs[i].data.epfemployee!=undefined){
+                    amnt +=this.recs[i].data.epfemployee*1
+                   
+                }
+            }
+            
+            Wtf.Ajax.requestEx({
+            method: "POST",
+            url:"Payroll/Wage/getCompanyDetail.py",
+            params: {
+                mode: 1
+            }
+        },
+        this,
+        function(result, request){
+            try {
+                var data = result;
+                if (data) {
+                    viewepfsheet(rec.data,data.data[0],amnt);
+                }
+            }
+            catch (e) {
+
+            }
+        },
+        function(){
+            Wtf.MessageBox.Show({
+                title: 'Error',
+                msg:  "Error occured while retriving information.",
+                buttons: Wtf.MessageBox.OK,
+                icon: Wtf.MessageBox.INFO
+            });
+        }
+        );
+
+
+        }
+     });
+    
+    this.ExportInfoBtn = new Wtf.exportButton({
+        obj:this,
+        menuItem:{
+            csv:true,
+            rowPdf:true
+        },
+        userinfo:true,
+        get:3,
+        params:{
+            isExport:true
+        },
+        url: "Payroll/Wage/getPayRollSummaryExport.py",
+        filename:"EPF File"
+    });
+
+    this.pg = new Wtf.PagingSearchToolbar({
+        pageSize: 25,
+        store: this.dstore,
+        displayInfo:false,
+       // displayMsg: 'Displaying records {0} - {1} of {2}',
+        emptyMsg: "No results to display",
+        items:[this.ExportInfoBtn,'->',this.paymentbutton],
+        plugins: this.pP = new Wtf.common.pPageSize()        
+    });
+    this.quickSearchTF = new Wtf.KWLTagSearch({
+        id: 'sunrise_cal'+this.id,
+        width: 200,
+        emptyText: 'Search by Employee Name '
+    });
+ //   var optbutton = [];
+   // if(!WtfGlobal.EnableDisable(Wtf.UPerm.Product, Wtf.Perm.Product.exportt))
+ //   {
+    //    this.exp = exportButton(this,"Record",9);
+   //     optbutton.push(this.exp);
+
+
+  //      this.printprv = printButton(this,"Record",9);
+  //      optbutton.push(this.printprv);
+
+//    }
+
+//    if(!WtfGlobal.EnableDisable(Wtf.UPerm.Lead, Wtf.Perm.Lead.importt)) {
+ //       var extraConfig = {};
+        //var createdon = new Date().getTime();
+//        var extraParams = "{\"Deleteflag\":0,\"UsersByCreatedbyid\":\""+loginid+"\", \"UsersByUpdatedbyid\":\""+loginid+"\"}";
+ //       this.importCalA =Wtf.importMenuArray(this,"Calibration",this.dstore,extraParams, extraConfig);
+//        this.importCals = Wtf.importMenuButtonA(this.importCalA,this,"Calibration");
+ //       optbutton.push(this.importCals);
+//    }
+
+//    this.tbarPrint.on('mouseover',function() {
+ //   	var s = this.getSelectionModel().getSelections();
+//        this.printprv.menu.items.items[1].setDisabled(s.length<=0);
+//    }, this);
+//    this.tbarExport.on("mouseover", function(){
+ //       var s = this.getSelectionModel().getSelections();
+ //       this.exp.menu.items.items[1].setDisabled(s.length<=0);
+//        this.exp.menu.items.items[3].setDisabled(s.length<=0);
+//        this.exp.menu.items.items[5].setDisabled(s.length<=0);
+ //   },this);
+    var selectionModel = new Wtf.grid.CheckboxSelectionModel();
+    Wtf.SunRiseCalibrationGrid.superclass.constructor.call(this, {
+        ds: this.dstore,
+        cm: this.cmodel,
+        plugins:[this.summary],
+        tbar:["Search",this.quickSearchTF,'-',this.resetbutton,'-',this.deletebutton],
+        enableColumnHide: true,
+        width: '100%',
+        scrollOffset: 0,
+        bbar:this.pg,
+        selModel: selectionModel
+    });
+
+    this.dstore.on('load',function(){
+        this.quickSearchTF.StorageChanged(this.dstore);
+        this.quickSearchTF.on('SearchComplete', function() {
+            this.getView().refresh();
+        }, this);
+    },this);
+
+    this.dstore.on("datachanged",function(){
+        this.quickSearchTF.setPage(this.pP.combo.value);
+    },this);
+}
+
+Wtf.extend(Wtf.SunRiseCalibrationGrid, Wtf.grid.EditorGridPanel, {
+    initComponent: function() {
+        Wtf.SunRiseCalibrationGrid.superclass.initComponent.call(this);
+        this.dstore.on('load', this.onDataLoad, this);
+        this.on('validateedit', this.Param, this);
+        this.on('afteredit', this.GridAfterEdit, this);
+/*        this.getSelectionModel().on("selectionchange",function(){
+            if(this.getSelectionModel().getCount()==1){
+                this.paymentbutton.enable();
+            }else{
+                this.paymentbutton.disable();
+            }
+        },this);*/
+
+        Wtf.getCmp(this.id+'monthCombo').on('beforeselect',function(combo,record,index){
+            return record.get('hasAccess' );
+        },this);
+    },
+    
+    onRender:function(config) {
+        Wtf.SunRiseCalibrationGrid.superclass.onRender.call(this,config);
+        this.exportinfo();
+    },
+    
+    exportinfo:function(){
+        var i,k=1;
+        var column = this.cmodel;
+        this.pdfStore =new Wtf.data.Store({});
+        for(i=0 ; i<column.getColumnCount() ; i++) { 
+          if(column.isHidden(i)!=undefined||column.getColumnHeader(i)==""||column.getDataIndex(i)==""){
+                    continue;
+          }
+          else{
+                var aligned=column.config[i].align;
+                var title;
+                if(aligned==undefined)
+                    aligned='center';
+                if(column.config[i].title==undefined)
+                    title=column.config[i].dataIndex;
+                else
+                    title=column.config[i].title;
+                this.newPdfRec = new Wtf.data.Record({
+                    header : title,
+                    title : column.config[i].header,
+                    width : column.config[i].pdfwidth,
+                    align : aligned,
+                    index : k
+                });
+                this.pdfStore.insert(this.pdfStore.getCount(), this.newPdfRec);
+                k++;
+          }
+        }
+        this.grid = this;
+    },
+
+    afterRender: function(config) {
+        Wtf.SunRiseCalibrationGrid.superclass.afterRender.call(this,config);
+        this.dstore.load({
+            params :{
+                start : 0,
+                limit : this.pP.combo.value
+            }
+        });
+
+    },
+
+    Param: function(e) {
+
+    },
+
+    GridAfterEdit: function(e) {
+        var rec = e.record;
+        var field = e.field;
+        var count = this.dstore.getCount();
+        if (count == (e.row + 1))
+            this.addBlankRow();
+        if (field=='empname' || field=='empid' || field=='nric' || field=='epfnumber' || field=='grosssalary'  || field=='epfemployer' || field=='epfemployee'|| field=='month'){
+
+           this.htmlStrippedRecordSet(rec,field)
+           if(field=='grosssalary'){
+              
+              var emplrContri = (rec.data.grosssalary*12)/100;
+             
+              rec.set('epfemployer',emplrContri);
+              var empleContri = (rec.data.grosssalary*11)/100;
+              rec.set('epfemployee',empleContri);
+           }
+        }
+        this.updateRecord(rec);
+        
+    },
+    htmlStrippedRecordSet : function (rec,field){
+
+        rec.set(field,WtfGlobal.HTMLStripper(rec.get(field)));
+
+    },
+    updateRecord : function(record) {
+        var rData = record.data;
+        Wtf.Ajax.requestEx({
+            url: "Payroll/Wage/payrollSummarySave.py",
+            params: {
+                jsondata: this.getJsonFromRecord(record)
+        }},this,
+        function(res) {
+            if(res.ID!=undefined){
+                rData.id = res.ID;
+             
+            }
+                
+        },
+        function(res) {
+           
+        });
+    },
+    deleteRecord:function() {
+    	if(this.getSelectionModel().getCount()==0)
+    	{
+    		 WtfComMsgBox(["Alert", "Please select record(s) to delete."],0);
+    		return;
+    	}
+    	else if(this.getSelectionModel().getCount()==1){
+            this.rec=this.getSelectionModel().getSelected();
+            var id=this.rec.data.id;
+            if(id=="0"){
+                WtfComMsgBox(["Alert", "Please select valid record(s) to delete."],0);;
+                	return;
+                }
+    	}
+        Wtf.MessageBox.show({
+            title:'Confirm',
+            msg:"Are you sure you want to delete selected Record(s)?<br><br><b>Note: This data cannot be retrieved later.</b>",
+            icon:Wtf.MessageBox.QUESTION,
+            buttons:Wtf.MessageBox.YESNO,
+            scope:this,
+            fn:function(button){
+                if(button=='yes')
+                {
+                	var sm = this.getSelectionModel();
+                    this.delkey=sm.getSelections();
+                    this.ids=[];
+                    sm.clearSelections();
+                    for(var i=0;i<this.delkey.length;i++){
+                        if(this.delkey[i].get('id'))
+                        {
+                            this.ids.push(this.delkey[i].get('id'));
+                        }
+                    }
+                    if(this.ids.length>0)
+                    {
+                    	Wtf.commonWaitMsgBox("Deleting data...");
+                        Wtf.Ajax.requestEx({
+
+                        	url: "Payroll/Wage/deletePayrollSummary.py",
+                                params:{
+                                    ids:this.ids
+                                }
+                            },this,
+                            function(action, response){
+                            	Wtf.updateProgress();
+                            	if(action.success) {
+                                	this.dstore.reload();
+                                	if(action.msg) {
+                                		WtfComMsgBox(["Alert", "Records deleted successfully."],0);;
+            			            }
+                                }
+
+                            },
+                            function()
+                            {
+                                Wtf.updateProgress();
+                                //ResponseAlert(92);
+                            })
+                    }
+                }
+            }
+        });
+    },
+
+    exportfile: function(type) {
+        if(this.searchJson==null) {
+            this.searchJson = "";
+        }
+        this.RelatedRecordName="";
+        var name="CalibrationReport";
+        var fromdate="";
+        var todate="";
+        var report=""
+        var url = Wtf.req.springBase+'common/sunrise/sunriseClientCallibrationExport.do';
+		if(this.sortInfo != undefined) {
+            var field = this.sortInfo.field;
+            var dir = this.sortInfo.direction;
+        }
+        exportWithTemplate(this,type,name,fromdate,todate,report,url,undefined,this,undefined,field,dir);
+    },
+    exportSelected: function(type) {
+        var name="CalibrationReport";
+        var fromdate="";
+        var todate="";
+        var report=""
+        this.titlename=""
+        var selArr = [];
+        var url = Wtf.req.springBase+'common/sunrise/sunriseClientCallibrationExport.do';
+        if(this.sortInfo != undefined) {
+            var field = this.sortInfo.field;
+            if(field!=undefined && field=="createdon"){
+                field="createdOn";
+            }
+            var dir = this.sortInfo.direction;
+        }
+        selArr = this.getSelectionModel().getSelections();
+        var jsondata = "";
+        for(var i=0;i<selArr.length;i++)
+        {
+                jsondata+="{'id':'" + selArr[i].get('id') + "'},";
+        }
+        if(jsondata.length > 0) {
+            var trmLen = jsondata.length - 1;
+            var finalStr = jsondata.substr(0,trmLen);
+            exportWithTemplate(this,type,name,fromdate,todate,report,url,undefined,this,finalStr,field,dir);
+        }
+    },
+    PrintPriview : function(type) {
+        if(this.searchJson==null) {
+            this.searchJson = "";
+        }
+        this.RelatedRecordName="";
+        var name="Calibration Report";
+        var fromdate="";
+        var todate="";
+        var report="report";
+        var exportUrl = Wtf.req.springBase+'common/sunrise/sunriseClientCallibrationExport.do';
+        if(this.sortInfo != undefined) {
+            var field = this.sortInfo.field;
+            if(field!=undefined && field=="createdon"){
+                field="createdOn";
+            }
+            var dir = this.sortInfo.direction;
+        }
+        exportWithTemplate(this,type,name,fromdate,todate,report,exportUrl,undefined,this,undefined,field,dir);
+    },
+    onDataLoad: function(store, record, option) {
+        this.addBlankRow();
+    },
+
+    getJsonFromRecord : function(record) {
+        var jsondata = "";
+        var rData = record.data;
+        var rid = rData.id
+        if(rid==undefined){
+            rid="0";
+        }
+        var rmonth=rData.month;
+        if(rData.month==undefined){
+            rmonth="";
+        }
+        jsondata+='{"id":"' + rid + '",';
+        jsondata+='"empname":"' +rData.empname + '",';
+        jsondata+='"empid":"' +rData.empid + '",';
+        jsondata+='"nric":"' +rData.nric + '",';
+        jsondata+='"epfnumber":"' +rData.epfnumber + '",';
+        jsondata+='"grosssalary":"' +rData.grosssalary + '",';
+        jsondata+='"epfemployer":"' +rData.epfemployer + '",';
+        jsondata+='"month":"' +rmonth + '",';
+        jsondata+='"epfemployee":"' +rData.epfemployee + '"';
+        
+        jsondata+= '},';
+        var finalStr = jsondata.substr(0,(jsondata.length - 1));
+        return finalStr;
+    },
+
+    addBlankRow: function(){
+        var p = new this.record({
+            empname: '',
+            empid: '',
+            nric: '',
+            epfnumber: '',
+            grosssalary: '',
+            epfemployer: '',
+            epfemployee: '',
+            month: ''
+        });
+        this.dstore.insert(this.dstore.getCount(), p);
+    }
+});
+
+
+var CalibrationPanel = new Wtf.SunRiseCalibrationGrid({
+    border:false,
+    //title:"Calibration Certificate",
+    layout:'fit',
+    //closable:true,
+    //iconCls:"listViewTabIcon",
+    id:'sunRiseCalibrationGrid',
+    viewConfig: {
+    	forceFit: true
+	}
+});
+Wtf.getCmp("tabsunrisecalibar").add(CalibrationPanel);
+Wtf.getCmp("tabsunrisecalibar").doLayout();
+
+</script>

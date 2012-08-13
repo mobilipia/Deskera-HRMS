@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.timesheet.Timesheet" table="timesheet">
+    <id column="id" name="id">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" column="userid" name="userID" not-null="true"/>
+    <property name="datevalue" not-null="true" type="date">
+      <column name="dateValue"/>
+    </property>
+    <property name="worktime" not-null="true" type="integer">
+      <column name="worktime"/>
+    </property>
+    <property name="jobtype" type="string">
+      <column length="255" name="jobtype"/>
+    </property>
+    <property name="approved" not-null="true" type="integer">
+      <column default="0" name="approved"/>
+    </property>
+    <property name="approvedby" type="string">
+      <column length="255" name="approvedby"/>
+    </property>
+    <property name="worktimemin" not-null="true" type="integer">
+      <column name="worktimemin"/>
+    </property>
+    <property name="isSubmitted" type="integer">
+      <column name="isSubmitted"/>
+    </property>
+    <property name="text" type="true_false">
+    	<column name="istext" default="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

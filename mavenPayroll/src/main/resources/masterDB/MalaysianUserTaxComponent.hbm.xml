@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="masterDB.MalaysianUserTaxComponent" table="malaysian_user_taxcomponents">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" name="user">
+      <column name="user" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="masterDB.MalaysianDeduction" name="deduction">
+      <column name="deduction"/>
+    </many-to-one>
+    <many-to-one class="masterDB.MalaysianTaxSlab" name="taxSlab">
+      <column name="taxslab"/>
+    </many-to-one>
+    <property name="amount" type="double">
+        <column name="amount"/>
+    </property>
+    <property name="submitted" type="true_false">
+      <column name="submitted" default="false"/>
+    </property>
+    <property name="year" type="date">
+      <column name="year"/>
+    </property>
+    <property name="modifiedon" type="timestamp">
+      <column name="modifiedon"/>
+    </property>
+    <property name="checked" type="true_false">
+      <column name="checked" default="false"/>
+    </property>
+  </class>
+</hibernate-mapping>

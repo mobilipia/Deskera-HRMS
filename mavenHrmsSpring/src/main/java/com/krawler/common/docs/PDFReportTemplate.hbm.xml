@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.docs.PDFReportTemplate" table="pdfreporttemplate">
+    <id name="ID" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="name" type="string">
+      <column length="40" name="name"/>
+    </property>
+    <property name="description" type="string">
+      <column length="40" name="description"/>
+    </property>
+    <property name="configuration" type="string">
+      <column length="2000" name="configstr"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" name="user"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.AudittrailPayroll" table="audittrailpayroll">
+    <id name="id" type="string">
+      <column length="36" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="typeofwork" type="string">
+      <column length="100" name="typeofwork" not-null="true"/>
+    </property>
+    <property name="ip" type="string">
+      <column length="36" name="ip" not-null="true"/>
+    </property>
+    <property name="companyid" type="string">
+      <column length="36" name="companyid" not-null="true"/>
+    </property>
+    <property name="userid" type="string">
+      <column length="36" name="userid" not-null="true"/>
+    </property>
+    <property name="spid" type="string">
+      <column length="36" name="spid"/>
+    </property>
+    <property name="date" type="date">
+      <column length="10" name="date" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

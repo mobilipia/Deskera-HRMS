@@ -1,0 +1,75 @@
+<settings>
+  <text_size>10</text_size>
+  <background>
+    <alpha>100</alpha>
+  </background>
+  <grid>
+    <category>
+      <alpha>41</alpha>
+      <dashed>1</dashed>
+    </category>
+    <value>
+      <alpha>39</alpha>
+      <dashed>1</dashed>
+      <fill_alpha>20</fill_alpha>
+    </value>
+  </grid>
+  <axes>
+    <category>
+      <width>1</width>
+      <color>E7E7E7</color>
+    </category>
+    <value>
+      <width>1</width>
+      <color>E7E7E7</color>
+    </value>
+  </axes>
+  <values>
+    <value>
+      <min>0</min>
+      <duration>mm</duration>
+    </value>
+  </values>
+    <legend>
+    <x>380</x>
+    <y>19</y>
+  </legend>
+  <depth>15</depth>
+  <column>
+    <width>50</width>
+    <balloon_text>{title}: {value}</balloon_text>
+    <grow_time>3</grow_time>
+  </column>
+  <strings>
+    <no_data>There are no reports for you at this time</no_data>
+  </strings>
+  <graphs>
+    <graph gid="1">
+      <title>Total Working hours</title>
+      <color>0099CC</color>
+    </graph>
+  </graphs>
+  <labels>
+    <label lid="0">
+      <text><![CDATA[<b>Weekly Timesheet </b>(Days VS Hours)]]></text>
+      <y>18</y>
+      <x>-86</x>
+      <text_color>000000</text_color>
+      <text_size>13</text_size>
+      <align>center</align>
+    </label>
+    <label lid="1">
+      <text>Hour of the Day</text>
+      <text_size>14</text_size>
+      <x>12</x>
+      <y>185</y>
+      <rotate>1</rotate>
+    </label>
+     <label lid="2">
+      <text>Days of the Week</text>
+      <text_size>14</text_size>
+      <x>235</x>
+      <y>280</y>
+    </label>
+  </labels>
+</settings>

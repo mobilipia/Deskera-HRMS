@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="masterDB.PayrollSummary" table="payrollsummary">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="empname" type="string">
+      <column length="255" name="empname"  default="' '"/>
+    </property>
+    <property name="empid" type="string">
+      <column length="255" name="empid"  default="' '"/>
+    </property>
+    <property name="nric" type="string">
+      <column length="255" name="nric"  default="' '"/>
+    </property>
+    <property name="grosssalary" type="string">
+      <column length="255" name="grosssalary"  default="' '"/>
+    </property>
+    <property name="epfnumber" type="string">
+      <column length="255" name="epfnumber"  default="' '"/>
+    </property>
+    <property name="epfemployer" type="string">
+      <column length="255" name="epfemployer"  default="' '"/>
+    </property>
+    <property name="epfemployee" type="string">
+      <column length="255" name="epfemployee" default="' '"/>
+    </property>
+    <property name="month" type="string">
+      <column length="2" name="month" default="' '"/>
+    </property>
+    <property name="deleteflag" type="true_false">
+      <column name="deleteflag"/>
+    </property>
+     </class>
+</hibernate-mapping>

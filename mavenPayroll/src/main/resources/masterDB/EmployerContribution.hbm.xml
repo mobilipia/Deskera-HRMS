@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="masterDB.EmployerContribution" table="employercontributionmaster">
+    <id name="id" type="string">
+      <column length="36" name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.Company" fetch="select" name="companyid">
+      <column length="36" name="companyid" not-null="true"/>
+    </many-to-one>
+    <property name="empcontritype" type="string">
+      <column length="100" name="empcontritype" not-null="true"/>
+    </property>
+    <property name="rate" type="integer">
+      <column length="11" name="rate"/>
+    </property>
+    <property name="empcontricode" type="string">
+      <column length="36" name="empcontricode"/>
+    </property>
+    <property name="cash" type="double">
+      <column name="cash"/>
+    </property>
+    <property name="isdefault" type="true_false">
+      <column name="isdefault"/>
+    </property>
+    <property name="computeon" type="integer">
+      <column length="11" name="computeon"/>
+    </property>
+    <property name="expr" type="string">
+      <column length="1024" name="expr"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- See http://maven.apache.org/maven-settings/settings.html --><settings>
+
+    <servers>
+        <server>
+            <id>krawler-repo</id>
+            <!-- Permissions ensure group-writable dirs and files -->
+            <filePermissions>664</filePermissions>
+            <directoryPermissions>2775</directoryPermissions>
+            <username>ashutosh.kumar</username>
+            <!-- Note: MUST use forward slashes ('/'), not backslashes ('\')! -->
+            <privateKey>/home/krawler</privateKey>
+        </server>
+        <server>
+            <id>krawler-snapshot-repo</id>
+            <!-- Permissions ensure group-writable dirs and files -->
+            <filePermissions>664</filePermissions>
+            <directoryPermissions>2775</directoryPermissions>
+            <!-- Note: MUST use forward slashes ('/'), not backslashes ('/')! -->
+            <username>ashutosh.kumar</username>
+            <privateKey>/home/krawler/ssh_keys</privateKey>
+        </server>
+		<server>
+             <id>krawler-central-repo</id>
+             <username>brajesh sachan</username>
+             <password>poop</password>
+         </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>deskera-group</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+
+			<properties>
+                <KRAWLER_REPO_URL>http://192.168.0.2/krawlerlib</KRAWLER_REPO_URL>
+				<MAVEN_REPO_URL>http://repo2.maven.org/maven2</MAVEN_REPO_URL>
+            </properties>
+            <repositories>
+                <repository>
+                    <id>krawler-proxy-repo</id>
+                    <name>Krawler Proxy Repository</name>
+                    <url>http://192.168.0.2/krawlerlib</url>
+                    <snapshots>
+                    </snapshots>
+                    <releases>
+                        <updatePolicy>daily</updatePolicy>
+                    </releases>
+                </repository>
+				<repository>
+                    <id>maven-repo</id>
+                    <name>Maven Repository</name>
+                    <url>${MAVEN_REPO_URL}</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <updatePolicy>daily</updatePolicy>
+                    </releases>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+
+
+
+    <localRepository>/home/krawler/.m2/repository</localRepository>
+ <proxies>
+   <proxy>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>192.168.0.233</host>
+      <port>3128</port>
+    </proxy>
+  </proxies>
+
+</settings>

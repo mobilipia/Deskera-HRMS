@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.krawler.hrms.timesheet.TimesheetTimer" table="timesheettimer">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <many-to-one class="com.krawler.common.admin.User" fetch="select" name="user">
+          <column name="user" not-null="true"/>
+        </many-to-one>
+        <property name="startTime" type="timestamp">
+          <column name="starttime" default="null"/>
+        </property>
+        <property name="stopTime" type="timestamp">
+          <column name="stoptime" default="null"/>
+        </property>
+        <property name="jobname" type="string">
+          <column name="jobname" default="null"/>
+        </property>
+  </class>
+</hibernate-mapping>

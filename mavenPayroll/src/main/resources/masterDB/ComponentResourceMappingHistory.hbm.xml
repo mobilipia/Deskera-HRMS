@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="masterDB.ComponentResourceMappingHistory" table="component_resource_mapping_history">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="masterDB.Componentmaster" fetch="select" name="component" lazy="false">
+      <column name="component" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.krawler.common.admin.User" fetch="select" name="user">
+      <column name="user" not-null="true"/>
+    </many-to-one>
+    <property name="componentstartdate" type="date">
+      <column length="10" name="componentstartdate"/>
+    </property>
+    <property name="componentenddate" type="date">
+      <column length="10" name="componentenddate"/>
+    </property>
+    <property name="amount" type="double">
+      <column name="amount"/>
+    </property>
+    <property name="periodstartdate" type="date">
+      <column length="10" name="periodstartdate"/>
+    </property>
+    <property name="periodenddate" type="date">
+      <column length="10" name="periodenddate"/>
+    </property>
+    <property name="frequency" type="integer">
+      <column name="frequency"/>
+    </property>
+  </class>
+</hibernate-mapping>

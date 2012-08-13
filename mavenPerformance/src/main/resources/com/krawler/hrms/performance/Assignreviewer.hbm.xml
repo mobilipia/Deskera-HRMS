@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.Assignreviewer" table="assignreviewer">
+    <id column="id" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.User" name="employee"/>
+    <many-to-one class="com.krawler.common.admin.User" name="reviewer"/>
+    <property name="reviewerstatus" type="integer">
+      <column name="reviewerstatus"/>
+    </property>
+  </class>
+</hibernate-mapping>

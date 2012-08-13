@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaFormTP3" table="malaysia_form_tp3">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="previousEmployer1" type="string">
+          <column name="previousemployer1"/>
+        </property>
+        <property name="employerReferenceNo1" type="string">
+          <column name="employerreferenceno1"/>
+        </property>
+        <property name="previousEmployer2" type="string">
+          <column name="previousemployer2"/>
+        </property>
+        <property name="employerReferenceNo2" type="string">
+          <column name="employerreferenceno2"/>
+        </property>
+        <property name="oldIdentificationNumber" type="string">
+          <column name="oldidentificationnumber"/>
+        </property>
+        <property name="newIdentificationNumber" type="string">
+          <column name="newidentificationnumber"/>
+        </property>
+        <property name="armyOrPoliceNumber" type="string">
+          <column name="armyorpolicenumber"/>
+        </property>
+        <property name="passportNumber" type="string">
+          <column name="passportnumber"/>
+        </property>
+        <property name="incomeTaxFileNumber" type="string">
+          <column name="incometaxfilenumber"/>
+        </property>
+        <property name="freeSampleProductOnDiscount" type="double">
+          <column name="freesampleproductondiscount" default="0"/>
+        </property>
+        <property name="employeeLongServiceAward" type="string">
+          <column name="employeelongserviceaward"/>
+        </property>
+        <property name="totalContributionToKWSP" type="double">
+          <column name="totalcontributiontokwsp" default="0"/>
+        </property>
+        <property name="tuitionfees" type="double">
+          <column name="tuitionfees" default="0"/>
+        </property>
+        <property name="contributionToPrivatePension" type="double">
+          <column name="contributiontoprivatepension" default="0"/>
+        </property>
+        <property name="totalAllowance" type="double">
+          <column name="totalallowance" default="0"/>
+        </property>
+        <property name="otherAllowance" type="double">
+          <column name="otherallowance" default="0"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.Useraccount" fetch="select" name="useraccount">
+          <column name="useraccount" not-null="true"/>
+        </many-to-one>
+        <property name="authorizeStatus" type="integer">
+            <column name="authorizestatus" default="0"/>
+        </property>
+  </class>
+</hibernate-mapping>

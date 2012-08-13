@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.Deductionmaster" table="deductionmaster">
+    <id name="deductionid" type="string">
+      <column length="36" name="deductionid"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.Company" fetch="select" name="companydetails">
+      <column length="36" name="companyid" not-null="true"/>
+    </many-to-one>
+    <property name="deductiontype" type="string">
+      <column length="100" name="deductiontype" not-null="true"/>
+    </property>
+    <property name="rate" type="integer">
+      <column length="11" name="rate"/>
+    </property>
+    <property name="dcode" type="string">
+      <column length="36" name="dcode"/>
+    </property>
+    <property name="cash" type="double">
+      <column name="cash"/>
+    </property>
+    <property name="isdefault" type="true_false">
+      <column name="isdefault"/>
+    </property>
+  </class>
+</hibernate-mapping>

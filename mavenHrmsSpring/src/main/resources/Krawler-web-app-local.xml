@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="nutch-conf.xsl"?>
+
+
+<krawler-conf>
+
+    <property>
+        <name>deskerasuperuser</name>
+        <value>ff808081227de9f701227de9fb4b0002</value>
+    </property>
+    <property>
+        <name>forum_base_url</name>
+        <value>http://192.168.0.221/deskerasupport/</value>
+    </property>
+    <property>
+        <name>base_urlformat</name>
+        <value>http://hrms.deskera.com/a/%s/</value>
+    </property>
+    <property>
+        <name>ProfileImagePathBase</name>
+        <value>/home/krawler/store/</value>
+    </property>
+    <property>
+        <name>DocStorePath0</name>
+        <value>/home/krawler/store/HRMS/</value>
+    </property>
+    <property>
+        <name>DocStorePath1</name>
+        <value>/home/krawler/store/HRMS/</value>
+    </property>
+    <property>
+        <name>SMTPPath</name>
+        <value>localhost</value>
+    </property>
+    <property>
+        <name>SMTPPort</name>
+        <value>25</value>
+    </property>
+    <property>
+		<name>audittrailindex</name>
+		<value>/home/krawler/store/HRMS/audit/audittrailindex</value>
+	</property>
+    <property>
+		<name>audittraildocindex</name>
+		<value>/home/krawler/store/HRMS/audit/audittraildocindex</value>
+	</property>
+
+</krawler-conf>

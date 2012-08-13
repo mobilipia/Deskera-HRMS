@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--<class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.hrms.performance.CompetencyQuestion" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/>-->
+  <class name="com.krawler.hrms.performance.CompetencyQuestion" table="competencyquestion">
+    <id name="quesid" type="string">
+      <column name="quesid"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="quesdesc" length="1024" type="string">
+      <column name="quesdesc" not-null="true"/>
+    </property>
+    <property name="noofans" type="int">
+      <column name="noofans" not-null="true"/>
+    </property>
+    <property name="questype" type="string">
+      <column name="questype" not-null="false"/>
+    </property>
+    <property name="quesorder" type="int">
+      <column name="quesorder"/>
+    </property>
+    <property name="visible" type="true_false">
+            <column name="visible" default="true"/>
+    </property>
+    <!--<set cascade="all" inverse="true" name="managecmpts">
+      <key column="cmptid"/>
+      <one-to-many class="com.krawler.hrms.performance.Managecmpt"/>
+    </set>
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>-->
+  </class>
+</hibernate-mapping>

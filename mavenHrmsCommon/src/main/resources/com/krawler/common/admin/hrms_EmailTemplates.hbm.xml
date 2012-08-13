@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.hrms_EmailTemplates" table="hrms_emailTemplates">
+    <id column="templateid" name="templateid">
+      <generator class="uuid"/>
+    </id>
+    <property name="subject" type="string">
+      <column length="255" name="subject"/>
+    </property>
+    <property name="body_plain" type="text">
+      <column name="body_plain"/>
+    </property>
+    <property name="body_html" type="text">
+      <column name="body_html"/>
+    </property>
+    <property name="templatetype" type="string">
+      <column length="255" name="templatetype"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.Company" name="company" not-null="true"/>
+    <property name="deleted" type="true_false">
+      <column name="deleteflag"/>
+    </property>
+  </class>
+</hibernate-mapping>

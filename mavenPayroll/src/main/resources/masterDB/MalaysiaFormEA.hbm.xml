@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="masterDB.MalaysiaFormEA" table="malaysia_form_ea">
+        <id name="id" type="string">
+          <column name="id"/>
+          <generator class="uuid"/>
+        </id>
+        <property name="serialNumber" type="string">
+          <column name="serialnumber"/>
+        </property>
+        <property name="employerERefNumber" type="string">
+          <column name="employererefnumber"/>
+        </property>
+        <property name="incomeTaxFileNumber" type="string">
+          <column name="incometaxfilenumber"/>
+        </property>
+        <property name="incomeTaxBranch" type="string">
+          <column name="incometaxbranch"/>
+        </property>
+        <property name="oldIdentificationNumber" type="string">
+          <column name="oldidentificationnumber"/>
+        </property>
+        <property name="newIdentificationNumber" type="string">
+          <column name="newidentificationnumber"/>
+        </property>
+        <property name="accNumberKWSP" type="string">
+          <column name="accnumberkwsp"/>
+        </property>
+        <property name="incomeTaxPaidByEmployer" type="double">
+          <column name="incometaxpaidbyemployer" default="0"/>
+        </property>
+        <property name="carAndPetrol" type="double">
+          <column name="carandpetrol" default="0"/>
+        </property>
+        <property name="carType" type="string">
+          <column name="cartype"/>
+        </property>
+        <property name="carYearMake" type="date">
+          <column name="caryearmake"/>
+        </property>
+        <property name="carModel" type="string">
+          <column name="carmodel"/>
+        </property>
+        <property name="driverWages" type="double">
+          <column name="driverwages" default="0"/>
+        </property>
+        <property name="entertainment" type="double">
+          <column name="entertainment" default="0"/>
+        </property>
+        <property name="handphone" type="double">
+          <column name="handphone" default="0"/>
+        </property>
+        <property name="maidAndGardener" type="double">
+          <column name="maidandgardener" default="0"/>
+        </property>
+        <property name="airTicketsForHolidays" type="double">
+          <column name="airticketsforholidays" default="0"/>
+        </property>
+        <property name="otherBenefitsForClothingAndFoods" type="double">
+          <column name="otherbenefitsforclothingandfoods" default="0"/>
+        </property>
+        <property name="housingAddress" type="string">
+          <column name="housingaddress"/>
+        </property>
+        <property name="refundsFromKWSPOther" type="double">
+          <column name="refundsfromkwspother" default="0"/>
+        </property>
+        <property name="compensationLossWork" type="double">
+          <column name="compensationlosswork" default="0"/>
+        </property>
+        <property name="retirementPayment" type="double">
+          <column name="retirementpayment" default="0"/>
+        </property>
+        <property name="periodicalPayment" type="double">
+          <column name="periodicalpayment" default="0"/>
+        </property>
+        <property name="cp38Deduction" type="double">
+          <column name="cp38deduction" default="0"/>
+        </property>
+        <property name="name" type="string">
+          <column name="name"/>
+        </property>
+        <property name="portionOfKWSP" type="double">
+          <column name="portionofkwsp" default="0"/>
+        </property>
+        <property name="typeOfIncome" type="string">
+          <column name="typeofincome"/>
+        </property>
+        <property name="contributionKWSP" type="double">
+          <column name="contributionkwsp"/>
+        </property>
+        <property name="amount" type="double">
+          <column name="amount" default="0"/>
+        </property>
+        <property name="nonTaxableAmount" type="double">
+          <column name="nontaxableamount" default="0"/>
+        </property>
+        <property name="otherBenefits" type="double">
+          <column name="otherbenefits" default="0"/>
+        </property>
+        <property name="housingBenefitsWithFurniture" type="double">
+          <column name="housingbenefitswithfurniture" default="0"/>
+        </property>
+        <property name="housingBenefitsWithKitchen" type="double">
+          <column name="housingBenefitswithkitchen" default="0"/>
+        </property>
+        <property name="furnitureAndFitting" type="double">
+          <column name="furnitureandfitting" default="0"/>
+        </property>
+        <property name="kitchenAndUtensils" type="double">
+          <column name="kitchenandutensils" default="0"/>
+        </property>
+        <property name="month" type="integer">
+          <column name="month" default="0"/>
+        </property>
+        <property name="year" type="integer">
+          <column name="year" default="0"/>
+        </property>
+        <many-to-one class="com.krawler.common.admin.Useraccount" fetch="select" name="useraccount">
+          <column name="useraccount" not-null="true"/>
+        </many-to-one>
+        <property name="authorizeStatus" type="integer">
+            <column name="authorizestatus" default="0"/>
+        </property>
+  </class>
+</hibernate-mapping>

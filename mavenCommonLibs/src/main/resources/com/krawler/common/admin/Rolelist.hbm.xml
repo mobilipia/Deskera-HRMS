@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 3:40:56 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="com.krawler.common.admin.Rolelist" table="rolelist">
+    <id name="roleid" type="string">
+      <column name="roleid"/>
+      <generator class="uuid"/>
+    </id>
+    <property name="rolename" type="string">
+      <column length="100" name="rolename"/>
+    </property>
+    <property name="displayrolename" type="string">
+      <column name="displayrolename"/>
+    </property>
+  </class>
+</hibernate-mapping>

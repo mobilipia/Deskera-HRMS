@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.Appraisalcycle" table="appraisalcycle">
+    <id column="id" name="id" type="string">
+      <generator class="uuid"/>
+    </id>
+    <property name="cyclename" type="string">
+      <column length="255" name="cyclename"/>
+    </property>
+    <property name="startdate" type="date">
+      <column name="startdate"/>
+    </property>
+    <property name="enddate" type="date">
+      <column name="enddate"/>
+    </property>
+    <many-to-one class="com.krawler.common.admin.User" name="createdby"/>
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+    <property name="submitstartdate" type="date">
+      <column name="submitstartdate"/>
+    </property>
+    <property name="submitenddate" type="date">
+      <column name="submitenddate"/>
+    </property>
+    <property name="cycleapproval" type="true_false">
+      <column name="cycleapproval"/>
+    </property>
+    <property name="reviewed" type="true_false">
+      <column name="reviewed"/>
+    </property>
+  </class>
+</hibernate-mapping>

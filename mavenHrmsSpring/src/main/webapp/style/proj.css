@@ -1,0 +1,505 @@
+.browseTextField {
+    height: 19px;
+    width: 200px !important;
+}
+
+.ParentTask {
+    cursor: move;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: black;
+    position: absolute;
+    height: 10px;
+    line-height: 0px;
+    background-color: black;
+}
+
+.taskOverDue {
+    border-color: red !important;
+    background-color: red !important;
+}
+
+.test {
+    border: 0 solid red;
+    font-weight: lighter;
+    background: transparent url(../lib/resources/images/default/panel/top-bottom.gif) repeat-x scroll 0 50%;
+    margin: 0;
+    padding: 0;
+    font-size: 9pt;
+}
+
+.headerPanel {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 7181px;
+}
+
+.headerProject {
+    float: left;
+    width: 110px;
+    border-left: 0 solid #99bbe8;
+    border-right: 2px solid #99bbe8;
+    height: 30px;
+    background-image: url(../images/weekheaderimg16.png);
+}
+
+.chartPanel, .DataViewPanel {
+    width: 7167px;
+    height: 7300px;
+    position: relative;
+}
+
+.DataViewPanel {
+    background: url(../images/final161.PNG) repeat;
+}
+
+.chartPanelOldCursor {
+    cursor: default;
+}
+
+.chartPanelNewCursor {
+    cursor: url(../images/movecursor.cur), auto !important;
+}
+
+.containerPanel {
+    height: 100% !important;
+}
+
+.custom, .milestoneIcon {
+    cursor: move;
+    position: absolute;
+    height: 10px;
+    min-height: 10px;
+}
+
+.custom {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: blue;
+    background-color: #3366FF;
+    line-height: 0px;
+    height: 10px;
+}
+
+.milestoneIcon {
+    background: url(../images/milestone.gif);
+}
+
+.newTaskPanelStyle {
+    border: 1px solid #e67e0f;
+}
+
+#chartContainerPanel .x-resizable-handle-east {
+    cursor: url(../images/extend1.cur), auto !important;
+}
+
+.TempTask {
+    cursor: url(../images/movecursor.cur), auto !important;
+    position: absolute;
+    border: 2px solid;
+    height: 9px;
+    line-height: 0px;
+    min-height: 9px;
+}
+
+.taskheader, .tName, .tSDate, .tDuration, .tEDate {
+    height: 12px;
+}
+
+.taskheader, .tName, .tEDate {
+    width: 100%;
+}
+
+.tSDate, .tDuration {
+    width: 50%;
+}
+
+.taskheader {
+    text-align: center;
+}
+
+.tName, .tEDate, .tSDate {
+    text-align: left;
+}
+
+.tDuration {
+    text-align: right;
+    float: right;
+}
+
+.ganttChart {
+    height: auto !important;
+    width: 7167px !important;
+}
+
+.gridFrame {
+    width: 50% !important;
+    height: 100% !important;
+}
+
+.charteastPane {
+    padding-bottom: 7px !important;
+}
+/* this is done to fix the scroll in ie gte 6 as well as firefox*/
+.scrollPanel {
+    position: relative;
+}
+
+.x-grid-editor, .scrollPanel .x-panel-body, .scrollPanel .x-panel-bwrap {
+    position: relative !important;
+}
+
+.x-grid-editor {
+    float: left !important;
+}
+
+.imgcls {
+    width: 10%;
+    float: left;
+}
+
+.defaulttext {
+    /*float: left;*/
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.imgtext {
+    /*float: left;*/
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.plus, .minus, .Dminus {
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-right: 5px;
+}
+
+.minus, .Dminus, .forum_minus {
+    background: url('../lib/resources/images/default/tree/elbow-minus-nl.gif') no-repeat center;
+}
+
+.plus, .forum_plus {
+    background: url('../lib/resources/images/default/tree/elbow-plus-nl.gif') no-repeat center;
+}
+
+.minus {
+    display: none;
+}
+
+.Dminus {
+    display: block;
+}
+
+.bt, .bt3 {
+    margin-right: 5px;
+}
+
+.bt1 {
+    margin-right: 4px;
+}
+
+.bt2, .bt3 {
+    margin-top: 5px;
+}
+
+.repoNormal {
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.repoBold {
+    font-weight: bold;
+    border-bottom: 1px solid #add8e6;
+}
+
+#reportGrid .x-grid3-row, #templateName .x-grid3-row {
+    border: 0 solid black;
+}
+
+.dateField {
+    margin-left: 20px;
+}
+
+.x-combo-list .x-combo-list-cursor {
+    border: 1px dotted #000000 !important;
+}
+
+.x-combo-list-item {
+    cursor: pointer;
+}
+
+.x-combo-list .x-combo-selected + .x-combo-selected {
+    border-top-color: #DFE8F6 !important;
+}
+
+.x-combo-list .x-combo-selected + .x-combo-selected.x-combo-list-cursor {
+    border-top-color: #000000 !important;
+}
+
+.search-item {
+    padding: 3px 10px 3px 10px;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #eeeeee;
+    white-space: normal;
+    color: #555;
+}
+
+.search-item h3 {
+    display: block;
+    font-weight: bold;
+    color: #222;
+}
+
+.search-item h3 span {
+    float: right;
+    font-weight: normal;
+    margin: 0 0 5px 5px;
+    width: 100px;
+    display: block;
+    clear: none;
+}
+
+.subtab {
+    padding: 16px;
+}
+
+.backcolor {
+    background-color: transparent !important;
+}
+
+.selected img {
+    border: 1px outset #222;
+}
+
+.padding {
+    padding: 8px;
+    background-color: white;
+}
+
+.searchInput {
+    padding-left: 36px !important;
+    border-top: 1px solid #041e9f !important;
+    border-bottom: 1px solid #041e9f !important;
+}
+
+.searchInput-over {
+    border-top: 1px solid #efa63c !important;
+    border-bottom: 1px solid #efa63c !important;
+}
+
+.searchleftbutton .x-btn-right {
+    background: transparent;
+}
+
+.searchrightbutton .x-btn-left {
+    display: none !important;
+}
+
+.x-tool-deleteselected {
+    background: transparent url(../images/Delete.gif) no-repeat 0 -1px !important;
+    margin-left: 8px !important;
+}
+
+.x-tool-addnewgroup {
+    background: transparent url(../images/list-items.gif) no-repeat !important;
+    margin-left: 8px !important;
+}
+
+.x-tool-addnew {
+    background: transparent url(../images/btn_add_quick.gif) 0 1px no-repeat !important;
+    margin-left: 8px !important;
+}
+
+.todoNode {
+    background: transparent url(../images/Notes.png) no-repeat !important;
+}
+
+.groupNode {
+    background: transparent url(../images/list-items.gif) no-repeat !important;
+}
+
+.todoPanel-header {
+    padding: 5px 5px 5px 5px;
+    background-color: #dde7ee;
+    color: #00156e;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bold;
+    line-height: 15px;
+    margin-bottom: 5px;
+}
+
+.todoPanel-body {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.x-form-field {
+    vertical-align: text-bottom;
+}
+
+.center-button {
+    text-align: center;
+}
+
+.left-button {
+    float: left;
+    margin: 6px 5px 1px 1px;
+}
+
+.right-button {
+    float: right;
+    margin: 6px 0 1px 6px;
+}
+
+.x-form fieldset {
+    border: 1px solid #B5B8C8;
+    padding: 10px;
+    margin: 0 6px 6px 6px;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    vertical-align: text-bottom;
+}
+
+.imageContainer {
+    width: 40%;
+    margin: auto;
+    height: 47px;
+    padding-top: 10px;
+}
+
+.windowimage, .windowForm, .windowFieldset {
+    margin: auto;
+}
+
+.radioButton, .windowComp, .windowComp .x-form-cb-label, .windowSpan, .windowFieldset, .todoPanel-header, .repoBold {
+    font-size: 11px;
+}
+
+.windowFieldset {
+    padding: 0;
+}
+
+.windowSpan {
+    width: 95%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.pwnd {
+    background: url(../images/tbar.gif) no-repeat !important;
+}
+
+.createtpl {
+    background-position: 0 -558px !important;
+}
+
+.inserttpl {
+    background-position: 0 -618px !important;
+}
+
+.deliconwt {
+    background-position: 0 -218px !important;
+}
+
+.delicon {
+    background-position: 0 -220px !important;
+}
+
+.cuticon {
+    background-position: 0 -1000px !important;
+}
+
+.cpyicon {
+    background-position: 0 -1020px !important;
+}
+
+.pasteicon {
+    background-position: 0 -1040px !important;
+}
+
+.leftarw {
+    background-position: 0 -740px !important;
+}
+
+.rightarw {
+    background-position: 0 -760px !important;
+}
+
+.progressicon {
+    background-position: 0 -1078px !important;
+}
+
+.reportusr {
+    background-position: 0 -658px !important;
+}
+
+.importicon {
+    background-position: 0 -498px !important;
+}
+
+.exporticon {
+    background-position: 0 -518px !important;
+}
+
+.reporticon {
+    background-position: 0 -678px !important;
+}
+.radContainer {
+    padding-left: 5px;
+    margin-left: 25px;
+}
+.BFvfre {
+	font-size: 70%;
+	padding-left: 5px;
+	width: 13px;
+}
+.qn0D4e {
+	cursor: pointer;
+	font-family: verdana,arial,sans-serif;
+	font-size: 9px;
+	font-size-adjust: none;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 10px;
+	margin: 0pt 0pt 3px;
+	outline-color: invert;
+	outline-style: none;
+	outline-width: medium;
+	text-decoration: none;
+}
+
+.qn0D4e b {
+border-color:-moz-use-text-color;
+border-style:solid;
+border-width:1px 0pt;
+display:block;
+font-weight:normal;
+margin:0pt 1px;
+padding:0pt;
+position:relative;
+}
+.qn0D4e b b {
+background:transparent none repeat scroll 0%;
+border-width:0pt 1px;
+display:block;
+margin:0pt -1px;
+padding:0pt;
+position:static;
+}
+.qn0D4e b b b {
+border-width:0pt;
+margin:0pt;
+padding:0pt 1px 1px;
+}

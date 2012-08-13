@@ -1,0 +1,151 @@
+/* 
+    Document   : lm.css
+    Author     : krawler-user/[sy]
+    Description:
+        All styles used in leave manager included here .
+*/
+
+.infocss {
+    font-size:10px !important;
+    margin-left: 105px !important;
+    padding-bottom:3px !important;
+}
+
+.leavepolicyinfocss {
+    margin-left: 125px !important;
+    color:gray !important;
+    font-style:italic;
+}
+
+.hrcss {
+   width: '75%';
+   margin-left: 10px;
+}
+
+.fieldContainerClass {
+    padding-bottom: 3px;
+    padding-left: 120px !important;
+}
+
+.companyFieldSet {
+    border: 0px solid red !important;
+    margin-left: 20px !important;
+    margin-right: 10% !important;
+    margin-top: 16px !important;
+    width: 70%;
+}
+.innerfieldset {
+    border: 0px solid red !important;
+   /* margin-left: 20px !important;
+   margin-right: 10% !important;*/
+    margin-top: 16px !important;
+    width: 70%;
+}
+
+.leaveApplicationIcon{
+	background:url(../images/leavem/leaveM.png);
+}
+
+.updateleavepolicy {
+    background-position: 0 -478px !important;
+}
+
+.refreshalertcls {
+    background-position: 0 -960px !important;
+    width:20px;
+    height:18px;
+    display:block;
+    float:right;
+    margin-right:10px;
+}
+
+.alertloadingcls {
+    background-image: url(../images/loading.gif);
+    width:16px;
+    height:16px;
+    display:block;
+    float:right;
+    margin-right:10px;
+}
+
+.pad{
+    padding-left: 100px;
+}
+
+.andiv{
+    padding-bottom: 1px;
+    padding-left: 28px;
+    background: no-repeat 0 -1px;
+}
+
+.alertWrap, .padTitle, .calendarWrap, .announceWrap {
+    padding-bottom: 3px;
+    padding-left: 20px;
+    background: no-repeat 0 1px;
+}
+
+.alertWrap {
+    background-image: url(../images/bell.png);
+}
+.announceWrap {
+    background-image: url(../images/announce.png);
+}
+.calendarWrap{
+	background-image: url(../images/Calendar-Month.gif);
+}
+
+.overdueicon {
+    background-position: 0 -1380px !important;
+}
+.priorityicon {
+    background-position: 0 -1403px !important;
+}
+
+/*to highlight and make emailids a link*/
+.mailTo {
+    color: gray;
+}
+.mailTo a {
+    text-decoration: none;
+}
+.mailTo a:link, .mailTo a:visited {
+    color: #083772;
+}
+.mailTo a:hover{
+    color: #456;
+    text-decoration: underline;
+}
+
+.exporticon {
+    background-position: 0 -518px !important;
+}
+.parentRow td, .parentRow tr{
+    font-weight: bold;
+}
+.inactiveRow td, .inactiveRow tr{
+    color: red;
+}
+.announceicon {
+    background-position: 0 -1591px !important;
+}
+.auditTrailicon {
+    background-image: url(../images/AuditTrail.png);
+}
+.holidaycontent{
+    font-size: 11px;
+    color: black;
+}
+.iconwin {
+    background-image:url(../images/favicon.ico) !important;
+}
+.dldiconwt {
+    background-position: 0 -940px !important;
+}
+.document {
+     background-image:url(../images/document.png) !important;
+}
+.dashboardcal{
+    margin-top:10px;
+    margin-left:10px;
+
+}

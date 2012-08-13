@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2009 7:43:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.TempTemplatemapwage" table="temptemplatemapwage">
+    <id name="id" type="string">
+      <column length="36" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="masterDB.Template" fetch="select" name="template">
+      <column length="36" name="templateid" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="masterDB.Wagemaster" fetch="select" name="wagemaster">
+      <column length="36" name="wageid" not-null="true"/>
+    </many-to-one>
+    <property name="rate" type="string">
+      <column length="36" name="rate"/>
+    </property>
+  </class>
+</hibernate-mapping>

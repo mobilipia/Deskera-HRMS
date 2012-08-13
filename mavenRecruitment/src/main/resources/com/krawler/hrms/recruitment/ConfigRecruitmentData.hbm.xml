@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.krawler.hrms.recruitment.ConfigRecruitmentData" table="configrecruitmentdata">
+        <id name="id" type="string" >
+            <column name="id"/>
+            <generator class="uuid"/>
+        </id>
+        <property name="referenceid" type="string" not-null="false">
+            <column name="referenceid"/>
+        </property>
+        <property name="col1" type="string" not-null="false">
+        </property>
+        <property name="col2" type="string" not-null="false">
+        </property>
+        <property name="col3" type="string" not-null="false">
+        </property>
+        <property name="col4" type="string" not-null="false">
+        </property>
+        <property name="col5" type="string" not-null="false">
+        </property>
+        <property name="col6" type="string" not-null="false">
+        </property>
+        <property name="col7" type="string" not-null="false">
+        </property>
+        <property name="col8" type="string" not-null="false">
+        </property>
+        <property name="col9" type="string" not-null="false">
+        </property>
+        <property name="col10" type="string" not-null="false">
+        </property>
+        <property name="col11" type="string" not-null="false">
+        </property>
+        <property name="col12" type="string" not-null="false">
+        </property>
+        <property name="col13" type="string" not-null="false">
+        </property>
+        <property name="col14" type="string" not-null="false">
+        </property>
+        <property name="col15" type="string" not-null="false">
+        </property>
+        <property name="col16" type="string" not-null="false">
+        </property>
+        <property name="col17" type="string" not-null="false">
+        </property>
+        <property name="col18" type="string" not-null="false">
+        </property>
+        <property name="col19" type="string" not-null="false">
+        </property>
+        <property name="col20" type="string" not-null="false">
+        </property>
+        <property name="col21" type="string" not-null="false">
+        </property>
+        <property name="col22" type="string" not-null="false">
+        </property>
+        <property name="col23" type="string" not-null="false">
+        </property>
+        <property name="col24" type="string" not-null="false">
+        </property>
+        <property name="col25" type="string" not-null="false">
+        </property>
+        <property name="col26" type="string" not-null="false">
+        </property>
+        <property name="col27" type="string" not-null="false">
+        </property>
+        <property name="col28" type="string" not-null="false">
+        </property>
+        <property name="col29" type="string" not-null="false">
+        </property>
+        <property name="col30" type="string" not-null="false">
+        </property>
+        <property name="col31" type="string" not-null="false">
+        </property>
+        <property name="col32" type="string" not-null="false">
+        </property>
+        <property name="col33" type="string" not-null="false">
+        </property>
+        <property name="col34" type="string" not-null="false">
+        </property>
+        <property name="col35" type="string" not-null="false">
+        </property>
+        <property name="col36" type="string" not-null="false">
+        </property>
+        <property name="col37" type="string" not-null="false">
+        </property>
+        <property name="col38" type="string" not-null="false">
+        </property>
+        <property name="col39" type="string" not-null="false">
+        </property>
+        <property name="col40" type="string" not-null="false">
+        </property>
+        <property name="col41" type="string" not-null="false">
+        </property>
+        <property name="col42" type="string" not-null="false">
+        </property>
+        <property name="col43" type="string" not-null="false">
+        </property>
+        <property name="col44" type="string" not-null="false">
+        </property>
+        <property name="col45" type="string" not-null="false">
+        </property>
+        <property name="col46" type="string" not-null="false">
+        </property>
+        <property name="col47" type="string" not-null="false">
+        </property>
+        <property name="col48" type="string" not-null="false">
+        </property>
+        <property name="col49" type="string" not-null="false">
+        </property>
+        <property name="col50" type="string" not-null="false">
+        </property>
+        <property name="col51" type="string" not-null="false">
+        </property>
+        <property name="col52" type="string" not-null="false">
+        </property>
+        <property name="col53" type="string" not-null="false">
+        </property>
+        <property name="col54" type="string" not-null="false">
+        </property>
+        <property name="col55" type="string" not-null="false">
+        </property>
+        <property name="col56" type="string" not-null="false">
+        </property>
+        <property name="col57" type="string" not-null="false">
+        </property>
+        <property name="col58" type="string" not-null="false">
+        </property>
+        <property name="col59" type="string" not-null="false">
+        </property>
+        <property name="col60" type="string" not-null="false">
+        </property>
+        <property name="col61" type="string" not-null="false">
+        </property>
+        <property name="col62" type="string" not-null="false">
+        </property>
+        <property name="col63" type="string" not-null="false">
+        </property>
+        <property name="col64" type="string" not-null="false">
+        </property>
+        <property name="col65" type="string" not-null="false">
+        </property>
+        <property name="col66" type="string" not-null="false">
+        </property>
+        <property name="col67" type="string" not-null="false">
+        </property>
+        <property name="col68" type="string" not-null="false">
+        </property>
+        <property name="col69" type="string" not-null="false">
+        </property>
+        <property name="col70" type="string" not-null="false">
+        </property>
+        <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+        <property name="deleted" type="true_false">
+            <column name="deleted" />
+        </property>
+    </class>
+</hibernate-mapping>

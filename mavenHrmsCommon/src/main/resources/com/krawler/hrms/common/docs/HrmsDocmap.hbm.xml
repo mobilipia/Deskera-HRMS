@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="false" default-lazy="false">
+  <class name="com.krawler.hrms.common.docs.HrmsDocmap" table="hrms_docsmap">
+    <id name="id" type="java.lang.String">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.hrms.common.docs.HrmsDocs" column="docid" name="docid"/>
+    <property name="recid" type="java.lang.String"/>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,233 @@
+/*divs.css*/
+
+* html .wrappertemplate {
+    margin: 1px;
+    padding: 1px;
+    height: 53px;
+    width: 90%;
+}
+
+* html .utitle {
+    width: 98%;
+}
+
+* html .wrapperUInfo {
+    margin-left: 1px;
+    padding: 1px;
+    width: 98%;
+}
+/*event.css*/
+* html .dateWidth {
+    width: 80%;
+}
+
+* html .eventDivFloat {
+    height: 125px;
+}
+
+* html .eventTimeLeftDiv {
+    width: 30%;
+}
+
+* html .eventTimeRightDiv {
+    width: 43%;
+    margin-left: 2%;
+}
+/*GridTree.css*/
+* html .MyTabPanel {
+    width: 99%;
+}
+
+* html .labelAlign{
+    font-size:11px;
+    vertical-align:super;
+    margin-left:3px;
+}
+
+* html .forum_fromdiv {
+    margin-left: 28px;
+}
+/* KWLListPanel.css*/
+* html .header {
+    float: left;
+}
+
+* html .headercontent {
+    width: 100%;
+}
+
+* html .normal {
+    width: 95%;
+}
+
+* html .wtfalert {
+    left: -8px;
+}
+/*Month.css*/
+* html .padd {
+    margin-top: 0;
+    margin-right: 60px;
+}
+
+* html .OneDayPanel {
+    width: 14%;
+    height: 19.3%;
+}
+/*class*/
+* html .innerDiv {
+    width: 14%;
+}
+
+* html .taskPanel1 {
+    padding-bottom: 2px;
+}
+/*projChart.css*/
+* html x-grid3-row {
+    height: 8px;
+}
+
+* html .defaulttext .imgtext{
+    line-height: 0px !important;
+}
+
+* html .headerPanel {
+    width: 7050px;
+}
+
+* html .radContainer {
+/*    padding-left: 5px;*/
+/*    margin-left: 25px;*/
+    margin-top: 9px;
+}
+/*Quiz.css*/
+* html .queswinshow {
+    height: 630px;
+}
+
+* html .correct {
+    margin-left: 21px;
+}
+
+* html .shuffle1 {
+    margin-left: -7px;
+}
+/*sheet.css*/
+* html .wtfbuttonTrans {
+    margin: 0 -20px -39px 0;
+}
+/*stylesheet.css*/
+* html .lmswtfbutton span.label {
+    position: absolute;
+    top: 80px;
+    left: 32px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 5px;
+}
+/*projChart.css*/
+* html .x-grid3-col {
+    line-height: 16px !important;
+    /*    padding: 1px;*/
+}
+
+* html .x-grid3-cell-inner {
+    padding: 0;
+}
+/*view.css*/
+* html #searchBar div {
+    float: left;
+}
+
+* html #navcontainer {
+    left: 1px;
+}
+
+* html #pmessage {
+    float: left;
+}
+
+* html #calpanel {
+    float: left;
+}
+
+* html #docpanel {
+    float: left;
+}
+
+.searchleftbutton {
+    margin-top: 1px !important;
+}
+
+.searchInput {
+    margin-top: 1px !important;
+}
+
+.SmallDayPanel {
+    height: 16% !important;
+}
+
+.daycompCell {
+    height: 28px;
+}
+
+* html .x-resizable-handle-east {
+    height:10px;
+}
+/* TBD, new stuff */
+.listpanelheader {
+    float: none !important;
+}
+
+.dportlet {
+    width: 49.9%;
+}
+
+/*fix for field lable and input */
+.x-fieldset div ,.x-fieldset .x-form-item-label,.x-fieldset .x-form-cb-label,.x-fieldset .x-form-arrow-trigger,.x-fieldset .x-form-date-trigger,.x-fieldset x-form-field-wrap{
+position:fixed;
+}
+.x-form-element {
+        position:fixed !important;
+}
+.x-form-trigger{
+        position:fixed !important;
+        vertical-align:top !important;
+        top: -3;
+}
+.x-form-arrow-trigger{
+        position:fixed !important;
+        top: -3;
+}
+ .x-form-element div , .x-form-text  {
+        position:fixed !important;
+}
+.x-form-item label ,.x-form-item input {
+    position:fixed !important;
+}
+.x-form-field-wrap img {
+    position:fixed !important;
+    vertical-align:middle;
+}
+.gridApply {
+    background-position:0 -246px !important;
+    height:11px;
+}
+.gridCancel {
+    background-position:0 -268px !important;
+    height:13px;
+    margin-bottom:1px;
+}
+
+img {
+    behavior: url(style/iepngfix.htc);
+}
+
+.x-form-element div.x-form-invalid-icon{
+    position:absolute !important;
+} 
+#cmpts .x-panel-bwrap .x-panel-body,#myappraisal .x-panel-bwrap .x-panel-body {
+    overflow-x : hidden !important;
+    background :rgb(241,241,241) !important;
+}

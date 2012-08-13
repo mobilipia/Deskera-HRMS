@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.performance.AppraisalQuestionAnswers" table="appraisalquestionanswers" >
+    <id name="questionanswerid" type="string">
+      <column name="questionanswerid"/>
+      <generator class="uuid"/>
+    </id>
+    <property length="15000" name="answer">
+      <column name="answer"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.performance.AppraisalmanagementQuestionAnswers"  name="appraisalmanagementquestionanswers">
+      <column name="appraisalmanagementquestionanswers" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.krawler.hrms.performance.Appraisalmanagement" name="appraisal">
+        <column name="appraisal" not-null="false"/>
+    </many-to-one>
+    <property name="orderofans" type="int">
+      <column name="orderofans" not-null="true" default="0"/>
+    </property>
+  </class>
+</hibernate-mapping>

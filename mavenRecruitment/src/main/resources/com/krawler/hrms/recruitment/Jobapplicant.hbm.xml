@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.recruitment.Jobapplicant" table="jobapplicant">
+    <id column="applicantid" name="applicantid">
+      <generator class="uuid"/>
+    </id>
+    <property name="username" type="string">
+      <column length="100" name="username"/>
+    </property>
+    <property name="password" not-null="true" type="string">
+      <column length="50" name="password"/>
+    </property>
+    <property name="title" type="string">
+      <column length="10" name="title"/>
+    </property>
+    <property name="firstname" type="string">
+      <column length="100" name="firstname"/>
+    </property>
+    <property name="lastname" type="string">
+      <column length="100" name="lastname"/>
+    </property>
+    <property name="email" type="string">
+      <column length="100" name="email"/>
+    </property>
+    <property name="otheremail" type="string">
+      <column length="100" name="otheremail"/>
+    </property>
+    <property name="birthdate" type="date">
+      <column name="birthdate"/>
+    </property>
+    <property name="address1" type="text">
+      <column name="address1"/>
+    </property>
+    <property name="address2" type="text">
+      <column name="address2"/>
+    </property>
+    <property name="city" type="string">
+      <column length="100" name="city"/>
+    </property>
+    <property name="state" type="string">
+      <column length="100" name="state"/>
+    </property>
+    <property name="country" type="string">
+      <column length="50" name="country"/>
+    </property>
+    <property name="contactno" type="string">
+      <column length="50" name="contactno"/>
+    </property>
+    <property name="mobileno" type="string">
+      <column length="50" name="mobileno"/>
+    </property>
+    <property name="graddegree" type="string">
+      <column length="50" name="graddegree"/>
+    </property>
+    <property name="gradspecialization" type="string">
+      <column length="100" name="gradspecialization"/>
+    </property>
+    <property name="gradcollege" type="string">
+      <column length="100" name="gradcollege"/>
+    </property>
+    <property name="graduniversity" type="string">
+      <column length="100" name="graduniversity"/>
+    </property>
+    <property name="gradpercent" type="string">
+      <column length="20" name="gradpercent"/>
+    </property>
+    <property name="gradpassdate" type="date">
+      <column name="gradpassdate"/>
+    </property>
+    <property name="pgqualification" type="string">
+      <column length="100" name="pgqualification"/>
+    </property>
+    <property name="pgspecialization" type="string">
+      <column length="100" name="pgspecialization"/>
+    </property>
+    <property name="pgcollege" type="string">
+      <column length="100" name="pgcollege"/>
+    </property>
+    <property name="pguniversity" type="string">
+      <column length="100" name="pguniversity"/>
+    </property>
+    <property name="pgpercent" type="string">
+      <column length="100" name="pgpercent"/>
+    </property>
+    <property name="pgpassdate" type="date">
+      <column name="pgpassdate"/>
+    </property>
+    <property name="otherqualification" type="string">
+      <column length="100" name="otherqualification"/>
+    </property>
+    <property name="othername" type="string">
+      <column length="100" name="othername"/>
+    </property>
+    <property name="otherdetails" type="string">
+      <column length="100" name="otherdetails"/>
+    </property>
+    <property name="otherpassdate" type="date">
+      <column name="otherpassdate"/>
+    </property>
+    <property name="otherpercent" type="string">
+      <column length="100" name="otherpercent"/>
+    </property>
+    <property name="experiencemonth" type="integer">
+      <column name="experiencemonth"/>
+    </property>
+    <property name="experienceyear" type="integer">
+      <column name="experienceyear"/>
+    </property>
+    <property name="functionalexpertise" type="string">
+      <column length="100" name="functionalexpertise"/>
+    </property>
+    <property name="currentindustry" type="string">
+      <column length="100" name="currentindustry"/>
+    </property>
+    <property name="currentorganization" type="string">
+      <column length="100" name="currentorganization"/>
+    </property>
+    <property name="currentdesignation" type="string">
+      <column length="100" name="currentdesignation"/>
+    </property>
+    <property name="grosssalary" type="integer">
+      <column name="grosssalary"/>
+    </property>
+    <property name="expectedsalary" type="integer">
+      <column name="expectedsalary"/>
+    </property>
+    <property name="category" type="string">
+      <column length="20" name="category"/>
+    </property>
+    <property name="companyrelative" type="string">
+      <column length="100" name="companyrelative"/>
+    </property>
+    <property name="appearedbefore" type="string">
+      <column length="100" name="appearedbefore"/>
+    </property>
+    <property name="interviewlocation" type="string">
+      <column length="100" name="interviewlocation"/>
+    </property>
+    <property name="keyskills" type="text">
+      <column name="keyskills"/>
+    </property>
+    <property name="filepath" type="text">
+      <column name="filepath"/>
+    </property>
+    <property name="status" type="integer">
+      <column name="status"/>
+    </property>
+    <property name="deleted" type="true_false">
+      <column name="deleteflag"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="countryid" name="countryid"/>
+    <many-to-one class="com.krawler.common.admin.Company" name="company"/>
+    <many-to-one class="com.krawler.hrms.master.MasterData" name="interviewposition"/>
+    <property name="interviewplace" type="text">
+      <column name="interviewplace"/>
+    </property>
+    <property name="interviewdate" type="date">
+      <column name="interviewdate"/>
+    </property>
+  </class>
+</hibernate-mapping>

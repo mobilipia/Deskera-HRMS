@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.Historydetail" table="historydetail">
+    <id name="primid" type="string">
+      <column name="primid"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="masterDB.Payhistory" fetch="select" name="payhistory">
+      <column name="historyid"/>
+    </many-to-one>
+    <property name="type" type="string">
+      <column name="type"/>
+    </property>
+    <property name="rate" type="string">
+      <column name="rate"/>
+    </property>
+    <property name="amount" type="string">
+      <column name="amount"/>
+    </property>
+    <property name="name" type="string">
+      <column name="name"/>
+    </property>
+    <many-to-one class="masterDB.Wagemaster" name="wagemaster"/>
+    <many-to-one class="masterDB.Deductionmaster" name="deductionmaster"/>
+    <many-to-one class="masterDB.Taxmaster" name="taxmaster"/>
+    <many-to-one class="masterDB.EmployerContribution" name="employercontributionmaster"/>
+  </class>
+</hibernate-mapping>

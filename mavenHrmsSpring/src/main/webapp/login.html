@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Login Deskera-HRMS</title>
+		<link rel="shortcut icon" href="../../images/deskera.png"/>
+		<link rel="stylesheet" type="text/css" href="../../style/allYourBases_1.css"/>
+		<script type="text/javascript" src="../../lib/jquery-1.2.2.min.js"></script>
+		<script type="text/javascript" src="../../scripts/core/42.js"></script>
+		<script type="text/javascript" src="../../scripts/belongToUs.js?v=4"></script>
+	</head>
+	<body onload="checkCookie(); formFocus();">
+		<div id="content">
+			<div class="companylogo">
+				<img id ="deskeraimageq" src="../../images/deskera/deskera-hrms-big2.jpg"/>
+			</div>
+			<div class="content">
+				<form action="javascript:lValidateEmpty();" name="loginForm" id="loginForm">
+					<p>
+						<label for="UserName" id="UserNameLabel" class="labels">
+							Username:
+						</label>
+						<input name="UserName" type="text" id="UserName" class="inputbox"/><span id="UserNameRequired" class="errorprompt" title="Username is required.">*</span>
+					</p>
+					<p>
+						<label for="Password" id="PasswordLabel" class="labels">
+							Password:
+						</label>
+						<input name="Password" type="password" id="Password" class="inputbox"/><span id="PasswordRequired" class="errorprompt" title="Password is required.">*</span>
+					</p>
+					<p>
+						<input type="submit" name="LoginButton" value="Login" id="LoginButton"/><span id="usrFeedback"></span>
+					</p>
+				</form>
+				<div class="shortcuts">
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">//doDirectLogin();
+	function gup( name ) {
+		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		var regexS = "[\\?&]"+name+"=([^&#]*)";
+		var regex = new RegExp( regexS );
+		var results = regex.exec( window.location.href );
+		if( results == null )
+			return "";
+		else
+			return results[1];
+	}
+	var demo=gup('demo');
+	if(demo=="true"){
+		document.forms['loginForm'].elements['UserName'].value="demo";
+		document.forms['loginForm'].elements['Password'].value="demo";
+		document.getElementById("deskeraimageq").src = "../../images/deskera/deskera-hrms-big.jpg";
+		javascript:lValidateEmpty();
+	}
+	</script>
+</html>

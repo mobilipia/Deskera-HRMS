@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+  <class name="masterDB.TemplateMapEmployerContribution" table="templatemapemployercontribution">
+    <id name="id" type="string">
+      <column length="36" name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="masterDB.Template" fetch="select" name="template">
+      <column length="36" name="templateid" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="masterDB.EmployerContribution" fetch="select" name="empcontrimaster">
+      <column length="36" name="empcontribid" not-null="true"/>
+    </many-to-one>
+    <property name="rate" type="string">
+      <column length="36" name="rate"/>
+    </property>
+    <property name="status" type="string">
+      <column length="1" name="status"/>
+    </property>
+  </class>
+
+</hibernate-mapping>

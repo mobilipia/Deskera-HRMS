@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- alternate XML view resolver, invoked if view returned from controller matches views.xml mapping -->
+    <bean id="xmlViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="1" />
+    </bean>
+
+    <import resource="classpath:com/krawler/spring/hrms/common/conf/Common-servlet.xml"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/jsp/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+        <property name="viewClass">
+            <value>org.springframework.web.servlet.view.JstlView</value>
+        </property>
+    </bean>
+
+
+    <bean id="hrmsGoaldao" class="com.krawler.spring.hrms.goal.hrmsGoalDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsGoalController" class="com.krawler.spring.hrms.goal.hrmsGoalController">
+        <property name="hrmsGoalDAO">
+            <ref bean="hrmsGoaldao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsCompetencydao" class="com.krawler.spring.hrms.competency.hrmsCompetencyDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsCompetencyController" class="com.krawler.spring.hrms.competency.hrmsCompetencyController">
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="hrmsAppraisalcycleservice">
+            <ref bean="hrmsAppraisalcycleservice"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsAppraisalcycledao" class="com.krawler.spring.hrms.appraisalcycle.hrmsAppraisalcycleDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsAppraisalcycleController" class="com.krawler.spring.hrms.appraisalcycle.hrmsAppraisalcycleController">
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="hrmsNonAnonymousAppraisalDAO">
+            <ref bean="hrmsNonAnonymousAppraisaldao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+    <bean id="hrmsAppraisaldao" class="com.krawler.spring.hrms.appraisal.hrmsAppraisalDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+         <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+    </bean>
+    <bean id="hrmsAppraisalController" class="com.krawler.spring.hrms.appraisal.hrmsAppraisalController">
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="hrmsGoalDAO">
+            <ref bean="hrmsGoaldao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="profileHandlerDAO">
+            <ref bean="profileHandlerdao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+    <bean id="hrmsAnonymousAppraisaldao" class="com.krawler.spring.hrms.anonymousappraisal.hrmsAnonymousAppraisalDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsAppraisalcycleservice" class="com.krawler.spring.hrms.appraisalcycle.bizservice.hrmsAppraisalcycleserviceImpl">
+        <property name="hrmsAppraisalcycleDAOObj">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+    </bean>
+    <bean id="hrmsAnonymousAppraisalController" class="com.krawler.spring.hrms.anonymousappraisal.hrmsAnonymousAppraisalController">
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="hrmsAppraisalcycleservice">
+            <ref bean="hrmsAppraisalcycleservice"/>
+        </property>
+        <property name="hrmsAnonymousAppraisalDAO">
+            <ref bean="hrmsAnonymousAppraisaldao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+
+    <bean id="hrmsNonAnonymousAppraisaldao" class="com.krawler.spring.hrms.nonanonymousappraisal.hrmsNonAnonymousAppraisalDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+    </bean>
+    <bean id="hrmsNonAnonymousAppraisalController" class="com.krawler.spring.hrms.nonanonymousappraisal.hrmsNonAnonymousAppraisalController">
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="hrmsNonAnonymousAppraisalDAO">
+            <ref bean="hrmsNonAnonymousAppraisaldao"/>
+        </property>
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+
+    <bean id="exportAppraisalReportPDFdao" class="com.krawler.spring.hrms.exportreport.exportAppraisalReportPDFDAOImpl">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+    </bean>
+    <bean id="exportAppraisalReportPDFcontroller" class="com.krawler.spring.hrms.exportreport.exportAppraisalReportPDFController">
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="exportAppraisalReportPDFDAOImpl">
+            <ref bean="exportAppraisalReportPDFdao"/>
+        </property>
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="hrmsAnonymousAppraisalDAO">
+            <ref bean="hrmsAnonymousAppraisaldao"/>
+        </property>
+        <property name="hrmsAppraisalcycleservice">
+            <ref bean="hrmsAppraisalcycleservice"/>
+        </property>
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+        <property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+    </bean>
+
+	<bean id="printAppraisalReportdao" class="com.krawler.spring.hrms.printreport.PrintAppraisalReportDAOImp">
+        <property name="sessionFactory">
+            <ref bean="mySessionFactory"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+    </bean>
+	<bean id="PrintAppraisalReportController" class="com.krawler.spring.hrms.printreport.PrintAppraisalReportController">
+		<property name="sessionHandlerImpl">
+            <ref bean="sessionHandlerdao"/>
+        </property>
+		<property name="txnManager">
+            <ref bean="txManager"/>
+        </property>
+        <property name="auditTrailDAO">
+            <ref bean="auditTraildao"/>
+        </property>
+        <property name="hrmsAppraisalcycleDAO">
+            <ref bean="hrmsAppraisalcycledao"/>
+        </property>
+        <property name="hrmsCommonDAO">
+            <ref bean="hrmsCommondao"/>
+        </property>
+        <property name="hrmsCompetencyDAO">
+            <ref bean="hrmsCompetencydao"/>
+        </property>
+        <property name="kwlCommonTablesDAO">
+            <ref bean="kwlCommonTablesdao"/>
+        </property>
+        <property name="hrmsAppraisalcycleservice">
+            <ref bean="hrmsAppraisalcycleservice"/>
+        </property>
+        <property name="hrmsAppraisalDAO">
+            <ref bean="hrmsAppraisaldao"/>
+        </property>
+        <property name="printAppraisalReportDAOImp">
+            <ref bean="printAppraisalReportdao"/>
+        </property>
+        <property name="hrmsGoalDAO">
+            <ref bean="hrmsGoaldao"/>
+        </property>
+        <property name="successView">
+            <value>jsonView</value>
+        </property>
+	</bean>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="/Performance/Goal/*.pf">hrmsGoalController</prop>
+                <prop key="/Performance/Competency/*.pf">hrmsCompetencyController</prop>
+                <prop key="/Performance/Appraisalcycle/*.pf">hrmsAppraisalcycleController</prop>
+                <prop key="/Performance/Appraisal/*.pf">hrmsAppraisalController</prop>
+                <prop key="/Performance/AnonymousAppraisal/*.pf">hrmsAnonymousAppraisalController</prop>
+                <prop key="/Performance/NonAnonymousAppraisal/*.pf">hrmsNonAnonymousAppraisalController</prop>
+                <prop key="/Performance/exportAppraisalReportPDF/*.pf">exportAppraisalReportPDFcontroller</prop>
+                <prop key="/Performance/PrintAppraisalReportPDF/*.pf">PrintAppraisalReportController</prop>
+            </props>
+        </property>
+        <property name="interceptors">
+            <list>
+                <ref bean="openSessionInViewInterceptor" />
+            </list>
+        </property>
+    </bean>
+</beans>

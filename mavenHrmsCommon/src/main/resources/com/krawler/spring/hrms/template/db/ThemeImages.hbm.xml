@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <!--class dynamic-insert="false" dynamic-update="false" mutable="true" name="com.krawler.spring.hrms.template.db.ThemeImages" optimistic-lock="version" polymorphism="implicit" select-before-update="false"/-->
+  <class name="com.krawler.spring.hrms.template.db.ThemeImages" table="themeimage">
+    <id name="id" type="string">
+      <column name="id"/>
+      <generator class="uuid"/>
+    </id>
+
+    <property name="imagename" type="string">
+      <column name="imagename" length="256" />
+    </property>
+    <property name="height" type="string">
+      <column name="height" length="256" />
+    </property>
+    <property name="url" type="string">
+      <column name="url" length="256" />
+    </property>
+    <property name="deleted" type="integer">
+      <column name="deleted" default="0" length="2"/>
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.krawler.hrms.ess.Empexperience" table="hrms_empexp">
+    <id column="id" name="id">
+      <generator class="uuid"/>
+    </id>
+    <many-to-one class="com.krawler.common.admin.UserLogin" column="userid" name="userid" not-null="true"/>
+    <property name="qualification" type="string">
+      <column length="100" name="qualification"/>
+    </property>
+    <property name="institution" type="string">
+      <column length="255" name="institution"/>
+    </property>
+    <property name="yearofgrad" type="string">
+      <column length="50" name="yearofgrad"/>
+    </property>
+    <property name="frmyear" type="string">
+      <column length="50" name="yearofgradfrm"/>
+    </property>
+    <property name="qaulin" type="string">
+      <column length="100" name="qualificationIN"/>
+    </property>
+    <property name="marks" type="string">
+      <column length="50" name="marks"/>
+    </property>
+    <property name="organization" type="string">
+      <column length="255" name="organization"/>
+    </property>
+    <property name="position" type="string">
+      <column length="255" name="position"/>
+    </property>
+    <property name="beginyear" type="string">
+      <column length="55" name="beginyear"/>
+    </property>
+    <property name="endyear" type="string">
+      <column length="55" name="endyear"/>
+    </property>
+    <property name="comment" type="string">
+      <column length="255" name="comment"/>
+    </property>
+    <property name="type" type="string">
+      <column length="20" name="type"/>
+    </property>
+  </class>
+</hibernate-mapping>

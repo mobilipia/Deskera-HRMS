@@ -1,0 +1,264 @@
+DROP TABLE `audittrail` IF EXISTS;
+DROP TABLE `auditaction` IF EXISTS;
+DROP TABLE `auditgroup` IF EXISTS;
+
+CREATE TABLE `auditgroup` (
+  `id` varchar(255) NOT NULL,
+  `groupname` varchar(50) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `groupname` (`groupname`)
+) ENGINE=InnoDB;
+
+CREATE TABLE `auditaction` (
+  `id` varchar(255) NOT NULL,
+  `actionname` varchar(50) NOT NULL,
+  `auditGroup` varchar(255) default NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `actionname` (`actionname`,`auditGroup`),
+  KEY `FK39D189D1A08616B` (`auditGroup`),
+  CONSTRAINT `FK39D189D1A08616B` FOREIGN KEY (`auditGroup`) REFERENCES `auditgroup` (`id`)
+) ENGINE=InnoDB;
+
+INSERT INTO `auditgroup` VALUES ('7', 'Apperaisal');
+INSERT INTO `auditgroup` VALUES ('3', 'Company');
+INSERT INTO `auditgroup` VALUES ('1', 'Log in');
+INSERT INTO `auditgroup` VALUES ('2', 'Log out');
+INSERT INTO `auditgroup` VALUES ('16', 'Password');
+INSERT INTO `auditgroup` VALUES ('4', 'Payroll');
+INSERT INTO `auditgroup` VALUES ('15', 'Permissions');
+INSERT INTO `auditgroup` VALUES ('5', 'Recruitment');
+INSERT INTO `auditgroup` VALUES ('6', 'Timesheet');
+INSERT INTO `auditgroup` VALUES ('14', 'User');
+
+INSERT INTO `auditaction` VALUES ('14', 'Apperaisal done', '7');
+INSERT INTO `auditaction` VALUES ('5', 'Company creation', '3');
+INSERT INTO `auditaction` VALUES ('8', 'Company deletion', '3');
+INSERT INTO `auditaction` VALUES ('6', 'Company updation', '3');
+INSERT INTO `auditaction` VALUES ('12', 'External job added', '5');
+INSERT INTO `auditaction` VALUES ('11', 'Internal job added', '5');
+INSERT INTO `auditaction` VALUES ('2', 'Log in failed', '1');
+INSERT INTO `auditaction` VALUES ('1', 'Log in success', '1');
+INSERT INTO `auditaction` VALUES ('4', 'Logout failed', '2');
+INSERT INTO `auditaction` VALUES ('3', 'Logout success', '2');
+INSERT INTO `auditaction` VALUES ('42', 'Password changed', '16');
+INSERT INTO `auditaction` VALUES ('41', 'Password reset', '16');
+INSERT INTO `auditaction` VALUES ('40', 'Permissions modified', '15');
+INSERT INTO `auditaction` VALUES ('15', 'Time sheet approved', '6');
+INSERT INTO `auditaction` VALUES ('37', 'User created', '14');
+INSERT INTO `auditaction` VALUES ('39', 'User deleted', '14');
+INSERT INTO `auditaction` VALUES ('38', 'User modified', '14');
+INSERT INTO `auditaction` VALUES ('13', 'User selected', '5');
+
+
+******************somnath jadhav 27 march **********************
+update finalgoalmanagement set  appid=4 ;
+update finalgoalmanagement set  completed='T' ;
+alter table apiresponse modify column response text;
+update finalgoalmanagement set  internal='T' ;
+******************somnath jadhav 27 march **********************
+
+
+*****************somnath jadhav 14 april 2010 ************************
+alter table audittrailpayroll modify column typeofwork longtext NOT NULL;
+insert into master(id,name,company,deleted) values('16','Currency','a4792363-b0e1-4b67-992b-2851234d5ea6','F');
+
+
+
+******Default Master data entries******
+insert into  DefaultMasterData (id,masterid,value) values('1',1,'Employee');
+insert into  DefaultMasterData (id,masterid,value) values('2',1,'Manager');
+
+insert into  DefaultMasterData (id,masterid,value) values('3',2,'Client relationship management');
+insert into  DefaultMasterData (id,masterid,value) values('4',2,'IT technical support');
+insert into  DefaultMasterData (id,masterid,value) values('5',2,'Market Research');
+insert into  DefaultMasterData (id,masterid,value) values('6',2,'Quality Assurance');
+insert into  DefaultMasterData (id,masterid,value) values('7',2,'Coding');
+insert into  DefaultMasterData (id,masterid,value) values('8',2,'Consultancy');
+insert into  DefaultMasterData (id,masterid,value) values('9',2,'Design');
+insert into  DefaultMasterData (id,masterid,value) values('10',2,'Documentation');
+insert into  DefaultMasterData (id,masterid,value) values('11',2,'Management');
+insert into  DefaultMasterData (id,masterid,value) values('12',2,'Marketing');
+insert into  DefaultMasterData (id,masterid,value) values('13',2,'Operations');
+insert into  DefaultMasterData (id,masterid,value) values('14',2,'Presentation');
+insert into  DefaultMasterData (id,masterid,value) values('15',2,'Recruitement');
+insert into  DefaultMasterData (id,masterid,value) values('16',2,'Sales');
+
+insert into  DefaultMasterData (id,masterid,value) values('17',3,'High');
+insert into  DefaultMasterData (id,masterid,value) values('18',3,'Low');
+insert into  DefaultMasterData (id,masterid,value) values('19',3,'Medium');
+
+insert into  DefaultMasterData (id,masterid,value) values('20',4,'10');
+insert into  DefaultMasterData (id,masterid,value) values('21',4,'20');
+insert into  DefaultMasterData (id,masterid,value) values('22',4,'30');
+insert into  DefaultMasterData (id,masterid,value) values('23',4,'40');
+insert into  DefaultMasterData (id,masterid,value) values('24',4,'50');
+insert into  DefaultMasterData (id,masterid,value) values('25',4,'60');
+insert into  DefaultMasterData (id,masterid,value) values('26',4,'70');
+insert into  DefaultMasterData (id,masterid,value) values('27',4,'80');
+insert into  DefaultMasterData (id,masterid,value) values('28',4,'90');
+insert into  DefaultMasterData (id,masterid,value) values('29',4,'100');
+
+insert into  DefaultMasterData (id,masterid,value) values('30',5,'10');
+insert into  DefaultMasterData (id,masterid,value) values('31',5,'20');
+insert into  DefaultMasterData (id,masterid,value) values('32',5,'30');
+insert into  DefaultMasterData (id,masterid,value) values('33',5,'40');
+insert into  DefaultMasterData (id,masterid,value) values('34',5,'50');
+insert into  DefaultMasterData (id,masterid,value) values('35',5,'60');
+insert into  DefaultMasterData (id,masterid,value) values('36',5,'70');
+insert into  DefaultMasterData (id,masterid,value) values('37',5,'80');
+insert into  DefaultMasterData (id,masterid,value) values('38',5,'90');
+insert into  DefaultMasterData (id,masterid,value) values('39',5,'100');
+
+
+insert into  DefaultMasterData (id,masterid,value) values('40',6,'Area of responsibility');
+insert into  DefaultMasterData (id,masterid,value) values('41',6,'Business Requirements');
+insert into  DefaultMasterData (id,masterid,value) values('42',6,'Communication Skills');
+insert into  DefaultMasterData (id,masterid,value) values('43',6,'Educational Qualifications');
+insert into  DefaultMasterData (id,masterid,value) values('44',6,'Knowledge, Skills and Abilities');
+insert into  DefaultMasterData (id,masterid,value) values('45',6,'Planning & Execution');
+insert into  DefaultMasterData (id,masterid,value) values('46',6,'Strategic Skills');
+insert into  DefaultMasterData (id,masterid,value) values('47',6,'Technical Skills & ability');
+insert into  DefaultMasterData (id,masterid,value) values('48',6,'Work Experience');
+insert into  DefaultMasterData (id,masterid,value) values('49',6,'Age');
+insert into  DefaultMasterData (id,masterid,value) values('50',6,'Gender');
+insert into  DefaultMasterData (id,masterid,value) values('51',6,'Industry');
+insert into  DefaultMasterData (id,masterid,value) values('52',6,'Nationality');
+insert into  DefaultMasterData (id,masterid,value) values('53',6,'Salary');
+
+insert into  DefaultMasterData (id,masterid,value) values('54',7,'Human Resource');
+insert into  DefaultMasterData (id,masterid,value) values('55',7,'Other');
+
+insert into  DefaultMasterData (id,masterid,value) values('56',10,'High Potential');
+insert into  DefaultMasterData (id,masterid,value) values('57',10,'Medicore');
+insert into  DefaultMasterData (id,masterid,value) values('58',10,'Potential');
+
+insert into  DefaultMasterData (id,masterid,value) values('59',12,'Under Graduate');
+insert into  DefaultMasterData (id,masterid,value) values('60',12,'Diploma');
+insert into  DefaultMasterData (id,masterid,value) values('61',12,'Post Graduate');
+insert into  DefaultMasterData (id,masterid,value) values('62',12,'PhD');
+
+insert into  DefaultMasterData (id,masterid,value) values('63',13,'Below Average');
+insert into  DefaultMasterData (id,masterid,value) values('64',13,'Exceeds Expectation');
+insert into  DefaultMasterData (id,masterid,value) values('65',13,'Meets Expectation');
+insert into  DefaultMasterData (id,masterid,value) values('66',13,'Excellent');
+insert into  DefaultMasterData (id,masterid,value) values('67',13,'Satisfactory');
+
+insert into  DefaultMasterData (id,masterid,value) values('68',14,'Male');
+insert into  DefaultMasterData (id,masterid,value) values('69',14,'Female');
+insert into  DefaultMasterData (id,masterid,value) values('70',14,'Senior Citizen');
+
+insert into  DefaultMasterData (id,masterid,value) values('71',15,'Long Leave');
+insert into  DefaultMasterData (id,masterid,value) values('72',15,'Resignation');
+insert into  DefaultMasterData (id,masterid,value) values('73',15,'Retirement');
+insert into  DefaultMasterData (id,masterid,value) values('74',15,'Termination');
+insert into  DefaultMasterData (id,masterid,value) values('75',15,'Retrenchment');
+
+update DefaultMasterData set deleted='F';
+
+*****************somnath jadhav 14 april 2010 ************************
+
+*****************somnath jadhav 18 july 2010 ************************
+
+INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129c643d00129c65a291e000c',0,'Personal',3,'Last Name',2,'F','T','F','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129c643d00129c659b433000b',0,'Personal',2,'First Name',1,'F','T','F','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129c6b7210129c6c775730006',7,'Personal',5,'Email ID',3,'F','T','F','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129c6b7210129c6c7be4e0007',6,'Contact',1,'Contact No',4,'F','T','F','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129c6b7210129c6c8b3f80008',5,'other',3,'Resume',5,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129c6b7210129c6c92fce0009',4,'Contact',6,'Address',6,'F','T','F','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129c6b7210129c6cfae2c000e',2,'Personal',4,'Date of Birth',7,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129ca60fa0129caa9d815000f',2,'Academic',6,'Graduation Passing Date',10,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca370b0129ca384b8c0002',2,'Personal',6,'Applied Date',9,'F','T','T','F','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caaf5f150016',0,'Work',1,'Current Organization',11,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caa95aba000e',6,'Academic',5,'Graduation Percentage',8,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129ca9d6ff40004',7,'Personal',7,'Other Email Id',13,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+ INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129ca60fa0129ca9e05fc0005',6,'Contact',2,'Alternative Contact No.',14,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129ca9ecc730006',3,'Contact',3,'Country',15,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129ca9f45b30007',0,'Contact',4,'State',16,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129ca9f88e60008',0,'Contact',5,'City',17,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caaa5a4c0010',0,'Academic',7,'Post Graduation Degree',12,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+ INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129ca60fa0129caa08a78000a',0,'Academic',1,'Graduation Degree',18,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caa2fb1b000b',0,'Academic',2,'Graduation Specialization',19,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caa3a1a9000c',0,'Academic',3,'Graduation University',20,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caa40c14000d',0,'Academic',4,'Graduation /*  */College',21,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caacbdaa0011',0,'Academic',8,'Post Graduation Specialization',22,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caadf4450012',0,'Academic',9,'Post Graduation University',23,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+ INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129ca60fa0129caae41fc0013',0,'Academic',10,'Post Graduation /*  */College',24,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caae7eca0014',6,'Academic',11,'Post Graduation Percentage',25,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caaebc110015',2,'Academic',12,'Post Graduation Passing Date',26,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129caafac9b0017',0,'Work',2,'Current Designation',27,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab004250018',0,'Work',3,'Current Industry Type',28,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab0514d0019',0,'Work',4,'Experience',29,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab0a533001a',4,'Work',5,'Functional Expertise',30,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+ INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129ca60fa0129cab0f7a5001b',6,'Work',6,'Gross CTC',31,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab167d3001c',6,'Work',7,'Expected CTC',32,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab1c1ef001d',4,'other',1,'Key Skills',33,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab24888001e',3,'other',2,'Preferred Interview Location',34,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129ca60fa0129cab32d83001f',0,'other',4,'Mother\'s Maiden Name',35,'F','T','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129fdba440129fdc6a7ad0003',0,'Academic',14,'Other Degree Details ',37,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129fdba440129fdc65fd70002',0,'Academic',13,'Other Degree',36,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+ INSERT INTO `configrecruitment` (`configid`,`configtype`,`formtype`,`position`,`name`,`/*  */Colnum`,`deleteflag`,`issystemproperty`,`allownull`,`visible`,  `company`)
+ VALUES ('ff80808129fdba440129fdc6eb910004',6,'Academic',15,'Other Percentage ',38,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129fdba440129fdc739a10005',2,'Academic',16,'Other Passing Date ',39,'F','F','T','T','a4792363-b0e1-4b67-992b-2851234d5ea6'),('ff80808129fde1ad0129fde436b40002',3,'Personal',1,'Title',40,'F','T','F','T','a4792363-b0e1-4b67-992b-2851234d5ea6');
+
+INSERT INTO `configrecruitmentmaster` (masterid,masterdata,configid) VALUES ('ff80808129fde1ad0129fde4ec910003','Mr','ff80808129fde1ad0129fde436b40002'),('ff80808129fde1ad0129fde4fcb30004','Mrs','ff80808129fde1ad0129fde436b40002'),('ff80808129fde1ad0129fde557bc0005','Ms','ff80808129fde1ad0129fde436b40002');
+
+
+
+INSERT INTO configrecruitmentmaster(masterid,masterdata,configid) select id,value,'ff80808129ca60fa0129ca9ecc730006' from MasterData where masterid=11;
+
+
+INSERT INTO configrecruitmentmaster(masterid,masterdata,configid) select id,value,'ff80808129ca60fa0129cab24888001e' from MasterData where masterid=18;
+
+update allapplications set configjobapplicant = jobapplicantid,employeetype=4 where employeetype=0
+
+update hrms_docs set referenceid=applicantid
+
+
+insert into configrecruitmentdata(
+company/*j.company*/,id,/*j.applicantid*/
+/* title */Col40,
+/* firstname */Col1,/* lastname */Col2,/*email  */Col3,/*otheremail  */Col13,/* birthdate */Col7,
+/*address  */Col6,/* city */Col17,/* state */Col16,/*country  */Col15,/*contactno  */Col4,/* mobileno */Col14,
+/* graddegree */Col18,
+/* gradspecialization */Col19,/* gradCollege */Col21,/* graduniversity */Col20,/* gradpercent */Col8,/* gradpassdate */Col10,
+/* pgqualification */Col12,/*pgspecialization  */Col22,/* pgCollege */Col24,/*pguniversity  */Col23,/*pgpercent  */Col25,
+/* pgpassdate */Col26,/* otherqualification */Col36,/* otherdetails */Col37,/*otherpercent  */Col38,/* otherpassdate */Col39,
+/* Yearmonth */Col29,/* functionalexpertise */Col30,/* currentindustry */Col28,/*currentorganization  */Col11,/* currentdesignation */Col27,
+/* grosssalary */Col31,/* expectedsalary */Col32,/*keyskills  */Col33,/*interviewlocation  */Col34,/* docid */Col5,/*jobposid*/
+referenceid)
+
+select j.company,j.applicantid,
+case j.title when 'Mr' then 'ff80808129fde1ad0129fde4ec910003' when 'Mrs' then 'ff80808129fde1ad0129fde4fcb30004' when 'Ms' then 'ff80808129fde1ad0129fde557bc0005' end as title1
+,j.firstname,j.lastname,j.email,j.otheremail,j.birthdate,
+j.address1,j.city,j.state,j.country,j.contactno,j.mobileno,
+j.graddegree,j.gradspecialization,j.gradCollege,j.graduniversity,
+j.gradpercent,j.gradpassdate,j.pgqualification,j.pgspecialization,
+j.pgCollege,j.pguniversity,j.pgpercent,j.pgpassdate,j.otherqualification,
+j.otherdetails,j.otherpercent,j.otherpassdate,
+concat(ifnull(j.experienceyear,0) ,' Years ',ifnull(j.experiencemonth,0),' months') as Yearmonth,
+j.functionalexpertise,j.currentindustry,j.currentorganization,j.currentdesignation,
+j.grosssalary,j.expectedsalary,j.keyskills,j.interviewlocation,hd.docid,ap.jobposid
+
+from jobapplicant j
+left join hrms_docsmap hd on hd.recid=j.applicantid
+left join allapplications ap  on ap.jobapplicantid = j.applicantid
+group by j.applicantid;
+
+*****************somnath jadhav 18 july 2010 ************************
+
+*****************somnath jadhav 3 sept 2010 ************************
+alter table taxmaster modify column rangefrom double;
+alter table taxmaster modify column rangeto double;
+update taxmaster set rangefrom=0 where rangefrom is null;
+update taxmaster set rangeto=0 where rangeto is null;
+*****************somnath jadhav 3 sep 2010 ************************
+
+
+*****************somnath jadhav 24 dec 2010 ************************
+
+delete from appraisalquestionanswers where appraisalmanagementquestionanswers in ( select appraisalQAid from appraisalmanagementquestionanswers where appcycle in ( select id from appraisalcycle where company ='54yyffc3-f607-496b-a0a1-997c823afde1' ) );
+delete  from appraisalmanagementquestionanswers where appcycle in ( select id from appraisalcycle where company ='54yyffc3-f607-496b-a0a1-997c823afde1' );
+
+delete from competencydesmap where desid in ( select desid from MasterData where company ='54yyffc3-f607-496b-a0a1-997c823afde1' );
+delete from questiongroup where  groupid in (select groupid from competencydesmap where desid in ( select desid from MasterData where company ='54yyffc3-f607-496b-a0a1-997c823afde1' ) );
+delete from reviewerquestionmap where empdesid in ( select id from MasterData where company ='54yyffc3-f607-496b-a0a1-997c823afde1' );
+delete from competencyquestion where quesid in ( select quesid from questiongroup where groupid in (select quesid from questiongroup where groupid in (select groupid from competencydesmap where desid in (( select desid from MasterData where company ='54yyffc3-f607-496b-a0a1-997c823afde1' ) )) ) );
+
+
+delete from appraisal where appraisal in (select appraisalid from appraisalmanagement where employee in (select userid from users where company='54yyffc3-f607-496b-a0a1-997c823afde1'));
+delete from appraisalmanagement where employee in (select userid from users where company='54yyffc3-f607-496b-a0a1-997c823afde1');
+delete from competencyAvg where appcycle in (select id from appraisalcycle where company='54yyffc3-f607-496b-a0a1-997c823afde1');
+
+update widgetmanagement set widgetstate='{"col1":[{"id":"DSBBookmarks"}],"col3":[{"id":"dash_performance"}],"col2":[{"id":"DSBMyWorkspaces"}]}'  where user in ( select userid from users where company in ( select companyid from company where companyid like '54yyffc3-f607-496b-a0a1-997c823afde1' ) )
+
+// new companyid entries for widget state
+
+insert into widgetmanagement(id,widgetstate,user) select uuid(),'{"col1":[{"id":"DSBBookmarks"}],"col3":[{"id":"dash_performance"}],"col2":[{"id":"DSBMyWorkspaces"}]}',userid from ( select userid from users where company in ( select companyid from company where companyid like '54yyffc3-f607-496b-a0a1-997c823afde1' )  ) as tab1
+*****************somnath jadhav 24 dec 2010 ************************
+
+*****************somnath jadhav 27 dec 2010 ************************
+ALTER TABLE `springhrms_20122010`.`appraisalquestionanswers` MODIFY COLUMN `answer` VARCHAR(10000)  CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL;
+
+*****************prashil gote 27 dec 2010 ************************
+
+ALTER TABLE `springhrms_20122010`.`competencyquestion` MODIFY COLUMN `quesdesc` VARCHAR(1024)  CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

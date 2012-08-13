@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 1, 2009 2:58:40 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+  <class name="masterDB.Template" table="template">
+    <id name="templateid" type="string">
+      <column length="36" name="templateid"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="templatename" type="string">
+      <column length="100" name="templatename" not-null="true"/>
+    </property>
+    <property name="startdate" type="string">
+      <column length="12" name="startdate"/>
+    </property>
+    <property name="enddate" type="string">
+      <column length="12" name="enddate"/>
+    </property>
+    <property name="paymentdate" type="string">
+      <column length="12" name="paymentdate"/>
+    </property>
+    <property name="startrange" type="string">
+      <column length="25" name="startrange" not-null="true"/>
+    </property>
+    <property name="endrange" type="string">
+      <column length="25" name="endrange" not-null="true"/>
+    </property>
+    <property name="companyid" type="string">
+      <column length="36" name="companyid"/>
+    </property>
+    <property name="status" type="string">
+      <column length="2" name="status"/>
+    </property>
+    <many-to-one class="com.krawler.hrms.master.MasterData" column="designationid" name="designationid"/>
+  </class>
+</hibernate-mapping>
